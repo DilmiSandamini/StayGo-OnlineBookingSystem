@@ -40,19 +40,13 @@ body{
             color: #523692;
 }
 
-/* .logo-p {
-            color: #666;
-            font-size: 0.9rem;
-            text-align: center;
-} */
-
-#login-Google-logo {
+#register-Google-logo {
             width: 20px;
             height: 20px;
             margin-right: 10px;
 }
 
-.sign-in-btn {
+.sign-up-btn {
             background-color: #1e40af;
             color: white;
             font-weight: bold;
