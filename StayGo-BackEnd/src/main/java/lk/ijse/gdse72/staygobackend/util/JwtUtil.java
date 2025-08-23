@@ -8,11 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-/**
- * @author Dusan
- * @date 7/21/2025
- */
-
 @Component
 public class JwtUtil {
     @Value("${jwt.expiration}")

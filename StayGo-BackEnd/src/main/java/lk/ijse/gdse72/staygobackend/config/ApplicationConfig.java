@@ -12,11 +12,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
 
-/**
- * @author Dusan
- * @date 8/6/2025
- */
-
 @Configuration
 @RequiredArgsConstructor
 

@@ -27,4 +27,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;    //   ADMIN, CLIENT, PARTNER, BUSINESS
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Business> businesses;
 }

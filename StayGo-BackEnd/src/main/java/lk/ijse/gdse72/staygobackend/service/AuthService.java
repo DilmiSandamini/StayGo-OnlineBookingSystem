@@ -7,17 +7,12 @@ import lk.ijse.gdse72.staygobackend.dto.RegisterDTO;
 import lk.ijse.gdse72.staygobackend.entity.Role;
 import lk.ijse.gdse72.staygobackend.entity.User;
 import lk.ijse.gdse72.staygobackend.repository.UserRepository;
-//import lk.ijse.gdse72.yummygobackend.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-/**
- * @author Dusan
- * @date 8/6/2025
- */
 
 @Service
 @RequiredArgsConstructor
