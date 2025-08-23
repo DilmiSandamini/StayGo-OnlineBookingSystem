@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth-> auth
                         .requestMatchers("/api/v1/auth/**").permitAll()
-//                        .requestMatchers("/uploads/**").permitAll()       // allow public access to images
+                        .requestMatchers("/uploads/**").permitAll()       // allow public access to images
                         .anyRequest().authenticated())
                 .sessionManagement(
                         session->

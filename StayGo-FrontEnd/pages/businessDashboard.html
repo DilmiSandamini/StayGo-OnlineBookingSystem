@@ -5,89 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Business Dashborad</title>
+    <title>Business Dashboard</title>
     <link rel="stylesheet" href="/css/businessDashboard.css">
-
 </head>
 <body>
     <div class="header">
-    <h4 class="logo">StayGo</h4>
+        <h4 class="logo">StayGo</h4>
     </div>
 
-    <div class="container mt-lg-5">
-        <button id="Business-add-button" class="btn rounded-0" 
-                data-bs-toggle="modal" data-bs-target="#BusinessAddModal">
-                +
-        </button>
+    <div class="container mt-lg-5 container1">
+        <button id="Business-add-button" class="btn rounded-0" data-bs-toggle="modal" data-bs-target="#Business-add-modal">+</button>
+    </div>
 
+    <div class="container mt-5">
+        <h3>All Businesses</h3>
+        <div id="business-list" class="row"></div>
     </div>
 
     <!-- Add Business Modal -->
-<div class="modal fade" id="BusinessAddModal" tabindex="-1" aria-labelledby="BusinessAddLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="BusinessAddLabel">Add Business</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+    <div class="modal fade" id="Business-add-modal" tabindex="-1" aria-labelledby="BusinessAddLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="BusinessAddLabel">Add Business</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-      <!-- Form Start -->
-      <form id="add-business-form">
-        <div class="modal-body">
-          
-          <!-- Business Name -->
-          <input type="text" class="form-control mb-3 border-dark" id="business-name" placeholder="Business Name" required>
+                <form id="add-business-form">
+                    <div class="modal-body">
+                        <input type="text" class="form-control mb-3 border-dark" id="business-name" placeholder="Business Name" required>
+                        <input type="text" class="form-control mb-3 border-dark" id="business-contact1" placeholder="Business Contact Number 1" required>
+                        <input type="text" class="form-control mb-3 border-dark" id="business-contact2" placeholder="Business Contact Number 2">
+                        <input type="email" class="form-control mb-3 border-dark" id="business-email" placeholder="Business Email" required>
+                        <input type="text" class="form-control mb-3 border-dark" id="business-address" placeholder="Business Address" required>
 
-          <!-- Contact Numbers -->
-          <input type="text" class="form-control mb-3 border-dark" id="business-contact1" placeholder="Business Contact Number 1" required>
-          <input type="text" class="form-control mb-3 border-dark" id="business-contact2" placeholder="Business Contact Number 2">
+                        <select id="business-category" class="form-control mb-3 border-dark" required>
+                            <option value="" disabled selected>Select Business Category</option>
+                            <option>Hotels</option>
+                            <option>Houses</option>
+                            <option>Villas</option>
+                            <option>Apartments</option>
+                        </select>
 
-          <!-- Email -->
-          <input type="email" class="form-control mb-3 border-dark" id="business-email" placeholder="Business Email" required>
+                        <textarea id="business-description" class="form-control mb-3 border-dark" placeholder="Business Description" rows="3"></textarea>
 
-          <!-- Address -->
-          <input type="text" class="form-control mb-3 border-dark" id="business-address" placeholder="Business Address" required>
+                        <div id="drop-area" style="border:2px dashed #aaa; border-radius:6px; padding:20px; text-align:center; cursor:pointer;">
+                            <p>Your business image click to select</p>
+                            <input type="file" id="fileElem" accept="image/*" style="display:none">
+                            <img id="preview" src="" alt="Image preview" style="max-width:50%; margin-top:10px; display:none;">
+                        </div>
+                    </div>
 
-          <!-- Category -->
-          <select id="business-category" class="form-control mb-3 border-dark" required>
-            <option value="" disabled selected>Select Business Category</option>
-            <option>Hotels</option>
-            <option>Houses</option>
-            <option>Villas</option>
-            <option>Apartments</option>
-          </select>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-warning" id="resetBtn">Reset</button>
+                        <button type="submit" class="btn btn-success" id="addBusinessButton">Submit</button>
+                    </div>
+                </form>
 
-          <!-- Description -->
-          <textarea id="business-description" class="form-control mb-3 border-dark" placeholder="Business Description" rows="3"></textarea>
-
-          <!-- Image Upload -->
-          <div id="drop-area" 
-               style="border: 2px dashed #aaa; border-radius: 6px; padding: 20px; text-align: center; cursor: pointer;">
-            <p>Drag & Drop your business image here or click to select</p>
-            <input type="file" id="fileElem" accept="image/*" style="display:none" />
-            <img id="preview" src="" alt="Image preview" style="max-width: 100%; margin-top: 10px; display:none;" />
-          </div>
-
+            </div>
         </div>
-
-        <!-- Footer Buttons -->
-        <div class="modal-footer">
-          <button type="reset" class="btn btn-warning">Reset</button>
-          <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-      </form>
-      <!-- Form End -->
-
     </div>
-  </div>
-</div>
 
-        
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/businessDashboard.js"></script>
 </body>
 </html>

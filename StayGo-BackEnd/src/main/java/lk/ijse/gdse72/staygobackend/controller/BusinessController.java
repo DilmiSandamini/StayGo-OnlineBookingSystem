@@ -62,7 +62,7 @@ public class BusinessController {
             businessDTO.setBusinessCategory(businessCategory);
             businessDTO.setBusinessDescription(businessDescription);
             businessDTO.setBusinessStatus(businessStatus);
-            businessDTO.setBusinessLogo("/uploads/business-logos/" + fileName);
+            businessDTO.setBusinessLogo("uploads/business-logos/" + fileName);
             businessDTO.setUserId(userId);
 
             System.out.println("Business DTO: " + businessDTO);

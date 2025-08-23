@@ -1,9 +1,8 @@
 $(document).ready(async function () {
     console.log("Business Dashboard Ready ✅");
 
-    const backendUrl = "http://localhost:8080"; // Backend Base URL
+    const backendUrl = "http://localhost:8080";
 
-    // ===== Helper: Token & UserID =====
     async function getAuthHeaders() {
         const cookie = await cookieStore.get("token");
         const token = cookie?.value;
@@ -12,14 +11,11 @@ $(document).ready(async function () {
 
     function getUserId() {
         const userId = localStorage.getItem("userId");
-        if (!userId) {
-            alert("User ID not found. Please log in again.");
-            throw new Error("Missing User ID");
-        }
+        if (!userId) throw new Error("Missing User ID");
         return userId;
     }
 
-    // ===== Load User Businesses =====
+    // ===== Load all businesses =====
     async function loadAllBusinesses() {
         try {
             const userId = getUserId();
@@ -38,27 +34,25 @@ $(document).ready(async function () {
                         return;
                     }
 
-                    response.data.forEach((b) => {
+                    response.data.forEach(b => {
                         container.append(`
                             <div class="col-md-4 mb-3">
                                 <div class="card shadow-sm p-2">
-                                    <img src="${backendUrl}${b.businessLogo}" 
-                                         alt="Business Logo" 
-                                         class="img-fluid mb-2" 
-                                         style="max-height:150px; object-fit:contain;">
+                                    <img src="${b.businessLogo ? backendUrl + '/' + b.businessLogo : '/images/default-logo.png'}" ...
+
                                     <h5>${b.businessName}</h5>
                                     <p>${b.businessDescription || "No description provided"}</p>
-                                    <p>${b.businessAddress}, ${b.businessAreaPostalCode}</p>
+                                    <p>${b.businessAddress}, ${b.businessAreaPostalCode || ""}</p>
                                     <p>${b.businessEmail} | ${b.contactNumber1}</p>
                                 </div>
                             </div>
                         `);
                     });
                 },
-                error: function (xhr) {
-                    console.error("Error fetching user businesses:", xhr.responseText);
-                    alert("Failed to load businesses. Please try again.");
-                },
+                error: function(xhr) {
+                    console.error(xhr.responseText);
+                    Swal.fire("Error", "Failed to load businesses.", "error");
+                }
             });
         } catch (e) {
             console.error(e.message);
@@ -66,22 +60,30 @@ $(document).ready(async function () {
     }
 
     // ===== Add Business =====
-    $("#addBusinessButton").click(async function (e) {
+    $("#add-business-form").on("submit", async function (e) {
         e.preventDefault();
 
         try {
             const headers = await getAuthHeaders();
             const userId = getUserId();
-
             const fileInput = $("#fileElem")[0];
+
             if (!fileInput.files.length) {
                 alert("Please upload a business logo.");
                 return;
             }
 
-            const formData = new FormData($("#add-business-form")[0]);
+            const formData = new FormData();
+            formData.append("businessName", $("#business-name").val());
+            formData.append("contactNumber1", $("#business-contact1").val());
+            formData.append("contactNumber2", $("#business-contact2").val());
+            formData.append("businessEmail", $("#business-email").val());
+            formData.append("businessAddress", $("#business-address").val());
+            formData.append("businessCategory", $("#business-category").val());
+            formData.append("businessDescription", $("#business-description").val());
             formData.append("businessStatus", "ACTIVE");
             formData.append("userId", userId);
+            formData.append("logo", fileInput.files[0]);
 
             $.ajax({
                 method: "POST",
@@ -90,21 +92,51 @@ $(document).ready(async function () {
                 processData: false,
                 contentType: false,
                 data: formData,
-                success: function (response) {
-                    alert(response.message || "Business created!");
+                success: function(response) {
+                    Swal.fire("Success!", response.message || "Business created!", "success");
                     $("#Business-add-modal").modal("hide");
                     $("#add-business-form")[0].reset();
                     $("#preview").hide();
                     loadAllBusinesses();
                 },
-                error: function (xhr) {
+                error: function(xhr) {
                     console.error(xhr.responseText);
-                    alert(xhr.responseJSON?.message || "Error creating business!");
-                },
+                    Swal.fire("Error", xhr.responseJSON?.message || "Error creating business!", "error");
+                }
             });
+
         } catch (e) {
             console.error(e.message);
         }
+    });
+
+    // ===== Reset with SweetAlert =====
+    $("#resetBtn").click(function (e) {
+        e.preventDefault();
+        Swal.fire({
+            title: "Are you sure?",
+            text: "This will clear all form data!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, reset it!",
+            background: "rgba(0,0,0,0.9)",
+            color: "#fff"
+        }).then(result => {
+            if (result.isConfirmed) {
+                $("#add-business-form")[0].reset();
+                $("#preview").hide();
+                Swal.fire({
+                    title: "Form Reset!",
+                    icon: "success",
+                    timer: 1500,
+                    showConfirmButton: false,
+                    background: "rgba(0,0,0,0.9)",
+                    color: "#fff"
+                });
+            }
+        });
     });
 
     // ===== Image Preview =====
@@ -121,7 +153,6 @@ $(document).ready(async function () {
             alert("Upload an image only!");
             return;
         }
-
         const reader = new FileReader();
         reader.onload = (event) => {
             preview.src = event.target.result;
@@ -130,6 +161,6 @@ $(document).ready(async function () {
         reader.readAsDataURL(file);
     }
 
-    // Initial load
+    // ===== Initial Load =====
     loadAllBusinesses();
 });
