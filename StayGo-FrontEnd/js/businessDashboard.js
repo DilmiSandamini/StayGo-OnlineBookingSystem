@@ -10,7 +10,7 @@ $(document).ready(async function () {
     }
 
     function getUserId() {
-        const userId = localStorage.getItem("userId");
+        const userId = sessionStorage.getItem("userId");
         if (!userId) throw new Error("Missing User ID");
         return userId;
     }
@@ -35,19 +35,22 @@ $(document).ready(async function () {
                     }
 
                     response.data.forEach(b => {
-                        container.append(`
-                            <div class="col-md-4 mb-3">
-                                <div class="card shadow-sm p-2">
-                                    <img src="${b.businessLogo ? backendUrl + '/' + b.businessLogo : '/images/default-logo.png'}" ...
-
+                    container.append(`
+                        <div class="col-md-4 mb-3">
+                            <div class="card shadow-sm p-2 business-card" data-id="${b.businessId}" style="cursor:pointer;">
+                                <img src="${b.businessLogo ? backendUrl + '/' + b.businessLogo : '/images/default-logo.png'}" class="card-img-top" style="height:200px; object-fit:cover;">
+                                <div class="card-body">
                                     <h5>${b.businessName}</h5>
                                     <p>${b.businessDescription || "No description provided"}</p>
                                     <p>${b.businessAddress}, ${b.businessAreaPostalCode || ""}</p>
                                     <p>${b.businessEmail} | ${b.contactNumber1}</p>
                                 </div>
                             </div>
-                        `);
-                    });
+                        </div>
+                    
+                    `);
+                });
+
                 },
                 error: function(xhr) {
                     console.error(xhr.responseText);
@@ -163,4 +166,12 @@ $(document).ready(async function () {
 
     // ===== Initial Load =====
     loadAllBusinesses();
+});
+
+$(document).on("click", ".business-card", function() {
+    const businessId = $(this).data("id");
+    if (!businessId) return;
+
+    // Redirect with businessId in query params
+    window.location.href = `/pages/businessDetailDashborad.html?businessId=${businessId}`;
 });
