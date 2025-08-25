@@ -8,6 +8,8 @@ import lombok.Setter;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -35,4 +37,8 @@ public class Business {
 
     private Timestamp createdAt;
     private Timestamp updatedAt;
+
+    // One Business → Many BusinessDetails
+    @OneToMany(mappedBy = "business", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BusinessDetails> businessDetailsList = new ArrayList<>();
 }

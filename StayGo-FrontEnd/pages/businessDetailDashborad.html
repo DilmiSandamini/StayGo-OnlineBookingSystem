@@ -3,97 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Details - StayGo</title>
+  <title>Business Details Dashboard - StayGo</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/businessDetail.css">
 </head>
 <body>
-  <!-- Header -->
   <div class="header text-white p-3">
     <h4 class="logo m-0">StayGo</h4>
   </div>
 
-  <div class="container my-5">
-    <hr class="my-4">
-
-    <!-- Hotel Rooms Form -->
-    <div class="card shadow-sm">
-      <div class="card-header bg-primary text-white">
-        <i class="bi bi-building"></i> Add More Details Your Business
-      </div>
-      <div class="card-body">
-        <form id="hotel-rooms-form">
-          <div class="row g-3">
-            <!-- Number of Rooms -->
-            <div class="col-md-4 col-12">
-              <label for="roomsCount" class="form-label">Number of Rooms</label>
-              <input type="number" min="1" step="1" class="form-control border-dark" id="roomsCount" placeholder="e.g. 12" required>
-            </div>
-
-            <!-- Number of Beds -->
-            <div class="col-md-4 col-12">
-              <label for="bedsCount" class="form-label">Number of Beds (per room)</label>
-              <input type="number" min="1" step="1" class="form-control border-dark" id="bedsCount" placeholder="e.g. 2" required>
-            </div>
-
-            <!-- Price Per Day -->
-            <div class="col-md-4 col-12">
-              <label for="pricePerDay" class="form-label">Price (Per Day)</label>
-              <div class="input-group">
-                <span class="input-group-text border-dark">LKR</span>
-                <input type="number" min="0" step="0.01" class="form-control border-dark" id="pricePerDay" placeholder="e.g. 15000.00" required>
-              </div>
-            </div>
-
-            <!-- Luxury Level -->
-            <div class="col-md-6 col-12">
-              <label for="luxuryLevel" class="form-label">Business Luxury Level</label>
-              <select id="luxuryLevel" class="form-select border-dark" required>
-                <option value="" selected disabled>Select level</option>
-                <option value="STANDARD">Standard</option>
-                <option value="DELUXE">Deluxe</option>
-                <option value="SUPER_DELUXE">Super Deluxe</option>
-                <option value="LUXURY">Luxury</option>
-                <option value="FIVE_STAR">5-Star</option>
-              </select>
-            </div>
-
-            <!-- Images (multiple) -->
-            <div class="col-md-6 col-12">
-              <label for="roomImages" class="form-label">Room Images (you can select multiple)</label>
-              <input class="form-control border-dark" type="file" id="roomImages" accept="image/*" multiple>
-              <div id="imagePreview" class="d-flex flex-wrap gap-2 mt-2"></div>
-              <div class="form-text">Up to 10 images recommended. JPG/PNG only.</div>
-            </div>
-
-            <!-- Description (optional) -->
-            <div class="col-12">
-              <label for="roomDesc" class="form-label">Description (optional)</label>
-              <textarea id="roomDesc" class="form-control border-dark" rows="2" placeholder="Short description about the room type, amenities, view, etc."></textarea>
-            </div>
-          </div>
-
-          <!-- Buttons -->
-          <div class="d-flex gap-2 mt-4">
-            <button type="reset" class="btn btn-outline-secondary" id="roomsFormReset">
-              <i class="bi bi-arrow-counterclockwise"></i> Reset
-            </button>
-            <button type="submit" class="btn btn-success">
-              <i class="bi bi-save"></i> Save
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+  <div class="container mt-5 text-center">
+      <button id="Business-add-button" class="btn rounded-0 mb-3" data-bs-toggle="modal" data-bs-target="#Business-add-modal">+</button>
   </div>
 
-  <!-- Bootstrap Bundle JS -->
+  <div class="container mt-3">
+      <h3>All Business Details</h3>
+      <div id="business-list" class="row"></div>
+  </div>
+
+  <!-- Add Business Modal -->
+  <div class="modal fade" id="Business-add-modal" tabindex="-1" aria-labelledby="BusinessAddLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="BusinessAddLabel">Add Business Details</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form id="add-business-form">
+                  <div class="modal-body">
+                      <input type="number" min="1" class="form-control mb-3 border-dark" id="roomsCount" placeholder="Number of Rooms" required>
+                      <input type="number" min="1" class="form-control mb-3 border-dark" id="bedsCount" placeholder="Number of Beds (per room)" required>
+                      <input type="number" min="0" step="0.01" class="form-control mb-3 border-dark" id="pricePerDay" placeholder="Price Per Day (LKR)" required>
+                      <select id="luxuryLevel" class="form-select mb-3 border-dark" required>
+                          <option value="" disabled selected>Select Luxury Level</option>
+                          <option value="STANDARD">Standard</option>
+                          <option value="DELUXE">Deluxe</option>
+                          <option value="SUPER_DELUXE">Super Deluxe</option>
+                          <option value="LUXURY">Luxury</option>
+                          <option value="FIVE_STAR">5-Star</option>
+                      </select>
+                      <textarea id="roomDesc" class="form-control border-dark mb-3" rows="2" placeholder="Facilities / Description"></textarea>
+                    <input type="file" class="form-control mb-3" id="roomImages" accept="image/*">
+                    <!-- Image preview -->
+                    <img id="preview" src="" style="display:none; max-width:200px; margin-top:10px;">
+                  </div>
+                  <div class="modal-footer">
+                      <button type="reset" class="btn btn-warning" id="resetBtn">Reset</button>
+                      <button type="submit" class="btn btn-success">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/businessDetailDashboard.js"></script>
 </body>
 </html>
