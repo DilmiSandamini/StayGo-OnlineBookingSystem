@@ -3534,3 +3534,8 @@ io.jsonwebtoken.security.SignatureException: JWT signature does not match locall
 2025-09-05T20:10:54.366+05:30 DEBUG 13348 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
 2025-09-05T20:10:54.367+05:30 DEBUG 13348 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
 2025-09-05T20:10:54.383+05:30 DEBUG 13348 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-05T20:30:46.942+05:30  INFO 13348 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-05T20:30:46.973+05:30  INFO 13348 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-05T20:30:47.002+05:30  INFO 13348 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T20:30:47.035+05:30  INFO 13348 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T20:30:47.051+05:30  INFO 13348 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
