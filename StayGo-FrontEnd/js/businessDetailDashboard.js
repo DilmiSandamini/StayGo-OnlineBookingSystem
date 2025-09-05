@@ -59,10 +59,11 @@ $(document).ready(async function () {
                             <div class="card shadow-sm p-2">
                                 <img src="${detail.roomImage ? backendUrl + '/' + detail.roomImage : '/images/default-logo.png'}" class="card-img-top" style="height:200px; object-fit:cover;">
                                 <div class="card-body">
-                                    <h5>Rooms: ${detail.roomsCount}</h5>
+                                    <h5> ${detail.luxuryLevel}</h5>
+                                    <p>Rooms: ${detail.roomsCount}</p>
                                     <p>Beds per room: ${detail.bedsCount}</p>
-                                    <p>Price: LKR ${detail.pricePerDay}</p>
-                                    <p>Luxury: ${detail.luxuryLevel}</p>
+                                    <p>Price Per Day One Room (LKR): LKR ${detail.pricePerDay}</p>
+                                    <p>Price Per Night One Room (LKR): LKR ${detail.pricePerNight}</p>
                                     <p>${detail.facilities || ""}</p>
                                 </div>
                             </div>
@@ -90,6 +91,7 @@ $(document).ready(async function () {
         formData.append("roomsCount", $("#roomsCount").val());
         formData.append("bedsCount", $("#bedsCount").val());
         formData.append("pricePerDay", $("#pricePerDay").val());
+        formData.append("pricePerNight", $("#pricePerNight").val());
         formData.append("luxuryLevel", $("#luxuryLevel").val());
         formData.append("facilities", $("#roomDesc").val());
         formData.append("businessId", businessId);

@@ -80,21 +80,26 @@ public class BusinessController {
     }
 
     @GetMapping("/getAll")
-    public ResponseEntity<APIResponse<List<BusinessDTO>>> getAllBusinesses() {
+    public ResponseEntity<APIResponse<List<BusinessDTO>>> getAllBusinesses(
+            @RequestParam(required = false) String category) {
         try {
-            List<Business> businesses = businessService.getAllBusinessesEntity();
-            List<BusinessDTO> businessDTOs = businesses.stream()
-                    .map(b -> modelMapper.map(b, BusinessDTO.class))
-                    .toList();
+            List<BusinessDTO> businessDTOs;
+
+            if (category != null && !category.isEmpty()) {
+                businessDTOs = businessService.getBusinessesByCategory(category);
+            } else {
+                businessDTOs = businessService.getAllBusinesses();
+            }
 
             return ResponseEntity.ok(new APIResponse<>(200, "Businesses fetched successfully", businessDTOs));
-
         } catch (Exception e) {
             log.error("Error fetching businesses", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new APIResponse<>(500, "Error fetching businesses", null));
         }
     }
+
+
 
     @GetMapping("/getAllThisUserBusinesses")
     public ResponseEntity<APIResponse<List<BusinessDTO>>> getAllThisUserBusinesses(@RequestParam Long userId) {
@@ -110,6 +115,19 @@ public class BusinessController {
             log.error("Error fetching user businesses", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new APIResponse<>(500, "Error fetching user businesses", null));
+        }
+    }
+
+    @GetMapping("/getById")
+    public ResponseEntity<APIResponse<BusinessDTO>> getBusinessById(@RequestParam Long businessId) {
+        try {
+            Business business = businessService.getBusinessById(businessId);
+            BusinessDTO businessDTO = modelMapper.map(business, BusinessDTO.class);
+            return ResponseEntity.ok(new APIResponse<>(200, "Business fetched successfully", businessDTO));
+        } catch (Exception e) {
+            log.error("Error fetching business by ID", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new APIResponse<>(500, "Error fetching business", null));
         }
     }
 }

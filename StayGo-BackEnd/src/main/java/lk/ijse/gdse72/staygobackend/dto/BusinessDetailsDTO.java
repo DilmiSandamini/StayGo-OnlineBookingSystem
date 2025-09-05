@@ -31,6 +31,10 @@ public class BusinessDetailsDTO {
     @Min(value = 0, message = "Price per day cannot be negative")
     private BigDecimal pricePerDay;
 
+    @NotNull(message = "Price per Night cannot be null")
+    @Min(value = 0, message = "Price per day cannot be negative")
+    private BigDecimal pricePerNight;
+
     @NotBlank(message = "Luxury level cannot be blank")
     private String luxuryLevel;
 

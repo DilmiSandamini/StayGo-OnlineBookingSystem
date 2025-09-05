@@ -41,14 +41,30 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     @Override
-    public List<Business> getAllBusinessesEntity() {
-        return businessRepository.findAll();
+    public List<BusinessDTO> getBusinessesByCategory(String category) {
+        List<Business> businesses = businessRepository.findByBusinessCategory(category);
+        return businesses.stream()
+                .map(business -> modelMapper.map(business, BusinessDTO.class))
+                .toList();
     }
-
     @Override
     public List<Business> getBusinessesByUserId(Long userId) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
         return businessRepository.findByUser(user); // <-- use repository method
+    }
+
+    @Override
+    public List<BusinessDTO> getAllBusinesses() {
+        List<Business> businesses = businessRepository.findAll();
+        return businesses.stream()
+                .map(business -> modelMapper.map(business, BusinessDTO.class))
+                .toList();
+    }
+
+    @Override
+    public Business getBusinessById(Long businessId) {
+        return businessRepository.findById(businessId)
+                .orElseThrow(() -> new RuntimeException("Business not found with ID: " + businessId));
     }
 }

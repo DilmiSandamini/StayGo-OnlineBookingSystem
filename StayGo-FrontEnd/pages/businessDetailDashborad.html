@@ -38,10 +38,7 @@
               </div>
               <form id="add-business-form">
                   <div class="modal-body">
-                      <input type="number" min="1" class="form-control mb-3 border-dark" id="roomsCount" placeholder="Number of Rooms" required>
-                      <input type="number" min="1" class="form-control mb-3 border-dark" id="bedsCount" placeholder="Number of Beds (per room)" required>
-                      <input type="number" min="0" step="0.01" class="form-control mb-3 border-dark" id="pricePerDay" placeholder="Price Per Day (LKR)" required>
-                      <select id="luxuryLevel" class="form-select mb-3 border-dark" required>
+                    <select id="luxuryLevel" class="form-select mb-3 border-dark" required>
                           <option value="" disabled selected>Select Luxury Level</option>
                           <option value="STANDARD">Standard</option>
                           <option value="DELUXE">Deluxe</option>
@@ -49,6 +46,12 @@
                           <option value="LUXURY">Luxury</option>
                           <option value="FIVE_STAR">5-Star</option>
                       </select>
+                      <input type="number" min="1" class="form-control mb-3 border-dark" id="roomsCount" placeholder="Number of Rooms" required>
+                      <input type="number" min="1" class="form-control mb-3 border-dark" id="bedsCount" placeholder="Number of Beds (per room)" required>
+                      <input type="number" min="0" step="0.01" class="form-control mb-3 border-dark" id="pricePerDay" placeholder="Price Per Day One Room (LKR)" required>
+                      <input type="number" min="0" step="0.01" class="form-control mb-3 border-dark" id="pricePerNight" placeholder="Price Per Night One Room(LKR)" required>
+
+                      
                       <textarea id="roomDesc" class="form-control border-dark mb-3" rows="2" placeholder="Facilities / Description"></textarea>
                     <input type="file" class="form-control mb-3" id="roomImages" accept="image/*">
                     <!-- Image preview -->

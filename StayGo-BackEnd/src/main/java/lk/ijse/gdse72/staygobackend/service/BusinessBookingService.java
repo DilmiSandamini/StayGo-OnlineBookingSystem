@@ -1,4 +1,4 @@
-package lk.ijse.gdse72.staygobackend.service.impl;
+package lk.ijse.gdse72.staygobackend.service;
 
 public interface BusinessBookingService {
 }

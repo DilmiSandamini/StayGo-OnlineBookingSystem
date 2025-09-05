@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Dashboard - StayGo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/clientDashboard.css">
+
+</head>
+<body>
+  <!-- Header -->
+ <div class="header">
+        <h4 class="logo">StayGo</h4>
+    </div>
+
+  <!-- Main content -->
+  <div class="container mt-5 property-destination">
+    <h3 class="mb-4">Available Businesses</h3>
+    <div class="property-grid">
+        <div class="property-item">
+            <img src="/assets/image/hotelbackgroundimage01.jpg" alt="Hotels">
+            <p>Hotels</p>
+        </div>
+        <div class="property-item">
+            <img src="/assets/image/hotelbackgroundimage02.jpg" alt="Apartments">
+            <p>Villas</p>
+        </div>
+        <div class="property-item">
+            <img src="/assets/image/hotelbackgroundimage03.jpeg" alt="Resorts">
+            <p>Resorts</p>
+        </div>
+        <div class="property-item">
+            <img src="/assets/image/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer.jpg" alt="Villas">
+            <p>Apartments</p>
+        </div>
+    </div>
+    <div id="businessContainer" class="row">
+      <!-- Business cards dynamically load here -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/clientDashboard.js"></script>
+</body>
+</html>

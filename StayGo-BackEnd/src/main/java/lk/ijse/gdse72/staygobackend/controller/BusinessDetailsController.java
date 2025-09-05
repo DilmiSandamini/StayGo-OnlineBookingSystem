@@ -40,6 +40,7 @@ public class BusinessDetailsController {
             @RequestParam Integer roomsCount,
             @RequestParam Integer bedsCount,
             @RequestParam BigDecimal pricePerDay,
+            @RequestParam BigDecimal pricePerNight,
             @RequestParam String luxuryLevel,
             @RequestParam String facilities,
             @RequestParam Long businessId,
@@ -62,6 +63,7 @@ public class BusinessDetailsController {
             businessDetailsDTO.setRoomsCount(roomsCount);
             businessDetailsDTO.setBedsCount(bedsCount);
             businessDetailsDTO.setPricePerDay(pricePerDay);
+            businessDetailsDTO.setPricePerNight(pricePerNight);
             businessDetailsDTO.setLuxuryLevel(luxuryLevel);
             businessDetailsDTO.setFacilities(facilities);
             businessDetailsDTO.setRoomImage("uploads/roomImage-logos/" + fileName);
@@ -106,6 +108,7 @@ public class BusinessDetailsController {
                 dto.setRoomsCount(d.getRoomsCount());
                 dto.setBedsCount(d.getBedsCount());
                 dto.setPricePerDay(d.getPricePerDay());
+                dto.setPricePerNight(d.getPricePerNight());
                 dto.setLuxuryLevel(d.getLuxuryLevel());
                 dto.setFacilities(d.getFacilities());
                 dto.setRoomImage(d.getRoomImage());

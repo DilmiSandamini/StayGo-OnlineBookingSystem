@@ -1,0 +1,32 @@
+:root{
+    --primary:#175658;
+    --secondary:#ff6922;
+    --light:#Effdf5;
+    --dark:#0f2135;
+}
+
+body{
+    background: #fff;
+}
+
+.hero-section {
+    background: url('/assets/image/outdoor-swimming-pool.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 180px 0;
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }

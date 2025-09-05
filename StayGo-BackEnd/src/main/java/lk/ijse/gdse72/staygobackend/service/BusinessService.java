@@ -8,7 +8,12 @@ import java.util.List;
 public interface BusinessService {
     void SaveBusiness(BusinessDTO businessDTO);
 
-    List<Business> getAllBusinessesEntity();
+    List<BusinessDTO> getBusinessesByCategory(String category);
 
     List<Business> getBusinessesByUserId(Long userId);
+
+    List<BusinessDTO> getAllBusinesses();
+
+    Business getBusinessById(Long businessId);
+
 }
