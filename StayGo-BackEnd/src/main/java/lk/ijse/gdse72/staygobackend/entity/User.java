@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
@@ -28,6 +29,9 @@ public class User {
     private Role role;    //   ADMIN, CLIENT, PARTNER, BUSINESS
 
     private String status;  // Active, Inactive
+
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Business> businesses;
