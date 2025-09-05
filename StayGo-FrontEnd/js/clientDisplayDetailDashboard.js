@@ -79,6 +79,7 @@ $(document).ready(async function () {
                                     <p>Day Price: LKR ${detail.pricePerDay}</p>
                                     <p>Night Price: LKR ${detail.pricePerNight}</p>
                                     <p>${detail.facilities || ""}</p>
+                                    <button class="btn btn-sm btn-primary" onclick="window.location.href='pages/businessBooking.html?businessId=${businessId}&detailId=${detail.detailId}'">Processe To Booking</button>
                                 </div>
                             </div>
                         </div>
