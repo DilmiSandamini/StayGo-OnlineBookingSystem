@@ -123,5 +123,33 @@ public class BusinessDetailsController {
         }
     }
 
+    @GetMapping("/getById")
+    public ResponseEntity<APIResponse<BusinessDetailsDTO>> getDetailsById(@RequestParam Long businessDetailId) {
+        try {
+            BusinessDetails details = businessDetailsService.getDetailsById(businessDetailId);
+            if (details == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body(new APIResponse<>(404, "Business detail not found", null));
+            }
+
+            BusinessDetailsDTO dto = new BusinessDetailsDTO();
+            dto.setBusinessDetailId(details.getBusinessDetailId());
+            dto.setBusinessId(details.getBusiness().getBusinessId());
+            dto.setRoomsCount(details.getRoomsCount());
+            dto.setBedsCount(details.getBedsCount());
+            dto.setPricePerDay(details.getPricePerDay());
+            dto.setPricePerNight(details.getPricePerNight());
+            dto.setLuxuryLevel(details.getLuxuryLevel());
+            dto.setFacilities(details.getFacilities());
+            dto.setRoomImage(details.getRoomImage());
+
+            return ResponseEntity.ok(new APIResponse<>(200, "Business detail fetched successfully", dto));
+        } catch (Exception e) {
+            log.error("Error fetching business detail by id", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new APIResponse<>(500, "Error fetching business detail by id", null));
+        }
+    }
+
 
 }

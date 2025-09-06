@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -51,5 +52,11 @@ public class BusinessDetailsServiceImpl implements BusinessDetailsService {
                 .orElseThrow(() -> new RuntimeException("Business not found with ID: " + businessId));
 
         return businessDetailsRepository.findByBusiness(business);
+    }
+
+    @Override
+    public BusinessDetails getDetailsById(Long businessDetailId) {
+        Optional<BusinessDetails> optional = businessDetailsRepository.findById(businessDetailId);
+        return optional.orElse(null);
     }
 }

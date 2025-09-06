@@ -11,4 +11,6 @@ public interface BusinessDetailsService {
     List<BusinessDetails> getAllBusinessDetails();
 
     List<BusinessDetails> getDetailsByBusinessId(Long businessId);
+
+    BusinessDetails getDetailsById(Long businessDetailId);
 }
