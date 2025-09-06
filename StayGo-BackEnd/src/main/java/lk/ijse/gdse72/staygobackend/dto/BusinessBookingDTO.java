@@ -16,8 +16,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-
 public class BusinessBookingDTO {
+
     private Long bookingId;
 
     // 🟢 Relationships
@@ -28,8 +28,8 @@ public class BusinessBookingDTO {
     private Long businessDetailId;  // maps to BusinessDetails.businessDetailId
 
     // 🟢 Booking info
-    @NotBlank(message = "Booking time must be DAY or NIGHT")
-    private String bookingTime;   // "DAY" | "NIGHT"
+    @NotBlank(message = "Booking time must be DAY, NIGHT, or BOTH")
+    private String bookingTime;   // "DAY" | "NIGHT" | "BOTH"
 
     @NotNull(message = "Check-in time cannot be null")
     private LocalDateTime checkInTime;

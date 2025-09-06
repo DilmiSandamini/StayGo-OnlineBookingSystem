@@ -1,6 +1,8 @@
 package lk.ijse.gdse72.staygobackend.dto;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -15,6 +17,9 @@ public class RegisterDTO {
     private String role;
     private String status;  // Active, Inactive
 
+    @CreationTimestamp
     private Timestamp createdAt;
+
+    @UpdateTimestamp
     private Timestamp updatedAt;
 }

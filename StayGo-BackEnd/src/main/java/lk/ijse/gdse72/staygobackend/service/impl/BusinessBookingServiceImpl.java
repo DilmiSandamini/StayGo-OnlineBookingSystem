@@ -10,7 +10,6 @@ import lk.ijse.gdse72.staygobackend.repository.BusinessDetailsRepository;
 import lk.ijse.gdse72.staygobackend.repository.UserRepository;
 import lk.ijse.gdse72.staygobackend.service.BusinessBookingService;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -28,7 +27,6 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
     private final BusinessBookingRepository bookingRepository;
     private final UserRepository userRepository;
     private final BusinessDetailsRepository detailsRepository;
-    private final ModelMapper modelMapper;
 
     @Override
     public BusinessBookingDTO createBooking(BusinessBookingDTO dto) {
@@ -45,8 +43,17 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
             throw new RuntimeException("Check-in date must be before check-out date");
         }
 
-        // Map DTO to entity
-        BusinessBooking booking = modelMapper.map(dto, BusinessBooking.class);
+        // Map DTO to Entity manually (avoid ModelMapper conflicts)
+        BusinessBooking booking = new BusinessBooking();
+        booking.setUser(user);
+        booking.setBusinessDetail(details);
+        booking.setBookingTime(dto.getBookingTime());
+        booking.setCheckInTime(dto.getCheckInTime());
+        booking.setCheckOutTime(dto.getCheckOutTime());
+        booking.setRoomCount(dto.getRoomCount());
+        booking.setCreatedAt(Timestamp.from(Instant.now()));
+        booking.setUpdatedAt(Timestamp.from(Instant.now()));
+        booking.setStatus("PENDING");
 
         // Calculate days
         long days = ChronoUnit.DAYS.between(dto.getCheckInTime().toLocalDate(), dto.getCheckOutTime().toLocalDate());
@@ -73,23 +80,47 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
             default:
                 throw new RuntimeException("Invalid bookingTime. Must be DAY, NIGHT, or BOTH");
         }
-
         booking.setTotalPrice(totalPrice);
-        booking.setUser(user);
-        booking.setBusinessDetail(details);
-        booking.setCreatedAt(Timestamp.from(Instant.now()));
-        booking.setUpdatedAt(Timestamp.from(Instant.now()));
-        booking.setStatus("PENDING");
 
+        // Save booking
         BusinessBooking saved = bookingRepository.save(booking);
-        return modelMapper.map(saved, BusinessBookingDTO.class);
+
+        // Map Entity to DTO manually
+        BusinessBookingDTO responseDTO = new BusinessBookingDTO();
+        responseDTO.setBookingId(saved.getBookingId());
+        responseDTO.setUserId(saved.getUser().getId());
+        responseDTO.setBusinessDetailId(saved.getBusinessDetail().getBusinessDetailId());
+        responseDTO.setBookingTime(saved.getBookingTime());
+        responseDTO.setCheckInTime(saved.getCheckInTime());
+        responseDTO.setCheckOutTime(saved.getCheckOutTime());
+        responseDTO.setRoomCount(saved.getRoomCount());
+        responseDTO.setTotalPrice(saved.getTotalPrice());
+        responseDTO.setStatus(saved.getStatus());
+        responseDTO.setCreatedAt(saved.getCreatedAt());
+        responseDTO.setUpdatedAt(saved.getUpdatedAt());
+
+        return responseDTO;
     }
 
     @Override
     public List<BusinessBookingDTO> getBookingsByUser(Long userId) {
         return bookingRepository.findByUser_Id(userId)
                 .stream()
-                .map(b -> modelMapper.map(b, BusinessBookingDTO.class))
+                .map(b -> {
+                    BusinessBookingDTO dto = new BusinessBookingDTO();
+                    dto.setBookingId(b.getBookingId());
+                    dto.setUserId(b.getUser().getId());
+                    dto.setBusinessDetailId(b.getBusinessDetail().getBusinessDetailId());
+                    dto.setBookingTime(b.getBookingTime());
+                    dto.setCheckInTime(b.getCheckInTime());
+                    dto.setCheckOutTime(b.getCheckOutTime());
+                    dto.setRoomCount(b.getRoomCount());
+                    dto.setTotalPrice(b.getTotalPrice());
+                    dto.setStatus(b.getStatus());
+                    dto.setCreatedAt(b.getCreatedAt());
+                    dto.setUpdatedAt(b.getUpdatedAt());
+                    return dto;
+                })
                 .collect(Collectors.toList());
     }
 
@@ -97,7 +128,21 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
     public List<BusinessBookingDTO> getBookingsByBusiness(Long businessId) {
         return bookingRepository.findByBusinessDetail_Business_BusinessId(businessId)
                 .stream()
-                .map(b -> modelMapper.map(b, BusinessBookingDTO.class))
+                .map(b -> {
+                    BusinessBookingDTO dto = new BusinessBookingDTO();
+                    dto.setBookingId(b.getBookingId());
+                    dto.setUserId(b.getUser().getId());
+                    dto.setBusinessDetailId(b.getBusinessDetail().getBusinessDetailId());
+                    dto.setBookingTime(b.getBookingTime());
+                    dto.setCheckInTime(b.getCheckInTime());
+                    dto.setCheckOutTime(b.getCheckOutTime());
+                    dto.setRoomCount(b.getRoomCount());
+                    dto.setTotalPrice(b.getTotalPrice());
+                    dto.setStatus(b.getStatus());
+                    dto.setCreatedAt(b.getCreatedAt());
+                    dto.setUpdatedAt(b.getUpdatedAt());
+                    return dto;
+                })
                 .collect(Collectors.toList());
     }
 }

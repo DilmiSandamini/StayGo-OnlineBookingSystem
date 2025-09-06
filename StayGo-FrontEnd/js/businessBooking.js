@@ -1,8 +1,9 @@
-$(document).ready(async function () {
+$(document).ready(function () {
     console.log("Business Booking Page Ready ✅");
 
     const backendUrl = "http://localhost:8080";
 
+    // Get query params
     function getParams() {
         const params = new URLSearchParams(window.location.search);
         return {
@@ -11,13 +12,14 @@ $(document).ready(async function () {
         };
     }
 
+    // Get JWT token from cookie
     async function getAuthHeaders() {
         const cookie = await cookieStore.get("token");
         const token = cookie?.value;
         return token ? { Authorization: "Bearer " + token } : {};
     }
 
-    // ==== Load Room Info ====
+    // Load Room Info
     async function loadRoomInfo() {
         const { detailId } = getParams();
         if (!detailId) return;
@@ -58,22 +60,21 @@ $(document).ready(async function () {
         });
     }
 
-    // ==== Submit Booking ====
+    // Submit Booking
     $("#bookingForm").on("submit", async function (e) {
         e.preventDefault();
         const { detailId } = getParams();
         const headers = await getAuthHeaders();
 
-        // Get userId from sessionStorage
         const userId = sessionStorage.getItem("userId");
         if (!userId) {
             Swal.fire("Error", "You must login before booking!", "error");
             return;
         }
 
-        // ✅ Validate check-in and check-out dates
         const checkInDate = new Date($("#checkInDate").val());
         const checkOutDate = new Date($("#checkOutDate").val());
+
         if (checkInDate >= checkOutDate) {
             Swal.fire("Error", "Check-in date must be before check-out date", "error");
             return;
@@ -82,10 +83,10 @@ $(document).ready(async function () {
         const payload = {
             userId: parseInt(userId, 10),
             businessDetailId: parseInt(detailId, 10),
-            bookingTime: $("#bookingTime").val(),  // DAY / NIGHT / BOTH
+            bookingTime: $("#bookingTime").val(),
             checkInTime: $("#checkInDate").val() + "T12:00:00",
             checkOutTime: $("#checkOutDate").val() + "T10:00:00",
-            roomCount: parseInt($("#roomCount").val(), 10),
+            roomCount: parseInt($("#roomCount").val(), 10)
         };
 
         $.ajax({
@@ -95,9 +96,7 @@ $(document).ready(async function () {
             data: JSON.stringify(payload),
             success: function (res) {
                 Swal.fire("Success", "Your booking has been placed!", "success")
-                    .then(() => {
-                        window.location.href = "/pages/clientDashboard.html";
-                    });
+                    .then(() => window.location.href = "/pages/clientDashboard.html");
             },
             error: function (xhr) {
                 console.error(xhr.responseText);
@@ -107,6 +106,6 @@ $(document).ready(async function () {
         });
     });
 
-    // Initial Load
-    await loadRoomInfo();
+    // Initial load
+    loadRoomInfo();
 });

@@ -15,14 +15,14 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-
 public class BusinessBooking {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingId;
 
     // 🟢 Booking details
-    private String bookingTime;   // "DAY" or "NIGHT"
+    private String bookingTime;   // "DAY", "NIGHT", or "BOTH"
     private LocalDateTime checkInTime;
     private LocalDateTime checkOutTime;
     private Integer roomCount;    // Number of rooms booked
@@ -41,5 +41,4 @@ public class BusinessBooking {
     @ManyToOne
     @JoinColumn(name = "business_detail_id", nullable = false)
     private BusinessDetails businessDetail;  // Which room type booked
-
 }

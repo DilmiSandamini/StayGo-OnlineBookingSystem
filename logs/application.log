@@ -2068,3 +2068,1115 @@ java.lang.RuntimeException: Check-in date must be before check-out date
 2025-09-06T19:36:38.854+05:30  INFO 14676 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-09-06T19:36:38.865+05:30  INFO 14676 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-09-06T19:36:38.894+05:30  INFO 14676 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-06T19:36:43.335+05:30  INFO 15204 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 15204 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-06T19:36:43.338+05:30  INFO 15204 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-06T19:36:44.592+05:30  INFO 15204 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-06T19:36:44.721+05:30  INFO 15204 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 4 JPA repository interfaces.
+2025-09-06T19:36:45.698+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-06T19:36:45.720+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-06T19:36:45.721+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-06T19:36:45.804+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-06T19:36:45.805+05:30  INFO 15204 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2398 ms
+2025-09-06T19:36:46.043+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-06T19:36:46.154+05:30  INFO 15204 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-06T19:36:46.253+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-06T19:36:46.708+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-06T19:36:46.757+05:30  INFO 15204 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-06T19:36:47.467+05:30  INFO 15204 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cdd31a4
+2025-09-06T19:36:47.470+05:30  INFO 15204 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-06T19:36:47.605+05:30  WARN 15204 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-06T19:36:47.662+05:30  INFO 15204 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-06T19:36:49.452+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-06T19:36:49.644+05:30  INFO 15204 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T19:36:50.557+05:30  WARN 15204 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-06T19:36:50.646+05:30  INFO 15204 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-06T19:36:50.647+05:30  WARN 15204 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-06T19:36:50.925+05:30 DEBUG 15204 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-09-06T19:36:51.110+05:30 DEBUG 15204 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-06T19:36:51.284+05:30 DEBUG 15204 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-06T19:36:51.398+05:30 DEBUG 15204 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-06T19:36:51.730+05:30  INFO 15204 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-06T19:36:51.741+05:30  INFO 15204 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 9.107 seconds (process running for 10.145)
+2025-09-06T19:37:15.475+05:30  INFO 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-06T19:37:15.475+05:30  INFO 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-06T19:37:15.476+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-06T19:37:15.477+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-06T19:37:15.478+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-06T19:37:15.482+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@33c5e52f
+2025-09-06T19:37:15.483+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@68c05c5b
+2025-09-06T19:37:15.483+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-06T19:37:15.485+05:30  INFO 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-09-06T19:37:15.590+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-06T19:37:15.594+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-06T19:37:15.755+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiC, password=1234)]
+2025-09-06T19:37:16.104+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T19:37:16.108+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEa (truncated)...]
+2025-09-06T19:37:16.126+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:19.468+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Hotels", parameters={masked}
+2025-09-06T19:37:19.469+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T19:37:19.585+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T19:37:19.586+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@52270301]
+2025-09-06T19:37:19.611+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:19.628+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T19:37:19.629+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T19:37:19.640+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:21.022+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=2", parameters={masked}
+2025-09-06T19:37:21.023+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T19:37:21.027+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=2", parameters={masked}
+2025-09-06T19:37:21.027+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T19:37:21.065+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T19:37:21.066+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@35734cb6]
+2025-09-06T19:37:21.068+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:21.085+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T19:37:21.088+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T19:37:21.088+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@5363280f]
+2025-09-06T19:37:21.088+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T19:37:21.099+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:21.106+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:21.115+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T19:37:21.116+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T19:37:21.121+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:23.013+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=2", parameters={masked}
+2025-09-06T19:37:23.014+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T19:37:23.026+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T19:37:23.027+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@77d3a873]
+2025-09-06T19:37:23.030+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:23.038+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T19:37:23.039+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T19:37:23.045+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T19:37:58.495+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/bookings/create", parameters={}
+2025-09-06T19:37:58.495+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessBookingController#createBooking(BusinessBookingDTO)
+2025-09-06T19:37:58.514+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO@5b6d5552]
+2025-09-06T19:37:58.733+05:30 ERROR 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] l.i.g.s.c.BusinessBookingController      : Booking creation failed: ModelMapper configuration errors:
+
+1) The destination property lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO.setBusinessDetailId() matches multiple source property hierarchies:
+
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusinessDetailId()
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusiness()/lk.ijse.gdse72.staygobackend.entity.Business.getBusinessId()
+
+1 error
+
+org.modelmapper.ConfigurationException: ModelMapper configuration errors:
+
+1) The destination property lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO.setBusinessDetailId() matches multiple source property hierarchies:
+
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusinessDetailId()
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusiness()/lk.ijse.gdse72.staygobackend.entity.Business.getBusinessId()
+
+1 error
+	at org.modelmapper.internal.Errors.throwConfigurationExceptionIfErrorsExist(Errors.java:240) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.matchDestination(ImplicitMappingBuilder.java:159) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:90) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:75) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:131) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:106) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:113) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:589) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:422) ~[modelmapper-3.2.4.jar:na]
+	at lk.ijse.gdse72.staygobackend.service.impl.BusinessBookingServiceImpl.createBooking(BusinessBookingServiceImpl.java:85) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.10.jar:6.2.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.10.jar:6.2.10]
+	at lk.ijse.gdse72.staygobackend.service.impl.BusinessBookingServiceImpl$$SpringCGLIB$$0.createBooking(<generated>) ~[classes/:na]
+	at lk.ijse.gdse72.staygobackend.controller.BusinessBookingController.createBooking(BusinessBookingController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.44.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.44.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at lk.ijse.gdse72.staygobackend.util.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:58) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-06T19:37:58.750+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T19:37:58.750+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@1dfb2af2]
+2025-09-06T19:37:58.752+05:30 DEBUG 15204 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-09-06T21:51:36.702+05:30  WARN 15204 --- [StayGo-BackEnd] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h44m18s603ms427µs).
+2025-09-06T21:56:08.182+05:30  INFO 15204 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-06T21:56:08.285+05:30  INFO 15204 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-06T21:56:08.415+05:30  INFO 15204 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T21:56:08.509+05:30  INFO 15204 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-06T21:56:08.559+05:30  INFO 15204 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-06T21:56:16.692+05:30  INFO 20116 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 20116 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-06T21:56:16.694+05:30  INFO 20116 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-06T21:56:17.313+05:30  INFO 20116 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-06T21:56:17.364+05:30  INFO 20116 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2025-09-06T21:56:17.910+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-06T21:56:17.922+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-06T21:56:17.923+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-06T21:56:17.965+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-06T21:56:17.966+05:30  INFO 20116 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1222 ms
+2025-09-06T21:56:18.081+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-06T21:56:18.136+05:30  INFO 20116 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-06T21:56:18.187+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-06T21:56:18.429+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-06T21:56:18.454+05:30  INFO 20116 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-06T21:56:18.877+05:30  INFO 20116 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@156ff70f
+2025-09-06T21:56:18.878+05:30  INFO 20116 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-06T21:56:18.963+05:30  WARN 20116 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-06T21:56:18.977+05:30  INFO 20116 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-06T21:56:19.881+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-06T21:56:20.029+05:30  INFO 20116 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T21:56:20.504+05:30  WARN 20116 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-06T21:56:20.536+05:30  INFO 20116 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-06T21:56:20.537+05:30  WARN 20116 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-06T21:56:20.673+05:30 DEBUG 20116 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-09-06T21:56:20.759+05:30 DEBUG 20116 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-06T21:56:20.850+05:30 DEBUG 20116 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-06T21:56:20.904+05:30 DEBUG 20116 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-06T21:56:21.079+05:30  INFO 20116 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-06T21:56:21.086+05:30  INFO 20116 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 4.869 seconds (process running for 5.445)
+2025-09-06T21:56:43.204+05:30  INFO 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-06T21:56:43.204+05:30  INFO 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-06T21:56:43.205+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-06T21:56:43.205+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-06T21:56:43.205+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-06T21:56:43.206+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@152bb4cc
+2025-09-06T21:56:43.206+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6153aca1
+2025-09-06T21:56:43.206+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-06T21:56:43.206+05:30  INFO 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-06T21:56:43.259+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-06T21:56:43.261+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-06T21:56:43.323+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiC, password=1234)]
+2025-09-06T21:56:43.445+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T21:56:43.448+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEa (truncated)...]
+2025-09-06T21:56:43.457+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:46.509+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Hotels", parameters={masked}
+2025-09-06T21:56:46.510+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T21:56:46.566+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T21:56:46.566+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@71fdb062]
+2025-09-06T21:56:46.583+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:46.600+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T21:56:46.602+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T21:56:46.611+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:54.888+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=2", parameters={masked}
+2025-09-06T21:56:54.889+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T21:56:54.892+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=2", parameters={masked}
+2025-09-06T21:56:54.893+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T21:56:54.921+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T21:56:54.921+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@715476ed]
+2025-09-06T21:56:54.922+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:54.927+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T21:56:54.928+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T21:56:54.932+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:54.936+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T21:56:54.936+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@386d7418]
+2025-09-06T21:56:54.946+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:54.953+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T21:56:54.954+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T21:56:54.958+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:58.708+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=2", parameters={masked}
+2025-09-06T21:56:58.709+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T21:56:58.719+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T21:56:58.719+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@523bfefa]
+2025-09-06T21:56:58.721+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:56:58.729+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T21:56:58.731+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T21:56:58.736+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T21:57:18.968+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/bookings/create", parameters={}
+2025-09-06T21:57:18.968+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessBookingController#createBooking(BusinessBookingDTO)
+2025-09-06T21:57:18.976+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO@5f79a73a]
+2025-09-06T21:57:19.081+05:30 ERROR 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] l.i.g.s.c.BusinessBookingController      : Booking creation failed: ModelMapper configuration errors:
+
+1) The destination property lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO.setBusinessDetailId() matches multiple source property hierarchies:
+
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusiness()/lk.ijse.gdse72.staygobackend.entity.Business.getBusinessId()
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusinessDetailId()
+
+1 error
+
+org.modelmapper.ConfigurationException: ModelMapper configuration errors:
+
+1) The destination property lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO.setBusinessDetailId() matches multiple source property hierarchies:
+
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusiness()/lk.ijse.gdse72.staygobackend.entity.Business.getBusinessId()
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusinessDetailId()
+
+1 error
+	at org.modelmapper.internal.Errors.throwConfigurationExceptionIfErrorsExist(Errors.java:240) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.matchDestination(ImplicitMappingBuilder.java:159) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:90) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:75) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:131) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:106) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:113) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:589) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:422) ~[modelmapper-3.2.4.jar:na]
+	at lk.ijse.gdse72.staygobackend.service.impl.BusinessBookingServiceImpl.createBooking(BusinessBookingServiceImpl.java:85) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.10.jar:6.2.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.10.jar:6.2.10]
+	at lk.ijse.gdse72.staygobackend.service.impl.BusinessBookingServiceImpl$$SpringCGLIB$$0.createBooking(<generated>) ~[classes/:na]
+	at lk.ijse.gdse72.staygobackend.controller.BusinessBookingController.createBooking(BusinessBookingController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.44.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.44.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at lk.ijse.gdse72.staygobackend.util.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:58) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-06T21:57:19.086+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T21:57:19.086+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@3b0b1f40]
+2025-09-06T21:57:19.087+05:30 DEBUG 20116 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-09-06T22:08:32.372+05:30  INFO 20116 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-06T22:08:32.391+05:30  INFO 20116 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-06T22:08:32.411+05:30  INFO 20116 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:08:32.423+05:30  INFO 20116 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-06T22:08:32.445+05:30  INFO 20116 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-06T22:08:37.238+05:30  INFO 6096 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 6096 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-06T22:08:37.241+05:30  INFO 6096 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-06T22:08:37.922+05:30  INFO 6096 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-06T22:08:37.986+05:30  INFO 6096 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2025-09-06T22:08:38.492+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-06T22:08:38.503+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-06T22:08:38.504+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-06T22:08:38.546+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-06T22:08:38.546+05:30  INFO 6096 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1252 ms
+2025-09-06T22:08:38.654+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-06T22:08:38.712+05:30  INFO 6096 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-06T22:08:38.764+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-06T22:08:38.995+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-06T22:08:39.017+05:30  INFO 6096 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-06T22:08:39.447+05:30  INFO 6096 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@432a6a69
+2025-09-06T22:08:39.449+05:30  INFO 6096 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-06T22:08:39.521+05:30  WARN 6096 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-06T22:08:39.534+05:30  INFO 6096 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-06T22:08:40.437+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-06T22:08:40.577+05:30  INFO 6096 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:08:41.035+05:30  WARN 6096 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-06T22:08:41.074+05:30  INFO 6096 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-06T22:08:41.074+05:30  WARN 6096 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-06T22:08:41.217+05:30 DEBUG 6096 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-09-06T22:08:41.325+05:30 DEBUG 6096 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-06T22:08:41.414+05:30 DEBUG 6096 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-06T22:08:41.485+05:30 DEBUG 6096 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-06T22:08:41.634+05:30  INFO 6096 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-06T22:08:41.640+05:30  INFO 6096 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 4.901 seconds (process running for 5.49)
+2025-09-06T22:09:01.701+05:30  INFO 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-06T22:09:01.701+05:30  INFO 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-06T22:09:01.701+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-06T22:09:01.702+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-06T22:09:01.702+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-06T22:09:01.703+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@475753dd
+2025-09-06T22:09:01.703+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5bbf8daa
+2025-09-06T22:09:01.703+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-06T22:09:01.704+05:30  INFO 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-06T22:09:01.755+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-06T22:09:01.758+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-06T22:09:01.823+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiC, password=1234)]
+2025-09-06T22:09:01.968+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:09:01.972+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEa (truncated)...]
+2025-09-06T22:09:01.982+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:05.237+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Hotels", parameters={masked}
+2025-09-06T22:09:05.238+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T22:09:05.281+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:09:05.281+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@4813f5bb]
+2025-09-06T22:09:05.290+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:05.301+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T22:09:05.301+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:09:05.306+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:06.815+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=2", parameters={masked}
+2025-09-06T22:09:06.816+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:09:06.819+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=2", parameters={masked}
+2025-09-06T22:09:06.820+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T22:09:06.849+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:09:06.850+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@2e019a7]
+2025-09-06T22:09:06.851+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:06.854+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T22:09:06.855+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:09:06.859+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:06.862+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:09:06.862+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@36c774fd]
+2025-09-06T22:09:06.872+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:06.877+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T22:09:06.878+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:09:06.881+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:08.943+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=2", parameters={masked}
+2025-09-06T22:09:08.944+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T22:09:08.954+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:09:08.954+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@280707a5]
+2025-09-06T22:09:08.956+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:08.961+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T22:09:08.963+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:09:08.969+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:09:24.855+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/bookings/create", parameters={}
+2025-09-06T22:09:24.856+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessBookingController#createBooking(BusinessBookingDTO)
+2025-09-06T22:09:24.863+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO@6c4d78c9]
+2025-09-06T22:09:24.943+05:30 ERROR 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] l.i.g.s.c.BusinessBookingController      : Booking creation failed: ModelMapper configuration errors:
+
+1) The destination property lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO.setBusinessDetailId() matches multiple source property hierarchies:
+
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusiness()/lk.ijse.gdse72.staygobackend.entity.Business.getBusinessId()
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusinessDetailId()
+
+1 error
+
+org.modelmapper.ConfigurationException: ModelMapper configuration errors:
+
+1) The destination property lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO.setBusinessDetailId() matches multiple source property hierarchies:
+
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusiness()/lk.ijse.gdse72.staygobackend.entity.Business.getBusinessId()
+	lk.ijse.gdse72.staygobackend.entity.BusinessBooking.getBusinessDetail()/lk.ijse.gdse72.staygobackend.entity.BusinessDetails.getBusinessDetailId()
+
+1 error
+	at org.modelmapper.internal.Errors.throwConfigurationExceptionIfErrorsExist(Errors.java:240) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.matchDestination(ImplicitMappingBuilder.java:159) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:90) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:75) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:131) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:106) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:113) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:589) ~[modelmapper-3.2.4.jar:na]
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:422) ~[modelmapper-3.2.4.jar:na]
+	at lk.ijse.gdse72.staygobackend.service.impl.BusinessBookingServiceImpl.createBooking(BusinessBookingServiceImpl.java:94) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.10.jar:6.2.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.10.jar:6.2.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.10.jar:6.2.10]
+	at lk.ijse.gdse72.staygobackend.service.impl.BusinessBookingServiceImpl$$SpringCGLIB$$0.createBooking(<generated>) ~[classes/:na]
+	at lk.ijse.gdse72.staygobackend.controller.BusinessBookingController.createBooking(BusinessBookingController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.44.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.44.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at lk.ijse.gdse72.staygobackend.util.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:58) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.3.jar:6.5.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.10.jar:6.2.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-06T22:09:24.951+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:09:24.951+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@6c7c2ac5]
+2025-09-06T22:09:24.952+05:30 DEBUG 6096 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-09-06T22:26:13.927+05:30  INFO 6096 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-06T22:26:13.960+05:30  INFO 6096 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-06T22:26:13.987+05:30  INFO 6096 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:26:14.011+05:30  INFO 6096 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-06T22:26:14.041+05:30  INFO 6096 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-06T22:26:19.060+05:30  INFO 21064 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 21064 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-06T22:26:19.061+05:30  INFO 21064 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-06T22:26:19.805+05:30  INFO 21064 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-06T22:26:19.903+05:30  INFO 21064 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+2025-09-06T22:26:20.451+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-06T22:26:20.465+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-06T22:26:20.465+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-06T22:26:20.506+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-06T22:26:20.506+05:30  INFO 21064 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1401 ms
+2025-09-06T22:26:20.614+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-06T22:26:20.682+05:30  INFO 21064 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-06T22:26:20.735+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-06T22:26:21.008+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-06T22:26:21.030+05:30  INFO 21064 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-06T22:26:21.435+05:30  INFO 21064 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7dddfc35
+2025-09-06T22:26:21.437+05:30  INFO 21064 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-06T22:26:21.527+05:30  WARN 21064 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-06T22:26:21.542+05:30  INFO 21064 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-06T22:26:22.462+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-06T22:26:22.586+05:30  INFO 21064 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:26:23.018+05:30  WARN 21064 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-06T22:26:23.050+05:30  INFO 21064 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-06T22:26:23.050+05:30  WARN 21064 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-06T22:26:23.183+05:30 DEBUG 21064 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-09-06T22:26:23.273+05:30 DEBUG 21064 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-06T22:26:23.360+05:30 DEBUG 21064 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-06T22:26:23.417+05:30 DEBUG 21064 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-06T22:26:23.620+05:30  INFO 21064 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-06T22:26:23.625+05:30  INFO 21064 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 4.99 seconds (process running for 5.625)
+2025-09-06T22:28:31.645+05:30  INFO 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-06T22:28:31.645+05:30  INFO 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-06T22:28:31.645+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-06T22:28:31.645+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-06T22:28:31.645+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-06T22:28:31.646+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@623dc0b8
+2025-09-06T22:28:31.648+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1d642682
+2025-09-06T22:28:31.648+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-06T22:28:31.648+05:30  INFO 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-09-06T22:28:31.793+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=2", parameters={masked}
+2025-09-06T22:28:31.795+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T22:28:31.878+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:28:31.880+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@435c38dc]
+2025-09-06T22:28:31.903+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:28:31.914+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T22:28:31.915+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:28:31.919+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:28:42.814+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=2", parameters={masked}
+2025-09-06T22:28:42.815+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T22:28:42.823+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:28:42.823+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@2d08fd92]
+2025-09-06T22:28:42.825+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:28:42.833+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T22:28:42.834+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:28:42.836+05:30 DEBUG 21064 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:28:55.256+05:30  INFO 21064 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-06T22:28:55.264+05:30  INFO 21064 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-06T22:28:55.271+05:30  INFO 21064 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:28:55.273+05:30  INFO 21064 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-06T22:28:55.283+05:30  INFO 21064 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-06T22:28:57.696+05:30  INFO 5748 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 5748 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-06T22:28:57.698+05:30  INFO 5748 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-06T22:28:58.230+05:30  INFO 5748 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-06T22:28:58.278+05:30  INFO 5748 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2025-09-06T22:28:58.694+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-06T22:28:58.707+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-06T22:28:58.707+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-06T22:28:58.755+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-06T22:28:58.756+05:30  INFO 5748 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1019 ms
+2025-09-06T22:28:58.856+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-06T22:28:58.938+05:30  INFO 5748 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-06T22:28:58.989+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-06T22:28:59.203+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-06T22:28:59.227+05:30  INFO 5748 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-06T22:28:59.536+05:30  INFO 5748 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c206b14
+2025-09-06T22:28:59.538+05:30  INFO 5748 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-06T22:28:59.587+05:30  WARN 5748 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-06T22:28:59.601+05:30  INFO 5748 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-06T22:29:00.464+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-06T22:29:00.543+05:30  INFO 5748 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:29:00.935+05:30  WARN 5748 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-06T22:29:00.963+05:30  INFO 5748 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-06T22:29:00.964+05:30  WARN 5748 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-06T22:29:01.076+05:30 DEBUG 5748 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-09-06T22:29:01.161+05:30 DEBUG 5748 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-06T22:29:01.236+05:30 DEBUG 5748 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-06T22:29:01.284+05:30 DEBUG 5748 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-06T22:29:01.474+05:30  INFO 5748 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-06T22:29:01.478+05:30  INFO 5748 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 4.137 seconds (process running for 4.692)
+2025-09-06T22:29:21.595+05:30  INFO 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-06T22:29:21.596+05:30  INFO 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-06T22:29:21.596+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-06T22:29:21.596+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-06T22:29:21.596+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-06T22:29:21.598+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1b5e6983
+2025-09-06T22:29:21.598+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@50b1dfab
+2025-09-06T22:29:21.598+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-06T22:29:21.598+05:30  INFO 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-06T22:29:21.645+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-06T22:29:21.648+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-06T22:29:21.736+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiC, password=1234)]
+2025-09-06T22:29:21.892+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:29:21.895+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEa (truncated)...]
+2025-09-06T22:29:21.905+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:24.785+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Hotels", parameters={masked}
+2025-09-06T22:29:24.785+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T22:29:24.826+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:29:24.826+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@41e6595f]
+2025-09-06T22:29:24.839+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:24.852+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T22:29:24.853+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:29:24.859+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:26.259+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=2", parameters={masked}
+2025-09-06T22:29:26.260+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T22:29:26.262+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=2", parameters={masked}
+2025-09-06T22:29:26.263+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:29:26.286+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:29:26.287+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@597957ce]
+2025-09-06T22:29:26.289+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:26.294+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096497992_staygo-background02.webp", parameters={}
+2025-09-06T22:29:26.295+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:29:26.299+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:26.301+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:29:26.301+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@6ab64e65]
+2025-09-06T22:29:26.308+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:26.313+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T22:29:26.314+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:29:26.316+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:28.645+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=2", parameters={masked}
+2025-09-06T22:29:28.646+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T22:29:28.654+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:29:28.654+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@3a77d3fd]
+2025-09-06T22:29:28.655+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:28.659+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096578084_hotelroom02.jpg", parameters={}
+2025-09-06T22:29:28.659+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:29:28.662+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:29:49.672+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/bookings/create", parameters={}
+2025-09-06T22:29:49.673+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessBookingController#createBooking(BusinessBookingDTO)
+2025-09-06T22:29:49.685+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO@180c92e7]
+2025-09-06T22:29:49.769+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:29:49.769+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@7aaf7df7]
+2025-09-06T22:29:49.771+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-06T22:33:21.492+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Resorts", parameters={masked}
+2025-09-06T22:33:21.494+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T22:33:21.510+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:33:21.511+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@7d7dd979]
+2025-09-06T22:33:21.514+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:21.526+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096225256_staygo-background01.jpg", parameters={}
+2025-09-06T22:33:21.528+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:33:21.534+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:24.476+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=1", parameters={masked}
+2025-09-06T22:33:24.477+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T22:33:24.477+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=1", parameters={masked}
+2025-09-06T22:33:24.477+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:33:24.489+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:33:24.489+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@2c9eacab]
+2025-09-06T22:33:24.490+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:24.495+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:33:24.495+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@5da757a3]
+2025-09-06T22:33:24.495+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096225256_staygo-background01.jpg", parameters={}
+2025-09-06T22:33:24.496+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:33:24.496+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:24.499+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:24.502+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096266281_hotelroom02.jpg", parameters={}
+2025-09-06T22:33:24.503+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:33:24.508+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:27.119+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=1", parameters={masked}
+2025-09-06T22:33:27.119+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T22:33:27.133+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:33:27.133+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@7f578fcd]
+2025-09-06T22:33:27.135+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:27.141+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096266281_hotelroom02.jpg", parameters={}
+2025-09-06T22:33:27.143+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:33:27.144+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:52.560+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/bookings/create", parameters={}
+2025-09-06T22:33:52.560+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessBookingController#createBooking(BusinessBookingDTO)
+2025-09-06T22:33:52.568+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO@7b94c61b]
+2025-09-06T22:33:52.614+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:33:52.614+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@11615139]
+2025-09-06T22:33:52.617+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-06T22:33:57.696+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Resorts", parameters={masked}
+2025-09-06T22:33:57.696+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T22:33:57.712+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:33:57.713+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@3c5cba35]
+2025-09-06T22:33:57.715+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:33:57.723+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096225256_staygo-background01.jpg", parameters={}
+2025-09-06T22:33:57.727+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:33:57.731+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:34:35.156+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Resorts", parameters={masked}
+2025-09-06T22:34:35.157+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T22:34:35.163+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:34:35.163+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@4a607039]
+2025-09-06T22:34:35.164+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:34:35.170+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096225256_staygo-background01.jpg", parameters={}
+2025-09-06T22:34:35.171+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:34:35.173+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:34:36.867+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=1", parameters={masked}
+2025-09-06T22:34:36.868+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:34:36.868+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=1", parameters={masked}
+2025-09-06T22:34:36.868+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T22:34:36.873+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:34:36.874+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@26f87d2b]
+2025-09-06T22:34:36.875+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:34:36.878+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:34:36.878+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@3132a29b]
+2025-09-06T22:34:36.880+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:34:36.881+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757096225256_staygo-background01.jpg", parameters={}
+2025-09-06T22:34:36.882+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:34:36.885+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:34:36.887+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757096266281_hotelroom02.jpg", parameters={}
+2025-09-06T22:34:36.888+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:34:36.889+05:30 DEBUG 5748 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:38:49.337+05:30  INFO 5748 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-06T22:38:49.379+05:30  INFO 5748 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-06T22:38:49.423+05:30  INFO 5748 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:38:49.457+05:30  INFO 5748 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-06T22:38:49.518+05:30  INFO 5748 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-06T22:38:52.608+05:30  INFO 16440 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 16440 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-06T22:38:52.610+05:30  INFO 16440 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-06T22:38:53.269+05:30  INFO 16440 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-06T22:38:53.333+05:30  INFO 16440 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2025-09-06T22:38:53.840+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-06T22:38:53.852+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-06T22:38:53.852+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-06T22:38:53.892+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-06T22:38:53.893+05:30  INFO 16440 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1242 ms
+2025-09-06T22:38:54.002+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-06T22:38:54.056+05:30  INFO 16440 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-06T22:38:54.112+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-06T22:38:54.357+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-06T22:38:54.389+05:30  INFO 16440 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-06T22:38:55.058+05:30  INFO 16440 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2336cd91
+2025-09-06T22:38:55.059+05:30  INFO 16440 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-06T22:38:55.118+05:30  WARN 16440 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-06T22:38:55.131+05:30  INFO 16440 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-06T22:38:56.038+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-06T22:38:56.583+05:30  INFO 16440 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:38:57.095+05:30  WARN 16440 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-06T22:38:57.127+05:30  INFO 16440 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-06T22:38:57.128+05:30  WARN 16440 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-06T22:38:57.282+05:30 DEBUG 16440 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+2025-09-06T22:38:57.370+05:30 DEBUG 16440 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-06T22:38:57.452+05:30 DEBUG 16440 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-06T22:38:57.504+05:30 DEBUG 16440 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-06T22:38:57.649+05:30  INFO 16440 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-06T22:38:57.654+05:30  INFO 16440 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 5.645 seconds (process running for 6.373)
+2025-09-06T22:40:16.449+05:30  INFO 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-06T22:40:16.450+05:30  INFO 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-06T22:40:16.450+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-06T22:40:16.450+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-06T22:40:16.450+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-06T22:40:16.456+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@645b67d6
+2025-09-06T22:40:16.456+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3a5244a1
+2025-09-06T22:40:16.456+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-06T22:40:16.457+05:30  INFO 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-09-06T22:40:16.510+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/auth/roleSelector", parameters={}
+2025-09-06T22:40:16.512+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#getRoleSelector()
+2025-09-06T22:40:16.555+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:40:16.559+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=ok, data=Role Selected Successfully)]
+2025-09-06T22:40:16.573+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:41:09.387+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/register", parameters={}
+2025-09-06T22:41:09.387+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#registerUser(RegisterDTO)
+2025-09-06T22:41:09.423+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterDTO(fullName=Dilmi Business, email=dilmibusiness@gmail.com, username=DilmiB, password=1234,  (truncated)...]
+2025-09-06T22:41:09.528+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:41:09.528+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=ok, data=User Registration Success...)]
+2025-09-06T22:41:09.529+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:41:19.617+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-06T22:41:19.618+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-06T22:41:19.621+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiB, password=1234)]
+2025-09-06T22:41:19.735+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:41:19.736+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEa (truncated)...]
+2025-09-06T22:41:19.738+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:41:20.910+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAllThisUserBusinesses?userId=2", parameters={masked}
+2025-09-06T22:41:20.910+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllThisUserBusinesses(Long)
+2025-09-06T22:41:20.950+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:41:20.950+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@1a6c363e]
+2025-09-06T22:41:20.953+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:41:54.447+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/business/create", parameters={multipart}
+2025-09-06T22:41:54.529+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#createBusiness(String, String, String, String, String, String, String, String, Long, MultipartFile)
+2025-09-06T22:41:54.597+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:41:54.597+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@186dc13c]
+2025-09-06T22:41:54.602+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-06T22:41:54.641+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAllThisUserBusinesses?userId=2", parameters={masked}
+2025-09-06T22:41:54.642+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllThisUserBusinesses(Long)
+2025-09-06T22:41:54.652+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:41:54.653+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@220aa13c]
+2025-09-06T22:41:54.660+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:41:54.670+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757178714536_staygo-background02.webp", parameters={}
+2025-09-06T22:41:54.671+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:41:54.684+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:42:01.017+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=1", parameters={masked}
+2025-09-06T22:42:01.017+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:42:01.027+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:42:01.028+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@4bc603b0]
+2025-09-06T22:42:01.029+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:43:17.994+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/businessDetails/create", parameters={multipart}
+2025-09-06T22:43:18.016+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#createBusinessDetails(Integer, Integer, BigDecimal, BigDecimal, String, String, Long, MultipartFile)
+2025-09-06T22:43:18.052+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:43:18.053+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@8fcf1f5]
+2025-09-06T22:43:18.058+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-06T22:43:18.080+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=1", parameters={masked}
+2025-09-06T22:43:18.081+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:43:18.092+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:43:18.093+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@b6a1a87]
+2025-09-06T22:43:18.104+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:43:18.113+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757178798018_hotelroom02.jpg", parameters={}
+2025-09-06T22:43:18.114+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:43:18.129+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:43:43.634+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/auth/roleSelector", parameters={}
+2025-09-06T22:43:43.634+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#getRoleSelector()
+2025-09-06T22:43:43.635+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:43:43.636+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=ok, data=Role Selected Successfully)]
+2025-09-06T22:43:43.637+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:10.714+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/register", parameters={}
+2025-09-06T22:44:10.715+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#registerUser(RegisterDTO)
+2025-09-06T22:44:10.717+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterDTO(fullName=Dilmi Client, email=dilmiclient@gmail.com, username=DilmiC, password=1234, role (truncated)...]
+2025-09-06T22:44:10.802+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:44:10.802+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=ok, data=User Registration Success...)]
+2025-09-06T22:44:10.802+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:18.860+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-06T22:44:18.860+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-06T22:44:18.861+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiC, password=1234)]
+2025-09-06T22:44:18.934+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:44:18.934+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEa (truncated)...]
+2025-09-06T22:44:18.935+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:22.137+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getAll?category=Hotels", parameters={masked}
+2025-09-06T22:44:22.137+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getAllBusinesses(String)
+2025-09-06T22:44:22.143+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:44:22.143+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@37a7f39f]
+2025-09-06T22:44:22.145+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:22.149+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757178714536_staygo-background02.webp", parameters={}
+2025-09-06T22:44:22.150+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:44:22.153+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:26.194+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getByBusinessId?businessId=1", parameters={masked}
+2025-09-06T22:44:26.194+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsByBusinessId(Long)
+2025-09-06T22:44:26.199+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/business/getById?businessId=1", parameters={masked}
+2025-09-06T22:44:26.199+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessController#getBusinessById(Long)
+2025-09-06T22:44:26.203+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:44:26.203+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@74e742bf]
+2025-09-06T22:44:26.205+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:26.207+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:44:26.208+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@733cfcf0]
+2025-09-06T22:44:26.211+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:26.212+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757178798018_hotelroom02.jpg", parameters={}
+2025-09-06T22:44:26.212+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:44:26.217+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:26.219+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/uploads/business-logos/1757178714536_staygo-background02.webp", parameters={}
+2025-09-06T22:44:26.220+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:44:26.223+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:29.991+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/businessDetails/getById?businessDetailId=1", parameters={masked}
+2025-09-06T22:44:29.992+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessDetailsController#getDetailsById(Long)
+2025-09-06T22:44:30.001+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:44:30.002+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@63709284]
+2025-09-06T22:44:30.005+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:44:30.011+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/uploads/roomImage-logos/1757178798018_hotelroom02.jpg", parameters={}
+2025-09-06T22:44:30.012+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:uploads/]]
+2025-09-06T22:44:30.015+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-06T22:45:39.353+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/bookings/create", parameters={}
+2025-09-06T22:45:39.355+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.BusinessBookingController#createBooking(BusinessBookingDTO)
+2025-09-06T22:45:39.367+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.dto.BusinessBookingDTO@1d865153]
+2025-09-06T22:45:39.397+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-06T22:45:39.397+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@c6e57e]
+2025-09-06T22:45:39.400+05:30 DEBUG 16440 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-06T22:55:54.494+05:30  INFO 16440 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-06T22:55:54.530+05:30  INFO 16440 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-06T22:55:54.575+05:30  INFO 16440 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-06T22:55:54.622+05:30  INFO 16440 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-06T22:55:54.697+05:30  INFO 16440 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

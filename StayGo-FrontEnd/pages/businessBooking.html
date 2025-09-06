@@ -18,49 +18,37 @@
     <!-- Booking Form -->
     <form id="bookingForm" class="card p-4 shadow-sm">
 
-    <!-- Check-in Date -->
-    <div class="mb-3">
-        <label for="checkInDate" class="form-label">Check-In Date</label>
-        <input type="date" class="form-control" id="checkInDate" required>
-    </div>
+        <!-- Check-in Date -->
+        <div class="mb-3">
+            <label for="checkInDate" class="form-label">Check-In Date</label>
+            <input type="date" class="form-control" id="checkInDate" required>
+        </div>
 
-    <!-- Check-out Date -->
-    <div class="mb-3">
-        <label for="checkOutDate" class="form-label">Check-Out Date</label>
-        <input type="date" class="form-control" id="checkOutDate" required>
-    </div>
+        <!-- Check-out Date -->
+        <div class="mb-3">
+            <label for="checkOutDate" class="form-label">Check-Out Date</label>
+            <input type="date" class="form-control" id="checkOutDate" required>
+        </div>
 
-    <!-- Booking Time (Day / Night / Both) -->
-    <div class="mb-3">
-        <label for="bookingTime" class="form-label">Booking Time</label>
-        <select class="form-select" id="bookingTime" required>
-            <option value="" disabled selected>-- Select --</option>
-            <option value="DAY">Day</option>
-            <option value="NIGHT">Night</option>
-            <option value="BOTH">Day + Night</option>
-        </select>
-    </div>
+        <!-- Booking Time (Day / Night / Both) -->
+        <div class="mb-3">
+            <label for="bookingTime" class="form-label">Booking Time</label>
+            <select class="form-select" id="bookingTime" required>
+                <option value="" disabled selected>-- Select --</option>
+                <option value="DAY">Day</option>
+                <option value="NIGHT">Night</option>
+                <option value="BOTH">Day + Night</option>
+            </select>
+        </div>
 
-    <!-- Room Count -->
-    <div class="mb-3">
-        <label for="roomCount" class="form-label">Room Count</label>
-        <input type="number" class="form-control" id="roomCount" min="1" required>
-    </div>
+        <!-- Room Count -->
+        <div class="mb-3">
+            <label for="roomCount" class="form-label">Room Count</label>
+            <input type="number" class="form-control" id="roomCount" min="1" required>
+        </div>
 
-    <!-- Guests Count (extra info if needed) -->
-    <!-- <div class="mb-3">
-        <label for="guestsCount" class="form-label">Guests Count</label>
-        <input type="number" class="form-control" id="guestsCount" min="1" required>
-    </div> -->
-
-    <!-- Status (Optional: Default PENDING → backend set karanna) -->
-    <!-- <div class="mb-3">
-        <label for="status" class="form-label">Booking Status</label>
-        <input type="text" class="form-control" id="status" value="PENDING" disabled>
-    </div> -->
-
-    <button type="submit" class="btn btn-success w-100">Confirm Booking</button>
-</form>
+        <button type="submit" class="btn btn-success w-100">Confirm Booking</button>
+    </form>
 
 </div>
 

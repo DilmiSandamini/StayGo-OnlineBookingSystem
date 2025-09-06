@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -30,9 +32,11 @@ public class User {
 
     private String status;  // Active, Inactive
 
+    @CreationTimestamp
     private Timestamp createdAt;
-    private Timestamp updatedAt;
 
+    @UpdateTimestamp
+    private Timestamp updatedAt;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Business> businesses;
 }
