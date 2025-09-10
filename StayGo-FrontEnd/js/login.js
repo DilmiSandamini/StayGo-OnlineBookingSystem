@@ -40,7 +40,7 @@ $(document).ready(function () {
 
             setTimeout(() => {
               if (userRole === "ADMIN") {
-                window.location.href = "/pages/dashboardAdmin.html";
+                window.location.href = "/pages/adminDashboard.html";
               } else if (userRole === "CLIENT") {
                 window.location.href = "/pages/clientDashboard.html";
               } else if (userRole === "BUSINESS") {

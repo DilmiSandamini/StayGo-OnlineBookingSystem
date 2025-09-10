@@ -1,5 +1,6 @@
 package lk.ijse.gdse72.staygobackend.service;
 
+import lk.ijse.gdse72.staygobackend.dto.UserDTO;
 import lk.ijse.gdse72.staygobackend.util.JwtUtil;
 import lk.ijse.gdse72.staygobackend.dto.AuthDTO;
 import lk.ijse.gdse72.staygobackend.dto.AuthResponseDTO;
@@ -8,6 +9,7 @@ import lk.ijse.gdse72.staygobackend.entity.Role;
 import lk.ijse.gdse72.staygobackend.entity.User;
 import lk.ijse.gdse72.staygobackend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,6 +23,7 @@ public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
+    private final ModelMapper modelMapper;
 
     public String register (RegisterDTO registerDTO) {
         if(userRepository.findByUsername(
@@ -65,4 +68,5 @@ public class AuthService {
         System.out.println("Authentication successful for user: " + authDTO.getUsername());
         return  new AuthResponseDTO(token, role, user.getId());
     }
+
 }

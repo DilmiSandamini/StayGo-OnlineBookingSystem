@@ -1,0 +1,70 @@
+/* Admin Dashboard CSS */
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #0d1b44, #6472c0);
+      min-height: 100vh;
+      display: flex;
+      overflow-x: hidden;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      min-height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 80px;
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      color: #e9ecef;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #6c63ff;
+    }
+    .sidebar .active {
+      background: linear-gradient(90deg, #1c1950, #36968f);
+      font-weight: 600;
+    }
+    /* Navbar */
+    nav.navbar {
+      height: 70px;
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin-left: 260px;
+    }
+    /* Content */
+    .content {
+      margin-left: 260px;
+      padding: 90px 30px 30px;
+      color: white;
+      width: 100%;
+    }
+    /* Cards */
+    .data-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 15px 20px;
+      color: #fff;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+    .data-box:hover {
+      transform: translateY(-3px);
+    }

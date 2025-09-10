@@ -42,10 +42,10 @@ $(document).ready(function () {
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="fw-bold">${d.luxuryLevel}</h5>
-                                    <p>Rooms: ${d.roomsCount}</p>
-                                    <p>Beds: ${d.bedsCount}</p>
-                                    <p>Day Price: LKR ${d.pricePerDay}</p>
-                                    <p>Night Price: LKR ${d.pricePerNight}</p>
+                                    <p>Rooms count: ${d.roomsCount}</p>
+                                    <p>Beds per room: ${d.bedsCount}</p>
+                                    <p>Price Per Day One Room : LKR ${d.pricePerDay}</p>
+                                    <p>Price Per Night One Room : LKR ${d.pricePerNight}</p>
                                     <p>${d.facilities || ""}</p>
                                 </div>
                             </div>
@@ -84,8 +84,8 @@ $(document).ready(function () {
             userId: parseInt(userId, 10),
             businessDetailId: parseInt(detailId, 10),
             bookingTime: $("#bookingTime").val(),
-            checkInTime: $("#checkInDate").val() + "T12:00:00",
-            checkOutTime: $("#checkOutDate").val() + "T10:00:00",
+            checkInTime: $("#checkInDate").val()  + "T12:00:00",
+            checkOutTime: $("#checkOutDate").val() + "T12:00:00",
             roomCount: parseInt($("#roomCount").val(), 10)
         };
 

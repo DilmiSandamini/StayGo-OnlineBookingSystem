@@ -28,7 +28,7 @@ public class User {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private Role role;    //   ADMIN, CLIENT, PARTNER, BUSINESS
+    private Role role;    //   ADMIN, CLIENT, BUSINESS
 
     private String status;  // Active, Inactive
 

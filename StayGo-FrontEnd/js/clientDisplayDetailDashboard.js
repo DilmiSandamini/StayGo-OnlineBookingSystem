@@ -76,8 +76,8 @@ $(document).ready(async function () {
                                     <h5 class="fw-bold">${detail.luxuryLevel}</h5>
                                     <p>Rooms: ${detail.roomsCount}</p>
                                     <p>Beds per room: ${detail.bedsCount}</p>
-                                    <p>Day Price: LKR ${detail.pricePerDay}</p>
-                                    <p>Night Price: LKR ${detail.pricePerNight}</p>
+                                    <p>Price Per Day One Room : LKR ${detail.pricePerDay}</p>
+                                    <p>Price Per Night One Room : LKR ${detail.pricePerNight}</p>
                                     <p>${detail.facilities || ""}</p>
                                     <button class="btn btn-sm btn-primary" onclick="window.location.href='/pages/businessBooking.html?businessId=${businessId}&detailId=${detail.businessDetailId}'">Processe To Booking</button>
                                 </div>

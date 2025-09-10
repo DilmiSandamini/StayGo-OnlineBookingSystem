@@ -62,8 +62,8 @@ $(document).ready(async function () {
                                     <h5> ${detail.luxuryLevel}</h5>
                                     <p>Rooms: ${detail.roomsCount}</p>
                                     <p>Beds per room: ${detail.bedsCount}</p>
-                                    <p>Price Per Day One Room (LKR): LKR ${detail.pricePerDay}</p>
-                                    <p>Price Per Night One Room (LKR): LKR ${detail.pricePerNight}</p>
+                                    <p>Price Per Day One Room : LKR ${detail.pricePerDay}</p>
+                                    <p>Price Per Night One Room : LKR ${detail.pricePerNight}</p>
                                     <p>${detail.facilities || ""}</p>
                                 </div>
                             </div>
