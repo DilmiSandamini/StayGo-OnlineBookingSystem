@@ -8,6 +8,8 @@ import lk.ijse.gdse72.staygobackend.service.UserService;
 import lk.ijse.gdse72.staygobackend.util.APIResponse;
 import lombok.RequiredArgsConstructor;
 
+import org.hibernate.query.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,8 +44,5 @@ public class AdminDashboardUserManageController {
                 authService.register(registerDTO)
         ));
     }
-
-
-
 
 }

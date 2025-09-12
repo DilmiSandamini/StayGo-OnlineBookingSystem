@@ -1,6 +1,8 @@
 package lk.ijse.gdse72.staygobackend.repository;
 
+import lk.ijse.gdse72.staygobackend.entity.Role;
 import lk.ijse.gdse72.staygobackend.entity.User;
+import org.hibernate.query.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
