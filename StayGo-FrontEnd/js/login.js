@@ -26,6 +26,7 @@ $(document).ready(function () {
             const token = response.data.accessToken;
             const userRole = response.data.role;
             const userId = response.data.userId; // <-- save userId
+            
 
             cookieStore.set("token", token);
             sessionStorage.setItem("userId", userId); // <-- save for business creation

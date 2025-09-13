@@ -16,4 +16,5 @@ public interface BusinessService {
 
     Business getBusinessById(Long businessId);
 
+    void updateBusiness(Business business);
 }

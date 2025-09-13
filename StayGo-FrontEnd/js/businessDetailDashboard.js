@@ -65,6 +65,7 @@ $(document).ready(async function () {
                                     <p>Price Per Day One Room : LKR ${detail.pricePerDay}</p>
                                     <p>Price Per Night One Room : LKR ${detail.pricePerNight}</p>
                                     <p>${detail.facilities || ""}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

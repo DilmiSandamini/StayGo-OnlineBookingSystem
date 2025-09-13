@@ -67,4 +67,10 @@ public class BusinessServiceImpl implements BusinessService {
         return businessRepository.findById(businessId)
                 .orElseThrow(() -> new RuntimeException("Business not found with ID: " + businessId));
     }
+
+    @Override
+    public void updateBusiness(Business business) {
+        business.setUpdatedAt(new Timestamp(System.currentTimeMillis()));
+        businessRepository.save(business);
+    }
 }

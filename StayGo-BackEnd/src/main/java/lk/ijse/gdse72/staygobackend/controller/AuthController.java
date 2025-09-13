@@ -1,5 +1,6 @@
 package lk.ijse.gdse72.staygobackend.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lk.ijse.gdse72.staygobackend.dto.ApiResponse;
 import lk.ijse.gdse72.staygobackend.dto.AuthDTO;
 import lk.ijse.gdse72.staygobackend.dto.RegisterDTO;

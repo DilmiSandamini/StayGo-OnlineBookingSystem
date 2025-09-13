@@ -24,6 +24,10 @@
 
 }
 
+.dropdown-toggle::after {
+    display: none; /* hide default caret */
+}
+
 .container1{
     background-color: #003580;
     width: 100%;

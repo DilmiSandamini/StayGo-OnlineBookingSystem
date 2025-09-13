@@ -130,4 +130,68 @@ public class BusinessController {
                     .body(new APIResponse<>(500, "Error fetching business", null));
         }
     }
+
+    @PutMapping("/update/{businessId}")
+    public ResponseEntity<APIResponse<String>> updateBusiness(
+            @PathVariable Long businessId,
+            @RequestParam String businessName,
+            @RequestParam String contactNumber1,
+            @RequestParam String businessEmail,
+            @RequestParam String businessAddress,
+            @RequestParam String businessDescription,
+            @RequestParam(required = false) MultipartFile logo
+    ) {
+        try {
+            // Fetch existing business
+            Business business = businessService.getBusinessById(businessId);
+
+            // Update fields
+            business.setBusinessName(businessName);
+            business.setContactNumber1(contactNumber1);
+            business.setBusinessEmail(businessEmail);
+            business.setBusinessAddress(businessAddress);
+            business.setBusinessDescription(businessDescription);
+
+            // Update logo if new file uploaded
+            if (logo != null && !logo.isEmpty()) {
+                String uploadDir = "uploads/business-logos/";
+                Path uploadPath = Paths.get(uploadDir);
+                if (!Files.exists(uploadPath)) Files.createDirectories(uploadPath);
+
+                String fileName = System.currentTimeMillis() + "_" + logo.getOriginalFilename();
+                Path filePath = uploadPath.resolve(fileName);
+                Files.copy(logo.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+
+                business.setBusinessLogo("uploads/business-logos/" + fileName);
+            }
+
+            businessService.updateBusiness(business); // Make sure service layer has this method
+
+            return ResponseEntity.ok(new APIResponse<>(200, "Business updated successfully", null));
+
+        } catch (Exception e) {
+            log.error("Error updating business", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new APIResponse<>(500, "Error updating business", null));
+        }
+    }
+
+    @PutMapping("/deactivate/{businessId}")
+    public ResponseEntity<APIResponse<String>> deactivateBusiness(@PathVariable Long businessId) {
+        try {
+            Business business = businessService.getBusinessById(businessId);
+
+            // Set inactive
+            business.setBusinessStatus("INACTIVE");
+            businessService.updateBusiness(business);
+
+            return ResponseEntity.ok(new APIResponse<>(200, "Business deactivated successfully", null));
+        } catch (Exception e) {
+            log.error("Error deactivating business", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new APIResponse<>(500, "Error deactivating business", null));
+        }
+    }
+
+
 }

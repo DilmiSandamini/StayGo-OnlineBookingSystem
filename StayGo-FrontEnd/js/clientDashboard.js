@@ -29,6 +29,11 @@ $(document).ready(async function () {
                 }
 
                 response.data.forEach(b => {
+                    // === ADD THIS CHECK ===
+                    if (b.businessStatus === "INACTIVE") {
+                        return; // Skip inactive businesses
+                    }
+
                     const card = `
                         <div class="col-md-4 mb-4">
                             <div class="card business-card" data-id="${b.businessId}">
