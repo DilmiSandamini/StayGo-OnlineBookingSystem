@@ -27,6 +27,7 @@ public class BusinessDetails {
     private BigDecimal pricePerNight;
     private String luxuryLevel;
     private String status; // Active, Not Active
+    @Lob
     private String facilities;
     private String roomImage;
 

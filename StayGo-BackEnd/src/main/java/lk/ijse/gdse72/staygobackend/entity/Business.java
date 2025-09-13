@@ -28,6 +28,7 @@ public class Business {
     private String businessAddress;
     private String businessCategory;
     private String businessLogo;
+    @Lob
     private String businessDescription;
     private String businessStatus;
 
