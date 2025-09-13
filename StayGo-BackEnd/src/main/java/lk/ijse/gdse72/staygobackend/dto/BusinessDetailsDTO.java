@@ -37,6 +37,7 @@ public class BusinessDetailsDTO {
 
     @NotBlank(message = "Luxury level cannot be blank")
     private String luxuryLevel;
+    private String status; // Active, Not Active
 
     private String facilities;
 

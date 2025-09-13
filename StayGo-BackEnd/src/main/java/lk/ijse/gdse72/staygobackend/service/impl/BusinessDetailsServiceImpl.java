@@ -59,4 +59,43 @@ public class BusinessDetailsServiceImpl implements BusinessDetailsService {
         Optional<BusinessDetails> optional = businessDetailsRepository.findById(businessDetailId);
         return optional.orElse(null);
     }
+
+    @Override
+    public void updateBusinessDetails(BusinessDetailsDTO dto) {
+        BusinessDetails existing = businessDetailsRepository.findById(dto.getBusinessDetailId())
+                .orElseThrow(() -> new RuntimeException("BusinessDetails not found with ID: " + dto.getBusinessDetailId()));
+
+        // Update fields
+        existing.setRoomsCount(dto.getRoomsCount());
+        existing.setBedsCount(dto.getBedsCount());
+        existing.setPricePerDay(dto.getPricePerDay());
+        existing.setPricePerNight(dto.getPricePerNight());
+        existing.setLuxuryLevel(dto.getLuxuryLevel());
+        existing.setFacilities(dto.getFacilities());
+        existing.setStatus(dto.getStatus()); // ✅ Now updates status too
+
+        // If new image path comes -> update
+        if (dto.getRoomImage() != null && !dto.getRoomImage().isEmpty()) {
+            existing.setRoomImage(dto.getRoomImage());
+        }
+
+        // Update business reference if provided
+        if (dto.getBusinessId() != null) {
+            Business business = businessRepository.findById(dto.getBusinessId())
+                    .orElseThrow(() -> new RuntimeException("Business not found with ID: " + dto.getBusinessId()));
+            existing.setBusiness(business);
+        }
+
+        existing.setUpdatedAt(new Timestamp(System.currentTimeMillis()));
+
+        businessDetailsRepository.save(existing);
+    }
+
+    @Override
+    public void deleteBusinessDetails(Long businessDetailId) {
+        BusinessDetails details = businessDetailsRepository.findById(businessDetailId)
+                .orElseThrow(() -> new RuntimeException("BusinessDetails not found with ID: " + businessDetailId));
+        businessDetailsRepository.delete(details);
+    }
+
 }

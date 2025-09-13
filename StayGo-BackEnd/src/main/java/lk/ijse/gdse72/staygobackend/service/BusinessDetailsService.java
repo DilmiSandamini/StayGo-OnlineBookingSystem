@@ -13,4 +13,8 @@ public interface BusinessDetailsService {
     List<BusinessDetails> getDetailsByBusinessId(Long businessId);
 
     BusinessDetails getDetailsById(Long businessDetailId);
+
+    void updateBusinessDetails(BusinessDetailsDTO dto);
+
+    void deleteBusinessDetails(Long businessDetailId);
 }

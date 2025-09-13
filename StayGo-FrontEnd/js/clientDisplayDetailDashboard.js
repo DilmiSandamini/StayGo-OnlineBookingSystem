@@ -67,6 +67,8 @@ $(document).ready(async function () {
                     return;
                 }
                 response.data.forEach(detail => {
+                    // Only show ACTIVE rooms
+                        if (detail.status !== "ACTIVE") return;
                     container.append(`
                         <div class="col-md-4 mb-4">
                             <div class="card shadow-sm h-100">

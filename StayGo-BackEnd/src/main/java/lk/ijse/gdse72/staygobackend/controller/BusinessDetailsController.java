@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -42,6 +43,7 @@ public class BusinessDetailsController {
             @RequestParam BigDecimal pricePerDay,
             @RequestParam BigDecimal pricePerNight,
             @RequestParam String luxuryLevel,
+            @RequestParam String status,
             @RequestParam String facilities,
             @RequestParam Long businessId,
             @RequestPart("roomImage") MultipartFile roomImage
@@ -65,6 +67,7 @@ public class BusinessDetailsController {
             businessDetailsDTO.setPricePerDay(pricePerDay);
             businessDetailsDTO.setPricePerNight(pricePerNight);
             businessDetailsDTO.setLuxuryLevel(luxuryLevel);
+            businessDetailsDTO.setStatus(status);
             businessDetailsDTO.setFacilities(facilities);
             businessDetailsDTO.setRoomImage("uploads/roomImage-logos/" + fileName);
 
@@ -110,6 +113,7 @@ public class BusinessDetailsController {
                 dto.setPricePerDay(d.getPricePerDay());
                 dto.setPricePerNight(d.getPricePerNight());
                 dto.setLuxuryLevel(d.getLuxuryLevel());
+                dto.setStatus(d.getStatus());
                 dto.setFacilities(d.getFacilities());
                 dto.setRoomImage(d.getRoomImage());
                 detailsDTOs.add(dto);
@@ -140,6 +144,7 @@ public class BusinessDetailsController {
             dto.setPricePerDay(details.getPricePerDay());
             dto.setPricePerNight(details.getPricePerNight());
             dto.setLuxuryLevel(details.getLuxuryLevel());
+            dto.setStatus(details.getStatus());
             dto.setFacilities(details.getFacilities());
             dto.setRoomImage(details.getRoomImage());
 
@@ -151,5 +156,61 @@ public class BusinessDetailsController {
         }
     }
 
+    @PutMapping(value = "/update/{businessDetailId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<APIResponse<String>> updateBusinessDetails(
+            @PathVariable Long businessDetailId,
+            @RequestParam Integer roomsCount,
+            @RequestParam Integer bedsCount,
+            @RequestParam BigDecimal pricePerDay,
+            @RequestParam BigDecimal pricePerNight,
+            @RequestParam String luxuryLevel,
+            @RequestParam String status,
+            @RequestParam String facilities,
+            @RequestParam Long businessId,
+            @RequestPart(value = "roomImage", required = false) MultipartFile roomImage
+    ) throws IOException {
+        // Build DTO manually
+        BusinessDetailsDTO dto = new BusinessDetailsDTO();
+        dto.setBusinessDetailId(businessDetailId);
+        dto.setRoomsCount(roomsCount);
+        dto.setBedsCount(bedsCount);
+        dto.setPricePerDay(pricePerDay);
+        dto.setPricePerNight(pricePerNight);
+        dto.setLuxuryLevel(luxuryLevel);
+        dto.setStatus(status);
+        dto.setFacilities(facilities);
+        dto.setBusinessId(businessId);
+
+        // Handle image
+        if (roomImage != null && !roomImage.isEmpty()) {
+            String uploadDir = "uploads/roomImage-logos/";
+            Path uploadPath = Paths.get(uploadDir);
+            if (!Files.exists(uploadPath)) Files.createDirectories(uploadPath);
+
+            String fileName = System.currentTimeMillis() + "_" + roomImage.getOriginalFilename();
+            Path filePath = uploadPath.resolve(fileName);
+            Files.copy(roomImage.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+
+            dto.setRoomImage("uploads/roomImage-logos/" + fileName);
+        }
+
+        businessDetailsService.updateBusinessDetails(dto);
+
+        return ResponseEntity.ok(new APIResponse<>(200, "Business details updated successfully", null));
+    }
+
+
+    // ===== Delete Business Details =====
+    @DeleteMapping("/delete/{businessDetailId}")
+    public ResponseEntity<APIResponse<String>> deleteBusinessDetails(@PathVariable Long businessDetailId) {
+        try {
+            businessDetailsService.deleteBusinessDetails(businessDetailId);
+            return ResponseEntity.ok(new APIResponse<>(200, "Business details deleted successfully", null));
+        } catch (Exception e) {
+            log.error("Error deleting business details", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new APIResponse<>(500, "Error deleting business details", null));
+        }
+    }
 
 }

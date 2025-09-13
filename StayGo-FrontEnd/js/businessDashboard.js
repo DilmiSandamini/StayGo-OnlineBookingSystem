@@ -232,7 +232,7 @@ $(document).on("click", ".delete-business", async function () {
                     card.find(".business-status")
                         .removeClass("bg-success")
                         .addClass("bg-danger")
-                        .text("INACTIVE");
+                        .text("Deactive");
                 },
                 error: function (xhr) {
                     console.error(xhr.responseText);
