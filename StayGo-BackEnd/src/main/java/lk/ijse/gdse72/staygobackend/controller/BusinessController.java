@@ -139,6 +139,7 @@ public class BusinessController {
             @RequestParam String businessEmail,
             @RequestParam String businessAddress,
             @RequestParam String businessDescription,
+            @RequestParam String businessStatus,
             @RequestParam(required = false) MultipartFile logo
     ) {
         try {
@@ -151,6 +152,7 @@ public class BusinessController {
             business.setBusinessEmail(businessEmail);
             business.setBusinessAddress(businessAddress);
             business.setBusinessDescription(businessDescription);
+            business.setBusinessStatus(businessStatus.toUpperCase());
 
             // Update logo if new file uploaded
             if (logo != null && !logo.isEmpty()) {
@@ -165,7 +167,8 @@ public class BusinessController {
                 business.setBusinessLogo("uploads/business-logos/" + fileName);
             }
 
-            businessService.updateBusiness(business); // Make sure service layer has this method
+            // Save changes
+            businessService.updateBusiness(business);
 
             return ResponseEntity.ok(new APIResponse<>(200, "Business updated successfully", null));
 

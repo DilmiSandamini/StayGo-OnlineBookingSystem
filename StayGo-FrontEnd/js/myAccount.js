@@ -101,4 +101,9 @@ $('#save-details-btn').click(async function () {
         console.error(err);
         Swal.fire('Error', 'Failed to update details', 'error');
     }
+
+    
 });
+
+
+

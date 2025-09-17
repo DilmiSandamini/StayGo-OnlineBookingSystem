@@ -163,6 +163,9 @@ $("#edit-business-form").on("submit", async function (e) {
         formData.append("businessEmail", $("#edit-business-email").val());
         formData.append("contactNumber1", $("#edit-business-contact1").val());
 
+        // 👇 Add this line for status
+        formData.append("businessStatus", $("#editStatus").val());
+
         const fileInput = $("#edit-fileElem")[0];
         if (fileInput.files.length > 0) {
             formData.append("logo", fileInput.files[0]);
@@ -184,8 +187,16 @@ $("#edit-business-form").on("submit", async function (e) {
                 card.find(".business-desc").text($("#edit-business-description").val());
                 card.find(".business-address").text($("#edit-business-address").val());
                 card.find(".business-email").text(
-                    `${$("#edit-business-email").val()} | ${$("#edit-business-contact1").val()} | ${$("#edit-business-contact2").val()}`
+                    `${$("#edit-business-email").val()} | ${$("#edit-business-contact1").val()}`
                 );
+
+                // 👇 Update status badge dynamically
+                const newStatus = $("#editStatus").val();
+                const statusBadge = card.find(".business-status");
+                statusBadge
+                    .removeClass("bg-success bg-danger")
+                    .addClass(newStatus === "ACTIVE" ? "bg-success" : "bg-danger")
+                    .text(newStatus);
 
                 if (fileInput.files.length > 0) {
                     const reader = new FileReader();
@@ -204,6 +215,7 @@ $("#edit-business-form").on("submit", async function (e) {
         console.error(e.message);
     }
 });
+
 
 // ===== Deactivate Business =====
 $(document).on("click", ".delete-business", async function () {
@@ -305,3 +317,4 @@ $(document).on("click", ".business-card .view-details", function(e) {
     if (!businessId) return;
     window.location.href = `/pages/businessDetailDashborad.html?businessId=${businessId}`;
 });
+
