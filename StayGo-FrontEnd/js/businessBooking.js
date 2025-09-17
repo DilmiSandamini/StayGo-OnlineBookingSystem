@@ -36,13 +36,13 @@ $(document).ready(function () {
                 const d = res.data;
                 roomDetails = d;
 
-                // Show room info above button
-                $("#roomInfo").prepend(`
-                    <div class="card shadow-sm mb-3">
+                // Show room info
+                $("#roomInfo").html(`
+                    <div class="card mb-4">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="${d.roomImage ? backendUrl + '/' + d.roomImage : '/images/default-room.png'}"
-                                     class="img-fluid rounded-start" style="height:220px; object-fit:cover;">
+                                     class="img-fluid rounded" style="height:220px; width:100%; object-fit:cover;">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -64,18 +64,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    // Open booking modal
-    $("#openBookingModal").on("click", function () {
-        if (!roomDetails) return;
-
-        $("#bookingForm")[0].reset();
-        $("#paymentMethod").val("");
-        $(".payment-btn").removeClass("active");
-
-        const bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
-        bookingModal.show();
-    });
 
     // Payment selection
     $(document).on("click", ".payment-btn", function () {
@@ -107,12 +95,13 @@ $(document).ready(function () {
         return pricePerRoom * roomCount * days;
     }
 
-    // Update booking summary live
+    // Update booking summary
     function updateBookingSummary() {
         const checkIn = $("#checkInDate").val();
         const checkOut = $("#checkOutDate").val();
         const bookingTime = $("#bookingTime").val();
         const roomCount = $("#roomCount").val();
+        const guestCount = $("#guestCount").val();
         const paymentMethod = $("#paymentMethod").val();
         const totalPrice = calculateTotalPrice();
 
@@ -122,10 +111,15 @@ $(document).ready(function () {
             summaryHtml = `
                 <div class="card p-2 border">
                     <strong>Booking Details:</strong>
+                    <p>Name: ${$("#firstName").val() || booking.firstName || "-"} ${$("#lastName").val() || booking.lastName || "-"}</p>
+                    <p>Email: ${$("#email").val() || booking.email || "-"}</p>
+                    <p>Phone: ${$("#phoneNumber").val() || booking.phoneNumber || "-"}</p>
+                    <p>Address: ${$("#address").val() || booking.address || "-"}</p>
                     <p>Check-In Date: ${checkIn || booking.checkInDate || "-"}</p>
                     <p>Check-Out Date: ${checkOut || booking.checkOutDate || "-"}</p>
                     <p>Booking Time: ${bookingTime || booking.bookingTime || "-"}</p>
                     <p>Room Count: ${roomCount || booking.roomCount || "-"}</p>
+                    <p>Guest Count: ${guestCount || booking.guestCount || "-"}</p>                    
                     <p>Payment Method: ${paymentMethod || booking.paymentMethod || "-"}</p>
                     <p><strong>Total Price: LKR ${totalPrice || booking.totalPrice || 0}</strong></p>
                 </div>
@@ -139,12 +133,33 @@ $(document).ready(function () {
         updateBookingSummary();
     });
 
+    // Room count controls
+    $("#increaseRoom").on("click", function () {
+        let val = parseInt($("#roomCount").val(), 10);
+        $("#roomCount").val(val + 1).trigger("change");
+    });
+    $("#decreaseRoom").on("click", function () {
+        let val = parseInt($("#roomCount").val(), 10);
+        if (val > 1) $("#roomCount").val(val - 1).trigger("change");
+    });
+
+    // Guest count controls
+    $("#increaseGuest").on("click", function () {
+        let val = parseInt($("#guestCount").val(), 10);
+        $("#guestCount").val(val + 1).trigger("change");
+    });
+    $("#decreaseGuest").on("click", function () {
+        let val = parseInt($("#guestCount").val(), 10);
+        if (val > 1) $("#guestCount").val(val - 1).trigger("change");
+    });
+
     // Submit booking
     $("#bookingForm").on("submit", async function (e) {
         e.preventDefault();
         const { detailId } = getParams();
         const headers = await getAuthHeaders();
         const userId = sessionStorage.getItem("userId");
+
         if (!userId) {
             Swal.fire("Error", "You must login before booking!", "error");
             return;
@@ -167,10 +182,16 @@ $(document).ready(function () {
         const payload = {
             userId: parseInt(userId, 10),
             businessDetailId: parseInt(detailId, 10),
+            firstName: $("#firstName").val(),
+            lastName: $("#lastName").val(),
+            email: $("#email").val(),
+            phoneNumber: $("#phoneNumber").val(),
+            address: $("#address").val(),
             bookingTime: $("#bookingTime").val(),
             checkInTime: checkInDate + "T12:00:00",
             checkOutTime: checkOutDate + "T12:00:00",
             roomCount: parseInt($("#roomCount").val(), 10),
+            guestCount: parseInt($("#guestCount").val(), 10),
             totalPrice: totalPrice,
             paymentMethod: paymentMethod
         };
@@ -184,23 +205,26 @@ $(document).ready(function () {
                 Swal.fire("Success", "Your booking has been placed!", "success").then(() => {
                     // Store last booking to keep summary visible
                     lastBooking = {
+                        firstName: $("#firstName").val(),
+                        lastName: $("#lastName").val(),
+                        email: $("#email").val(),
+                        phoneNumber: $("#phoneNumber").val(),
+                        address: $("#address").val(),
                         checkInDate: checkInDate,
                         checkOutDate: checkOutDate,
                         bookingTime: $("#bookingTime").val(),
                         roomCount: $("#roomCount").val(),
+                        guestCount: $("#guestCount").val(),
                         totalPrice: totalPrice,
                         paymentMethod: paymentMethod
                     };
 
                     updateBookingSummary();
 
+                    // Clear form and selections
                     $("#bookingForm")[0].reset();
                     $("#paymentMethod").val("");
                     $(".payment-btn").removeClass("active");
-
-                    const modalEl = document.getElementById('bookingModal');
-                    const modal = bootstrap.Modal.getInstance(modalEl);
-                    modal.hide();
                 });
             },
             error: function (xhr) {

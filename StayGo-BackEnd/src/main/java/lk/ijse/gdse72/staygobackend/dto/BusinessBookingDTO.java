@@ -27,6 +27,22 @@ public class BusinessBookingDTO {
     @NotNull(message = "BusinessDetail ID cannot be null")
     private Long businessDetailId;  // maps to BusinessDetails.businessDetailId
 
+    // 🟢 Customer details
+    @NotBlank(message = "First name is required")
+    private String firstName;
+
+    @NotBlank(message = "Last name is required")
+    private String lastName;
+
+    @NotBlank(message = "Email is required")
+    private String email;
+
+    @NotBlank(message = "Phone number is required")
+    private String phoneNumber;
+
+    @NotBlank(message = "Address is required")
+    private String address;
+
     // 🟢 Booking info
     @NotBlank(message = "Booking time must be DAY, NIGHT, or BOTH")
     private String bookingTime;   // "DAY" | "NIGHT" | "BOTH"
@@ -40,6 +56,10 @@ public class BusinessBookingDTO {
     @NotNull(message = "Room count cannot be null")
     @Min(value = 1, message = "At least one room must be booked")
     private Integer roomCount;
+
+    @NotNull(message = "Guest count cannot be null")
+    @Min(value = 1, message = "Guest count cannot be negative")
+    private Integer guestCount;
 
     private BigDecimal totalPrice;
 

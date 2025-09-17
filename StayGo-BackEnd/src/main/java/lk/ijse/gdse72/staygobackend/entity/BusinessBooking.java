@@ -22,10 +22,16 @@ public class BusinessBooking {
     private Long bookingId;
 
     // 🟢 Booking details
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
+    private String address;
     private String bookingTime;   // "DAY", "NIGHT", or "BOTH"
     private LocalDateTime checkInTime;
     private LocalDateTime checkOutTime;
     private Integer roomCount;    // Number of rooms booked
+    private Integer guestCount;   // Number of guests
     private BigDecimal totalPrice;
 
     // 🟢 Status + audit
