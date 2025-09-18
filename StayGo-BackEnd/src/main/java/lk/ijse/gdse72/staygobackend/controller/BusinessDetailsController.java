@@ -3,6 +3,8 @@ package lk.ijse.gdse72.staygobackend.controller;
 
 import lk.ijse.gdse72.staygobackend.dto.BusinessDetailsDTO;
 import lk.ijse.gdse72.staygobackend.entity.BusinessDetails;
+import lk.ijse.gdse72.staygobackend.repository.BusinessBookingRepository;
+import lk.ijse.gdse72.staygobackend.repository.BusinessDetailsRepository;
 import lk.ijse.gdse72.staygobackend.service.BusinessBookingService;
 import lk.ijse.gdse72.staygobackend.service.BusinessDetailsService;
 import lk.ijse.gdse72.staygobackend.util.APIResponse;
@@ -38,6 +40,8 @@ public class BusinessDetailsController {
     private final BusinessDetailsService businessDetailsService;
     private final BusinessBookingService businessBookingService;
     private final ModelMapper modelMapper;
+    private final BusinessDetailsRepository businessDetailsRepository;
+    private final BusinessBookingRepository businessBookingRepository;
 
 
     // ===== Save Business Details =====
@@ -250,5 +254,7 @@ public class BusinessDetailsController {
                     .body(new APIResponse<>(500, "Error fetching available rooms", null));
         }
     }
+
+
 
 }

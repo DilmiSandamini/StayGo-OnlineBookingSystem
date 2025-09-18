@@ -50,6 +50,7 @@ $(document).ready(function () {
                                     <h5 class="fw-bold">${d.luxuryLevel}</h5>
                                     <p>Rooms count: ${d.roomsCount}</p>
                                     <p>Beds per room: ${d.bedsCount}</p>
+                                    <p>Guests allowed: ${d.guestCount}</p>   <!-- ✅ Add this -->
                                     <p>Price Per Day: LKR ${d.pricePerDay}</p>
                                     <p>Price Per Night: LKR ${d.pricePerNight}</p>
                                     <p>${d.facilities || ""}</p>
@@ -189,15 +190,20 @@ $(document).ready(function () {
         if (val > 1) $("#roomCount").val(val - 1).trigger("change");
     });
 
-    // Guest count controls
-    $("#increaseGuest").on("click", function () {
-        let val = parseInt($("#guestCount").val(), 10);
+// Guest count controls
+$("#increaseGuest").on("click", function () {
+    let val = parseInt($("#guestCount").val(), 10);
+    if (roomDetails && val < roomDetails.guestCount) {   // ✅ limit to allowed max
         $("#guestCount").val(val + 1).trigger("change");
-    });
-    $("#decreaseGuest").on("click", function () {
-        let val = parseInt($("#guestCount").val(), 10);
-        if (val > 1) $("#guestCount").val(val - 1).trigger("change");
-    });
+    } else {
+        Swal.fire("Limit Reached", "Guest count cannot exceed allowed limit!", "warning");
+    }
+});
+$("#decreaseGuest").on("click", function () {
+    let val = parseInt($("#guestCount").val(), 10);
+    if (val > 1) $("#guestCount").val(val - 1).trigger("change");
+});
+
 
     // Submit booking
     $("#bookingForm").on("submit", async function (e) {
@@ -225,6 +231,12 @@ $(document).ready(function () {
             return;
         }
 
+        // ✅ validate guest count before submit
+        const requestedGuests = parseInt($("#guestCount").val(), 10);
+        if (roomDetails && requestedGuests > roomDetails.guestCount) {
+            Swal.fire("Error", `Guest count exceeds allowed limit! Max allowed: ${roomDetails.guestCount}`, "error");
+            return;
+    }
         const totalPrice = calculateTotalPrice();
         const paymentMethod = $("#paymentMethod").val();
         if (!paymentMethod) {
@@ -290,4 +302,7 @@ $(document).ready(function () {
 
     // Initial load
     loadRoomInfo();
+
+
+
 });

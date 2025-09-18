@@ -26,5 +26,4 @@ public interface BusinessBookingRepository extends JpaRepository<BusinessBooking
                                   @Param("checkOut") LocalDateTime checkOut);
 
 
-
 }

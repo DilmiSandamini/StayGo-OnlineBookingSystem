@@ -53,7 +53,7 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
             throw new RuntimeException("Not enough rooms available for selected dates. Only " + available + " left.");
         }
 
-        // Map DTO to Entity manually (avoid ModelMapper conflicts)
+        // Map DTO to Entity manually
         BusinessBooking booking = new BusinessBooking();
         booking.setUser(user);
         booking.setBusinessDetail(details);
@@ -81,22 +81,40 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
                 totalPrice = details.getPricePerDay().multiply(BigDecimal.valueOf(days))
                         .multiply(BigDecimal.valueOf(dto.getRoomCount()));
                 break;
-
             case "NIGHT":
                 totalPrice = details.getPricePerNight().multiply(BigDecimal.valueOf(days))
                         .multiply(BigDecimal.valueOf(dto.getRoomCount()));
                 break;
-
             case "BOTH":
                 BigDecimal perDay = details.getPricePerDay().add(details.getPricePerNight());
                 totalPrice = perDay.multiply(BigDecimal.valueOf(days))
                         .multiply(BigDecimal.valueOf(dto.getRoomCount()));
                 break;
-
             default:
                 throw new RuntimeException("Invalid bookingTime. Must be DAY, NIGHT, or BOTH");
         }
         booking.setTotalPrice(totalPrice);
+
+        // Calculate available rooms
+        Integer bookedRooms = bookingRepository.sumBookedRoomsInRange(
+                dto.getBusinessDetailId(),
+                dto.getCheckInTime(),
+                dto.getCheckOutTime()
+        );
+        Integer totalRooms = details.getRoomsCount();
+        Integer availableRooms = totalRooms - bookedRooms;
+
+        // Set available rooms in booking entity
+                booking.setAvailableRoomCount(availableRooms);
+
+        // ---------- NEW: Guest count validation (server-side) ----------
+        if (dto.getGuestCount() == null || dto.getGuestCount() <= 0) {
+            throw new RuntimeException("Guest count must be at least 1");
+        }
+        if (details.getGuestCount() != null && dto.getGuestCount() > details.getGuestCount()) {
+            throw new RuntimeException("Guest count exceeds allowed guests for this room type. Maximum allowed: "
+                    + details.getGuestCount());
+        }
 
         // Save booking
         BusinessBooking saved = bookingRepository.save(booking);
@@ -122,8 +140,8 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
         responseDTO.setUpdatedAt(saved.getUpdatedAt());
 
         return responseDTO;
-
     }
+
 
     @Override
     public List<BusinessBookingDTO> getBookingsByUser(Long userId) {

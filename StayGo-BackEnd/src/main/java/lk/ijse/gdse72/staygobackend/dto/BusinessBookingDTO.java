@@ -19,6 +19,8 @@ import java.time.LocalDateTime;
 public class BusinessBookingDTO {
 
     private Long bookingId;
+    private Integer availableRoomCount; // Calculated field
+//    private Integer availableGuestCount; // Calculated field
 
     // 🟢 Relationships
     @NotNull(message = "User ID cannot be null")

@@ -3,6 +3,7 @@ package lk.ijse.gdse72.staygobackend.service;
 import lk.ijse.gdse72.staygobackend.dto.BusinessDetailsDTO;
 import lk.ijse.gdse72.staygobackend.entity.BusinessDetails;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface BusinessDetailsService {

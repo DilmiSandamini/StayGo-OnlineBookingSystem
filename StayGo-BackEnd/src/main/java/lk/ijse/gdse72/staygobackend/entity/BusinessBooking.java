@@ -30,7 +30,8 @@ public class BusinessBooking {
     private String bookingTime;   // "DAY", "NIGHT", or "BOTH"
     private LocalDateTime checkInTime;
     private LocalDateTime checkOutTime;
-    private String roomAvailability; // "AVAILABLE", "NOT_AVAILABLE"
+    private Integer availableRoomCount;
+//    private Integer availableGuestCount;
     private Integer roomCount;    // Number of rooms booked
     private Integer guestCount;   // Number of guests
     private BigDecimal totalPrice;
