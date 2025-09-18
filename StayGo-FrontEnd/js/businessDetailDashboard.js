@@ -46,8 +46,8 @@ async function loadBusinessDetails() {
                             <div class="card-body">
                                 <h5>${detail.luxuryLevel}</h5>
                                 <p>Rooms: ${detail.roomsCount}</p>
-                                <p>Available Rooms: <span id="availableRooms">${detail.availableRooms}</span></p>
                                 <p>Beds per room: ${detail.bedsCount}</p>
+                                <p>Guest Count per room: ${detail.guestCount}</p>
                                 <p>Price Per Day One Room : LKR ${detail.pricePerDay}</p>
                                 <p>Price Per Night One Room : LKR ${detail.pricePerNight}</p>
                                 <p>${detail.facilities || ""}</p>
@@ -104,6 +104,7 @@ $(document).ready(async function () {
         const formData = new FormData();
         formData.append("roomsCount", $("#roomsCount").val());
         formData.append("bedsCount", $("#bedsCount").val());
+        formData.append("guestCount", $("#guestCount").val());
         formData.append("pricePerDay", $("#pricePerDay").val());
         formData.append("pricePerNight", $("#pricePerNight").val());
         formData.append("luxuryLevel", $("#luxuryLevel").val());
@@ -167,6 +168,7 @@ $(document).on("click", ".edit-business", async function () {
             $("#editLuxuryLevel").val(d.luxuryLevel);
             $("#editRoomsCount").val(d.roomsCount);
             $("#editBedsCount").val(d.bedsCount);
+            $("#editGuestCount").val(d.guestCount);
             $("#editPricePerDay").val(d.pricePerDay);
             $("#editPricePerNight").val(d.pricePerNight);
             $("#editRoomDesc").val(d.facilities);
@@ -229,6 +231,7 @@ $("#edit-business-form").on("submit", async function (e) {
     formData.append("luxuryLevel", $("#editLuxuryLevel").val());
     formData.append("roomsCount", $("#editRoomsCount").val());
     formData.append("bedsCount", $("#editBedsCount").val());
+    formData.append("guestCount", $("#editGuestCount").val());
     formData.append("pricePerDay", $("#editPricePerDay").val());
     formData.append("pricePerNight", $("#editPricePerNight").val());
     formData.append("facilities", $("#editRoomDesc").val());

@@ -45,6 +45,7 @@ public class BusinessDetailsController {
     public ResponseEntity<APIResponse<String>> createBusinessDetails(
             @RequestParam Integer roomsCount,
             @RequestParam Integer bedsCount,
+            @RequestParam Integer guestCount,
             @RequestParam BigDecimal pricePerDay,
             @RequestParam BigDecimal pricePerNight,
             @RequestParam String luxuryLevel,
@@ -69,6 +70,7 @@ public class BusinessDetailsController {
             businessDetailsDTO.setBusinessId(businessId);
             businessDetailsDTO.setRoomsCount(roomsCount);
             businessDetailsDTO.setBedsCount(bedsCount);
+            businessDetailsDTO.setGuestCount(guestCount);
             businessDetailsDTO.setPricePerDay(pricePerDay);
             businessDetailsDTO.setPricePerNight(pricePerNight);
             businessDetailsDTO.setLuxuryLevel(luxuryLevel);
@@ -115,6 +117,7 @@ public class BusinessDetailsController {
                 dto.setBusinessId(d.getBusiness().getBusinessId()); // explicitly set businessId
                 dto.setRoomsCount(d.getRoomsCount());
                 dto.setBedsCount(d.getBedsCount());
+                dto.setGuestCount(d.getGuestCount());
                 dto.setPricePerDay(d.getPricePerDay());
                 dto.setPricePerNight(d.getPricePerNight());
                 dto.setLuxuryLevel(d.getLuxuryLevel());
@@ -147,6 +150,7 @@ public class BusinessDetailsController {
             dto.setBusinessId(details.getBusiness().getBusinessId());
             dto.setRoomsCount(details.getRoomsCount());
             dto.setBedsCount(details.getBedsCount());
+            dto.setGuestCount(details.getGuestCount());
             dto.setPricePerDay(details.getPricePerDay());
             dto.setPricePerNight(details.getPricePerNight());
             dto.setLuxuryLevel(details.getLuxuryLevel());
@@ -167,6 +171,7 @@ public class BusinessDetailsController {
             @PathVariable Long businessDetailId,
             @RequestParam Integer roomsCount,
             @RequestParam Integer bedsCount,
+            @RequestParam Integer guestCount,
             @RequestParam BigDecimal pricePerDay,
             @RequestParam BigDecimal pricePerNight,
             @RequestParam String luxuryLevel,
@@ -180,6 +185,7 @@ public class BusinessDetailsController {
         dto.setBusinessDetailId(businessDetailId);
         dto.setRoomsCount(roomsCount);
         dto.setBedsCount(bedsCount);
+        dto.setGuestCount(guestCount);
         dto.setPricePerDay(pricePerDay);
         dto.setPricePerNight(pricePerNight);
         dto.setLuxuryLevel(luxuryLevel);

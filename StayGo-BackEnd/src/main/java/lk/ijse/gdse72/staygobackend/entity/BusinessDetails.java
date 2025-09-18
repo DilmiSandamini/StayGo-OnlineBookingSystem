@@ -23,6 +23,7 @@ public class BusinessDetails {
 
     private Integer roomsCount;
     private Integer bedsCount;
+    private Integer guestCount;
     private BigDecimal pricePerDay;
     private BigDecimal pricePerNight;
     private String luxuryLevel;

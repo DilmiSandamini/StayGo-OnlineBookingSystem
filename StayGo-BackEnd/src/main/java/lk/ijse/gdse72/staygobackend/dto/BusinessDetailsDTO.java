@@ -27,6 +27,10 @@ public class BusinessDetailsDTO {
     @Min(value = 1, message = "Beds count must be at least 1")
     private Integer bedsCount;
 
+    @NotNull(message = "Guest count cannot be null")
+    @Min(value = 1, message = "Guest count must be at least 1")
+    private Integer guestCount;
+
     @NotNull(message = "Price per day cannot be null")
     @Min(value = 0, message = "Price per day cannot be negative")
     private BigDecimal pricePerDay;

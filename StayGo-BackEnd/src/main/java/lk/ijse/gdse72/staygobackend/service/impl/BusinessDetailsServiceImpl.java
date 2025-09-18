@@ -71,6 +71,7 @@ public class BusinessDetailsServiceImpl implements BusinessDetailsService {
         // Update fields
         existing.setRoomsCount(dto.getRoomsCount());
         existing.setBedsCount(dto.getBedsCount());
+        existing.setGuestCount(dto.getGuestCount());
         existing.setPricePerDay(dto.getPricePerDay());
         existing.setPricePerNight(dto.getPricePerNight());
         existing.setLuxuryLevel(dto.getLuxuryLevel());
