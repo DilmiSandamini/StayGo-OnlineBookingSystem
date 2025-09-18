@@ -3,6 +3,7 @@ package lk.ijse.gdse72.staygobackend.service.impl;
 import lk.ijse.gdse72.staygobackend.dto.BusinessDetailsDTO;
 import lk.ijse.gdse72.staygobackend.entity.Business;
 import lk.ijse.gdse72.staygobackend.entity.BusinessDetails;
+import lk.ijse.gdse72.staygobackend.repository.BusinessBookingRepository;
 import lk.ijse.gdse72.staygobackend.repository.BusinessDetailsRepository;
 import lk.ijse.gdse72.staygobackend.repository.BusinessRepository;
 import lk.ijse.gdse72.staygobackend.service.BusinessDetailsService;
@@ -11,6 +12,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,6 +21,7 @@ import java.util.Optional;
 
 public class BusinessDetailsServiceImpl implements BusinessDetailsService {
     private final BusinessDetailsRepository businessDetailsRepository;
+    private final BusinessBookingRepository bookingRepository;
     private final BusinessRepository businessRepository;
     private final ModelMapper modelMapper;
 
@@ -96,6 +99,18 @@ public class BusinessDetailsServiceImpl implements BusinessDetailsService {
         BusinessDetails details = businessDetailsRepository.findById(businessDetailId)
                 .orElseThrow(() -> new RuntimeException("BusinessDetails not found with ID: " + businessDetailId));
         businessDetailsRepository.delete(details);
+    }
+
+    @Override
+    public Integer getAvailableRooms(Long businessDetailId, LocalDateTime checkIn, LocalDateTime checkOut) {
+        BusinessDetails details = businessDetailsRepository.findById(businessDetailId)
+                .orElseThrow(() -> new RuntimeException("BusinessDetails not found with ID: " + businessDetailId));
+
+        Integer bookedInRange = bookingRepository.sumBookedRoomsInRange(businessDetailId, checkIn, checkOut);
+        if (bookedInRange == null) bookedInRange = 0;
+
+        int available = details.getRoomsCount() - bookedInRange;
+        return Math.max(available, 0);
     }
 
 }

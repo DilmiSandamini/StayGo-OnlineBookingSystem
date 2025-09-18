@@ -3,6 +3,7 @@ package lk.ijse.gdse72.staygobackend.controller;
 
 import lk.ijse.gdse72.staygobackend.dto.BusinessDetailsDTO;
 import lk.ijse.gdse72.staygobackend.entity.BusinessDetails;
+import lk.ijse.gdse72.staygobackend.service.BusinessBookingService;
 import lk.ijse.gdse72.staygobackend.service.BusinessDetailsService;
 import lk.ijse.gdse72.staygobackend.util.APIResponse;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -32,6 +36,7 @@ import java.util.UUID;
 @Slf4j
 public class BusinessDetailsController {
     private final BusinessDetailsService businessDetailsService;
+    private final BusinessBookingService businessBookingService;
     private final ModelMapper modelMapper;
 
 
@@ -127,6 +132,7 @@ public class BusinessDetailsController {
         }
     }
 
+
     @GetMapping("/getById")
     public ResponseEntity<APIResponse<BusinessDetailsDTO>> getDetailsById(@RequestParam Long businessDetailId) {
         try {
@@ -210,6 +216,32 @@ public class BusinessDetailsController {
             log.error("Error deleting business details", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new APIResponse<>(500, "Error deleting business details", null));
+        }
+    }
+
+    // ===== Get Available Rooms =====
+    @GetMapping("/available")
+    public ResponseEntity<APIResponse<Integer>> getAvailableRoomsForDates(
+            @RequestParam Long businessDetailId,
+            @RequestParam String checkIn,
+            @RequestParam String checkOut
+    ) {
+        try {
+            LocalDate ci = LocalDate.parse(checkIn);
+            LocalDate co = LocalDate.parse(checkOut);
+
+            LocalDateTime checkInDateTime = ci.atStartOfDay();
+            LocalDateTime checkOutDateTime = co.atStartOfDay();
+
+            Integer available = businessDetailsService.getAvailableRooms(businessDetailId, checkInDateTime, checkOutDateTime);
+            return ResponseEntity.ok(new APIResponse<>(200, "Available rooms fetched", available));
+        } catch (DateTimeParseException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new APIResponse<>(400, "Invalid date format. Use yyyy-MM-dd", null));
+        } catch (Exception e) {
+            log.error("Error fetching available rooms", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new APIResponse<>(500, "Error fetching available rooms", null));
         }
     }
 

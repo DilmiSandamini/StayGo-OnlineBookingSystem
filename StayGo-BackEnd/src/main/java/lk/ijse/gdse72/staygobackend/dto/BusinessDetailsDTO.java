@@ -47,4 +47,5 @@ public class BusinessDetailsDTO {
     private Timestamp updatedAt;
 
     private Long businessId; // maps to Business.businessId
+
 }

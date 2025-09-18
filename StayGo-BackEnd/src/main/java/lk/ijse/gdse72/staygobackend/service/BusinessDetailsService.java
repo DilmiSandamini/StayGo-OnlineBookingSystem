@@ -17,4 +17,8 @@ public interface BusinessDetailsService {
     void updateBusinessDetails(BusinessDetailsDTO dto);
 
     void deleteBusinessDetails(Long businessDetailId);
+
+    // add this method declaration to the interface
+    Integer getAvailableRooms(Long businessDetailId, java.time.LocalDateTime checkIn, java.time.LocalDateTime checkOut);
+
 }

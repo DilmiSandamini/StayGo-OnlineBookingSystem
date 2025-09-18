@@ -4,6 +4,7 @@ $(document).ready(function () {
     const backendUrl = "http://localhost:8080";
     let roomDetails = null; // store room info
     let lastBooking = null; // store last booking
+    let availableRooms = 0; // ✅ new state for availability
 
     // Get query params
     function getParams() {
@@ -64,6 +65,47 @@ $(document).ready(function () {
             }
         });
     }
+
+    // ✅ Fetch available rooms
+    async function fetchAvailableRooms(detailId, checkIn, checkOut) {
+        const headers = await getAuthHeaders();
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                method: "GET",
+                url: `${backendUrl}/api/v1/businessDetails/available`,
+                headers,
+                data: { businessDetailId: detailId, checkIn: checkIn, checkOut: checkOut },
+                success: function (res) {
+                    availableRooms = res.data || 0;
+                    $("#availableRooms").text(availableRooms);
+
+                    // Adjust room count if needed
+                    const currentCount = parseInt($("#roomCount").val(), 10);
+                    if (currentCount > availableRooms) {
+                        $("#roomCount").val(availableRooms);
+                        Swal.fire("Notice", "Room count adjusted to available limit", "info");
+                    }
+                    resolve(availableRooms);
+                },
+                error: function (xhr) {
+                    console.error(xhr.responseText);
+                    Swal.fire("Error", "Failed to fetch available rooms", "error");
+                    reject();
+                }
+            });
+        });
+    }
+
+    // ✅ Trigger availability check when dates change
+    $(document).on("change", "#checkInDate, #checkOutDate", async function () {
+        const { detailId } = getParams();
+        const checkIn = $("#checkInDate").val();
+        const checkOut = $("#checkOutDate").val();
+        if (checkIn && checkOut) {
+            await fetchAvailableRooms(detailId, checkIn, checkOut);
+        }
+    });
+
 
     // Payment selection
     $(document).on("click", ".payment-btn", function () {
@@ -136,7 +178,11 @@ $(document).ready(function () {
     // Room count controls
     $("#increaseRoom").on("click", function () {
         let val = parseInt($("#roomCount").val(), 10);
-        $("#roomCount").val(val + 1).trigger("change");
+        if (val < availableRooms) {   // ✅ prevent exceeding availability
+            $("#roomCount").val(val + 1).trigger("change");
+        } else {
+            Swal.fire("Limit Reached", "No more available rooms!", "warning");
+        }
     });
     $("#decreaseRoom").on("click", function () {
         let val = parseInt($("#roomCount").val(), 10);
@@ -169,6 +215,13 @@ $(document).ready(function () {
         const checkOutDate = $("#checkOutDate").val();
         if (new Date(checkInDate) >= new Date(checkOutDate)) {
             Swal.fire("Error", "Check-in date must be before check-out date", "error");
+            return;
+        }
+
+        // ✅ validate availability before submit
+        const requestedRooms = parseInt($("#roomCount").val(), 10);
+        if (requestedRooms > availableRooms) {
+            Swal.fire("Error", "Selected rooms exceed available rooms!", "error");
             return;
         }
 

@@ -9,14 +9,17 @@ import lk.ijse.gdse72.staygobackend.repository.BusinessBookingRepository;
 import lk.ijse.gdse72.staygobackend.repository.BusinessDetailsRepository;
 import lk.ijse.gdse72.staygobackend.repository.UserRepository;
 import lk.ijse.gdse72.staygobackend.service.BusinessBookingService;
+import lk.ijse.gdse72.staygobackend.service.BusinessDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -27,6 +30,7 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
     private final BusinessBookingRepository bookingRepository;
     private final UserRepository userRepository;
     private final BusinessDetailsRepository detailsRepository;
+    private final BusinessDetailsService businessDetailsService;
 
     @Override
     public BusinessBookingDTO createBooking(BusinessBookingDTO dto) {
@@ -41,6 +45,12 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
         // Validate dates
         if (dto.getCheckInTime().isAfter(dto.getCheckOutTime()) || dto.getCheckInTime().isEqual(dto.getCheckOutTime())) {
             throw new RuntimeException("Check-in date must be before check-out date");
+        }
+
+        // ===== availability check =====
+        Integer available = businessDetailsService.getAvailableRooms(dto.getBusinessDetailId(), dto.getCheckInTime(), dto.getCheckOutTime());
+        if (dto.getRoomCount() > available) {
+            throw new RuntimeException("Not enough rooms available for selected dates. Only " + available + " left.");
         }
 
         // Map DTO to Entity manually (avoid ModelMapper conflicts)
@@ -112,6 +122,7 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
         responseDTO.setUpdatedAt(saved.getUpdatedAt());
 
         return responseDTO;
+
     }
 
     @Override
@@ -169,4 +180,6 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
                 })
                 .collect(Collectors.toList());
     }
+
+
 }

@@ -11,4 +11,5 @@ public interface BusinessBookingService {
     List<BusinessBookingDTO> getBookingsByUser(Long userId);
 
     List<BusinessBookingDTO> getBookingsByBusiness(Long businessId);
+
 }

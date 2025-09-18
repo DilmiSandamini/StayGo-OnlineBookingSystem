@@ -46,6 +46,7 @@ async function loadBusinessDetails() {
                             <div class="card-body">
                                 <h5>${detail.luxuryLevel}</h5>
                                 <p>Rooms: ${detail.roomsCount}</p>
+                                <p>Available Rooms: <span id="availableRooms">${detail.availableRooms}</span></p>
                                 <p>Beds per room: ${detail.bedsCount}</p>
                                 <p>Price Per Day One Room : LKR ${detail.pricePerDay}</p>
                                 <p>Price Per Night One Room : LKR ${detail.pricePerNight}</p>
