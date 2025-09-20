@@ -51,20 +51,29 @@ $(document).ready(async function () {
                                     : 'warning';
 
                             container.append(`
-                                <div class="card mb-3 shadow-sm">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Business ID: ${booking.businessDetailId}</h5>
-                                        <p class="card-text">
-                                            <b>Check-In:</b> ${new Date(booking.checkInTime).toLocaleString()}<br>
-                                            <b>Check-Out:</b> ${new Date(booking.checkOutTime).toLocaleString()}<br>
-                                            <b>Rooms:</b> ${booking.roomCount} | <b>Guests:</b> ${booking.guestCount}<br>
-                                            <b>Status:</b> 
-                                            <span class="badge bg-${statusClass}">${booking.status}</span><br>
-                                            <b>Total Price:</b> LKR ${booking.totalPrice}
-                                        </p>
-                                    </div>
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Business ID: ${booking.businessDetailId}</h5>
+                                    <p class="card-text">
+                                        <b>Check-In:</b> ${new Date(booking.checkInTime).toLocaleString()}<br>
+                                        <b>Check-Out:</b> ${new Date(booking.checkOutTime).toLocaleString()}<br>
+                                        <b>Rooms:</b> ${booking.roomCount} | <b>Guests:</b> ${booking.guestCount}<br>
+                                        <b>Status:</b> 
+                                        <span id="booking-badge-${booking.bookingId}" 
+                                            class="badge bg-${statusClass}">
+                                            ${booking.status}
+                                        </span><br>
+                                        <b>Total Price:</b> LKR ${booking.totalPrice}
+                                    </p>
+                                    ${booking.status === 'PENDING' ? `
+                                        <button class="btn btn-sm btn-danger reject-booking" 
+                                                data-id="${booking.bookingId}">
+                                            <i class="bi bi-x-circle"></i> Reject
+                                        </button>
+                                    ` : ''}
                                 </div>
-                            `);
+                            </div>
+                        `);
                         });
                     } else {
                         container.html("<p class='text-center text-muted'>No bookings found.</p>");
@@ -81,6 +90,45 @@ $(document).ready(async function () {
             Swal.fire("Error", error.message, "error");
         }
     }
+
+    // Reject Booking
+    $(document).on("click", ".reject-booking", async function () {
+        const bookingId = $(this).data("id");
+        const headers = await getAuthHeaders();
+
+        Swal.fire({
+            title: "Reject this booking?",
+            text: "This action cannot be undone!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, reject",
+            cancelButtonText: "Cancel"
+        }).then(result => {
+            if (!result.isConfirmed) return;
+
+            $.ajax({
+                url: `${backendUrl}/reject/${bookingId}`,
+                method: "PUT",
+                headers,
+                success: function () {
+                    Swal.fire("Rejected!", "Your booking has been cancelled.", "success");
+
+                    // Update badge dynamically
+                    const badge = $(`#booking-badge-${bookingId}`);
+                    badge.removeClass("bg-success bg-warning")
+                        .addClass("bg-danger")
+                        .text("CANCELLED");
+
+                    // Remove button after rejection
+                    $(`button.reject-booking[data-id=${bookingId}]`).remove();
+                },
+                error: function (xhr) {
+                    Swal.fire("Error", xhr.responseJSON?.message || "Failed to reject booking", "error");
+                }
+            });
+        });
+    });
+
 
     // ------------------ Initialize ------------------
     bookingHistoryList();

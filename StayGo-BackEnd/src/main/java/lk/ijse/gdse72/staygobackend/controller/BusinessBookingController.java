@@ -57,4 +57,24 @@ public class BusinessBookingController {
         List<BusinessBookingDTO> bookings = bookingService.getBookingsByBusiness(businessId);
         return ResponseEntity.ok(new APIResponse<>(200, "Business bookings fetched", bookings));
     }
+
+    @PutMapping("/confirm/{id}")
+    public ResponseEntity<APIResponse<Void>> confirmBooking(@PathVariable Long id) {
+        try {
+            bookingService.confirmBooking(id);
+            return ResponseEntity.ok(new APIResponse<>(200, "Booking confirmed successfully", null));
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new APIResponse<>(400, e.getMessage(), null));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new APIResponse<>(500, "Error confirming booking", null));
+        }
+    }
+
+    @PutMapping("/reject/{bookingId}")
+    public ResponseEntity<APIResponse<Void>> rejectBooking(@PathVariable Long bookingId) {
+        bookingService.rejectBooking(bookingId);
+        return ResponseEntity.ok(new APIResponse<>(200, "Booking rejected successfully", null));
+    }
+
+
 }

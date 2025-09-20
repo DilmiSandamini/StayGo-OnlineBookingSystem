@@ -2,10 +2,12 @@ package lk.ijse.gdse72.staygobackend.repository;
 
 import lk.ijse.gdse72.staygobackend.entity.BusinessBooking;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -24,4 +26,10 @@ public interface BusinessBookingRepository extends JpaRepository<BusinessBooking
     Integer sumBookedRoomsInRange(@Param("detailId") Long detailId,
                                   @Param("checkIn") LocalDateTime checkIn,
                                   @Param("checkOut") LocalDateTime checkOut);
+
+    @Modifying
+    @Query("UPDATE BusinessBooking b SET b.status = :status, b.updatedAt = :updatedAt WHERE b.bookingId = :id")
+    int updateStatus(@Param("id") Long id,
+                     @Param("status") String status,
+                     @Param("updatedAt") Timestamp updatedAt);
 }

@@ -43,8 +43,11 @@ const backendUrl = "http://localhost:8080";
                             <p>Check-In: ${checkIn} | Check-Out: ${checkOut}</p>
                             <p>Rooms: ${b.roomCount} | Guests: ${b.guestCount}</p>
                             <p>Total Price: LKR ${b.totalPrice || 0}</p>
-                            <span class="badge ${b.status === 'CONFIRMED' ? 'bg-success' : b.status === 'PENDING' ? 'bg-warning text-dark' : 'bg-danger'}">${b.status}</span>
-                        </div>
+                            <button class="btn btn-sm btn-success confirm-booking" data-id="${b.bookingId}" title="Confirm">
+                                <i class="bi bi-check-lg "></i>
+                            </button>
+                            <span id="booking-badge-${b.bookingId}" class="badge ${b.status === 'CONFIRMED' ? 'bg-success' : b.status === 'PENDING' ? 'bg-warning text-dark' : 'bg-danger'}">${b.status}</span>
+                            </div>
                     `);
                 });
             },
@@ -54,6 +57,38 @@ const backendUrl = "http://localhost:8080";
             }
         });
     }
+
+    $(document).on("click", ".confirm-booking", async function () {
+    const bookingId = $(this).data("id");
+    const headers = await getAuthHeaders();
+
+    Swal.fire({
+        title: "Confirm booking?",
+        text: "This will change status to CONFIRMED.",
+        icon: "warning",
+        showCancelButton: true
+    }).then(result => {
+        if (!result.isConfirmed) return;
+
+        $.ajax({
+            url: `${backendUrl}/api/v1/bookings/confirm/${bookingId}`,
+            method: "PUT",
+            headers,
+            success: function () {
+                Swal.fire("Confirmed!", "Booking status updated.", "success");
+                const badge = $(`#booking-badge-${bookingId}`);
+                badge.removeClass("bg-warning text-dark bg-danger")
+                     .addClass("bg-success")
+                     .text("CONFIRMED");
+            },
+            error: function (xhr) {
+                Swal.fire("Error", xhr.responseJSON?.message || "Failed to confirm booking", "error");
+            }
+        });
+    });
+});
+
+
 
     async function loadBusinessDetails() {
         const businessId = getBusinessIdFromQuery();

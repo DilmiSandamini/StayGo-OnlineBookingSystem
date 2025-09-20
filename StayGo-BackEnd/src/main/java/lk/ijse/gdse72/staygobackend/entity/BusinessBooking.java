@@ -38,6 +38,7 @@ public class BusinessBooking {
 
     // 🟢 Status + audit
     private String status; // PENDING, CONFIRMED, CANCELLED
+
     private Timestamp createdAt;
     private Timestamp updatedAt;
 
@@ -49,4 +50,6 @@ public class BusinessBooking {
     @ManyToOne
     @JoinColumn(name = "business_detail_id", nullable = false)
     private BusinessDetails businessDetail;  // Which room type booked
+
+
 }

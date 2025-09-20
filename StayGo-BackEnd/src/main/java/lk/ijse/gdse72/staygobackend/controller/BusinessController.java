@@ -195,6 +195,4 @@ public class BusinessController {
                     .body(new APIResponse<>(500, "Error deactivating business", null));
         }
     }
-
-
 }

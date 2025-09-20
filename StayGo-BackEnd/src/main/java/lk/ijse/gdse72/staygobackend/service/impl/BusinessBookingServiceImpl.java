@@ -196,4 +196,40 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
                 })
                 .collect(Collectors.toList());
     }
+
+    // Service
+    @Transactional
+    public void confirmBooking(Long bookingId) {
+        BusinessBooking booking = bookingRepository.findById(bookingId)
+                .orElseThrow(() -> new RuntimeException("Booking not found with id: " + bookingId));
+
+        // Already confirmed? just return (idempotent)
+        if ("CONFIRMED".equalsIgnoreCase(booking.getStatus())) {
+            return;
+        }
+
+        booking.setStatus("CONFIRMED");
+        booking.setUpdatedAt(Timestamp.from(Instant.now()));
+        bookingRepository.save(booking);
+    }
+
+    @Override
+    @Transactional
+    public void rejectBooking(Long bookingId) {
+        BusinessBooking booking = bookingRepository.findById(bookingId)
+                .orElseThrow(() -> new RuntimeException("Booking not found with id: " + bookingId));
+
+        if ("CANCELLED".equalsIgnoreCase(booking.getStatus())) {
+            throw new RuntimeException("Booking is already cancelled");
+        }
+
+        booking.setStatus("CANCELLED");
+        booking.setUpdatedAt(Timestamp.from(Instant.now()));
+
+        // Save
+        bookingRepository.save(booking);
+    }
+
+
+
 }
