@@ -9,6 +9,9 @@ import lk.ijse.gdse72.staygobackend.repository.BusinessRepository;
 import lk.ijse.gdse72.staygobackend.service.BusinessDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -114,7 +117,16 @@ public class BusinessDetailsServiceImpl implements BusinessDetailsService {
         return Math.max(available, 0);
     }
 
+    @Override
+    public Page<BusinessDetails> getAllBusinessDetailsPaginated(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return businessDetailsRepository.findAll(pageable);
+    }
 
+    @Override
+    public long countByStatus(String status) {
+        return businessDetailsRepository.countByStatus(status);
+    }
 
 
 }

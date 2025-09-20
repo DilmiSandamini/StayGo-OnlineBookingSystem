@@ -16,10 +16,8 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -173,7 +171,7 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
 
     @Override
     public List<BusinessBookingDTO> getBookingsByBusiness(Long businessId) {
-        return bookingRepository.findByBusinessDetail_Business_BusinessId(businessId)
+        return bookingRepository.findByBusinessDetail_Business_BusinessIdOrderByCreatedAtDesc(businessId)
                 .stream()
                 .map(b -> {
                     BusinessBookingDTO dto = new BusinessBookingDTO();
@@ -198,6 +196,4 @@ public class BusinessBookingServiceImpl implements BusinessBookingService {
                 })
                 .collect(Collectors.toList());
     }
-
-
 }

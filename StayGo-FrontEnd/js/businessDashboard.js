@@ -317,4 +317,3 @@ $(document).on("click", ".business-card .view-details", function(e) {
     if (!businessId) return;
     window.location.href = `/pages/businessDetailDashborad.html?businessId=${businessId}`;
 });
-

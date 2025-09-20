@@ -1,51 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Client Dashboard - StayGo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/clientDashboard.css">
-
+    <meta charset="UTF-8">
+    <title>Client Dashboard - StayGo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/clientDashboard.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <!-- Header -->
- <div class="header">
-        <h4 class="logo">StayGo</h4>
+    <nav class="navbar-custom">
+        <a href="/pages/dashboard.html" class="logo">StayGo</a>
+        
+        <div class="nav-links">
+            <a href="">Dashboard</a>
+            <a href="/pages/clientDashboard.html">Businesses</a>
+            <a href="/pages/clientBookingHistory.html">Bookings</a>
+            <a href="/pages/reports.html">Reports</a>
+        </div>
+
+        <div class="profile" id="profileDropdown">
+            <img id="user-profile-pic" src="/assets/image/profile-icon-design-free-vector.jpg" alt="Profile">
+            <div class="dropdown-menu">
+                <a href="/pages/myAccount.html"><i class="bi bi-person-circle"></i> My Account</a>
+                <hr class="dropdown-divider">
+                <a href="/pages/login.html" id="logoutBtn" class="text-danger"><i class="bi bi-box-arrow-right"></i> Log out</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container mt-5 property-destination">
+        <h3 class="mb-4">Available Businesses</h3>
+        <div class="property-grid">
+            <div class="property-item" data-category="ALL">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" 
+                    alt="All Places">
+                <p>All Places</p>
+            </div>
+            <div class="property-item">
+                <img src="/assets/image/hotelbackgroundimage01.jpg" alt="Hotels">
+                <p>Hotels</p>
+            </div>
+            <div class="property-item">
+                <img src="/assets/image/hotelbackgroundimage02.jpg" alt="Apartments">
+                <p>Villas</p>
+            </div>
+            <div class="property-item">
+                <img src="/assets/image/hotelbackgroundimage03.jpeg" alt="Resorts">
+                <p>Resorts</p>
+            </div>
+            <div class="property-item">
+                <img src="/assets/image/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer.jpg" alt="Villas">
+                <p>Apartments</p>
+            </div>
+        </div>
     </div>
 
-  <!-- Main content -->
-  <div class="container mt-5 property-destination">
-    <h3 class="mb-4">Available Businesses</h3>
-    <div class="property-grid">
-        <div class="property-item">
-            <img src="/assets/image/hotelbackgroundimage01.jpg" alt="Hotels">
-            <p>Hotels</p>
-        </div>
-        <div class="property-item">
-            <img src="/assets/image/hotelbackgroundimage02.jpg" alt="Apartments">
-            <p>Villas</p>
-        </div>
-        <div class="property-item">
-            <img src="/assets/image/hotelbackgroundimage03.jpeg" alt="Resorts">
-            <p>Resorts</p>
-        </div>
-        <div class="property-item">
-            <img src="/assets/image/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer.jpg" alt="Villas">
-            <p>Apartments</p>
-        </div>
+    <div class="d-flex justify-content-center mt-5">
+      <div id="businessContainer" class="container row"></div>
     </div>
-    <div id="businessContainer" class="row">
-      <!-- Business cards dynamically load here -->
-    </div>
-  </div>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/clientDashboard.js"></script>
+    <div id="popular-traveling-citys" class="container popular-cities mt-5">
+        <h3 class="mb-4">Popular Traveling Cities in Sri Lanka</h3>
+        <div class="row g-3">
+            <!-- Top row (2 images) -->
+            <div class="col-md-6">
+                <div class="city-card">
+                  <img src="/assets/image/f0.jpg" alt="Kandy">
+                  <div class="city-name">Kandy</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="city-card">
+                  <img src="/assets/image/colombo-sri-lanka.jpg" alt="Colombo">
+                  <div class="city-name">Colombo</div>
+                </div>
+            </div>
+
+            <!-- Middle row (3 images) -->
+            <div class="col-md-4">
+                <div class="city-card">
+                  <img src="/assets/image/istockphoto-1087388190-612x612.jpg" alt="Galle">
+                  <div class="city-name">Galle</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="city-card">
+                  <img src="/assets/image/istockphoto-2170593156-612x612.jpg" alt="Nuwara Eliya">
+                  <div class="city-name">Nuwara Eliya</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="city-card">
+                  <img src="/assets/image/istockphoto-2190509860-612x612.jpg" alt="Sigiriya">
+                  <div class="city-name">Sigiriya</div>
+                </div>
+            </div>
+
+            <!-- Bottom row (3 images) -->
+            <div class="col-md-4">
+                <div class="city-card">
+                  <img src="/assets/image/istockphoto-1896358389-640x640.avif" alt="Ella">
+                  <div class="city-name">Ella</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="city-card">
+                  <img src="/assets/image/istockphoto-1197155454-612x612.jpg" alt="Jaffna">
+                  <div class="city-name">Jaffna</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="city-card">
+                  <img src="/assets/image/istockphoto-1311155487-612x612.jpg" alt="Trincomalee">
+                  <div class="city-name">Trincomalee</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/clientDashboard.js"></script>
 </body>
 </html>

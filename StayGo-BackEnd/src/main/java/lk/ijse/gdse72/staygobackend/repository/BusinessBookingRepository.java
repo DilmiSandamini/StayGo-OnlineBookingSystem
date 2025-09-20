@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface BusinessBookingRepository extends JpaRepository<BusinessBooking, Long> {
     List<BusinessBooking> findByUser_Id(Long userId);
-    List<BusinessBooking> findByBusinessDetail_Business_BusinessId(Long businessId);
+    List<BusinessBooking> findByBusinessDetail_Business_BusinessIdOrderByCreatedAtDesc(Long businessId);
 
     @Query("SELECT COALESCE(SUM(b.roomCount), 0) " +
             "FROM BusinessBooking b " +
@@ -24,6 +24,4 @@ public interface BusinessBookingRepository extends JpaRepository<BusinessBooking
     Integer sumBookedRoomsInRange(@Param("detailId") Long detailId,
                                   @Param("checkIn") LocalDateTime checkIn,
                                   @Param("checkOut") LocalDateTime checkOut);
-
-
 }

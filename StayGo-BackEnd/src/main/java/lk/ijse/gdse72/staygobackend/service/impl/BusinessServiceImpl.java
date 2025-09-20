@@ -8,6 +8,9 @@ import lk.ijse.gdse72.staygobackend.repository.UserRepository;
 import lk.ijse.gdse72.staygobackend.service.BusinessService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -73,4 +76,33 @@ public class BusinessServiceImpl implements BusinessService {
         business.setUpdatedAt(new Timestamp(System.currentTimeMillis()));
         businessRepository.save(business);
     }
+
+    @Override
+    public Page<BusinessDTO> getAllBusinessesPaginated(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Business> businessPage = businessRepository.findAll(pageable);
+
+        // map Page<Business> → Page<BusinessDTO>
+        return businessPage.map(business -> modelMapper.map(business, BusinessDTO.class));
+    }
+
+    @Override
+    public Page<BusinessDTO> getAllActiveBusinessesPaginated(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Business> businessPage = businessRepository.findByBusinessStatus("Active", pageable);
+
+        // map Page<Business> → Page<BusinessDTO>
+        return businessPage.map(business -> modelMapper.map(business, BusinessDTO.class));
+    }
+
+    @Override
+    public Page<BusinessDTO> getAllInactiveBusinessesPaginated(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Business> businessPage = businessRepository.findByBusinessStatus("Inactive", pageable);
+
+        // map Page<Business> → Page<BusinessDTO>
+        return businessPage.map(business -> modelMapper.map(business, BusinessDTO.class));
+    }
+
+
 }

@@ -1,62 +1,259 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Page layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-    max-width: 700px;
-    padding: 20px;
-    background: linear-gradient(135deg, #d2d7e9, #fefeff);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  max-width: 520px;
+  padding: 28px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 15; /* above overlay and video */
+  overflow: hidden;
+  /* soft translucent background to emulate glass */
+  background: linear-gradient(135deg, rgba(94, 170, 184, 0.8), rgba(47, 72, 126, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  /* the key: blur the background behind the card */
+  backdrop-filter: blur(12px) saturate(110%);
+  -webkit-backdrop-filter: blur(12px) saturate(110%);
+  /* subtle inner glow / glass sheen */
+  box-shadow:
+    0 8px 30px rgba(2, 6, 23, 0.45),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.container:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s ease;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-}
-
+/* Logo / heading */
 .logo {
-            color: #1e40af;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 6px 20px rgba(10, 20, 40, 0.5);
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+.logo:hover { color: #5c7edd; }
 
+/* Form styling */
+form#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.logo:hover {
-            color: #523692;
+/* Labels */
+label {
+  color: rgba(0, 0, 0, 0.92);
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
 }
 
-/* .logo-p {
-            color: #666;
-            font-size: 0.9rem;
-            text-align: center;
-} */
-
-#login-Google-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
+/* Input common */
+input.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  outline: none;
+  transition: all 180ms ease;
+  box-shadow: none;
+  font-size: 0.95rem;
 }
 
+/* Input focus */
+input.form-control:focus {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.24);
+  box-shadow: 0 6px 18px rgba(30, 50, 120, 0.12);
+  color: #fff;
+}
+
+/* Input placeholder color */
+input::placeholder {
+  color: rgba(207, 203, 203, 0.6);
+}
+
+/* Input group (password + toggle) */
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.input-group .form-control {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: none;
+}
+
+/* toggle button */
+#toggleLoginPassword {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+#toggleLoginPassword i {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+#toggleLoginPassword:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-1px);
+}
+
+/* Message text under inputs (errors/success) */
+#message {
+  min-height: 1.2rem;
+  color: #ffd3d3; /* error by default */
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Sign-in button */
 .sign-in-btn {
-            background-color: #1e40af;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+  background: linear-gradient(180deg, #1e40af 0%, #2536b3 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 8px 20px rgba(30, 50, 120, 0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
 }
+.sign-in-btn:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(30, 50, 120, 0.25);
+  opacity: 0.98;
+}
+
+/* Link text */
+p.text-center {
+  color: rgba(255,255,255,0.9);
+}
+p.text-center a {
+  color: #dbeafe;
+  font-weight: 700;
+  text-decoration: none;
+}
+p.text-center a:hover { text-decoration: underline; }
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.12));
+}
+
+/* "Or" text */
+p.text-center.mt-3 {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Google button */
+button.btn.btn-outline-dark.w-50 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  font-weight: 700;
+  transition: transform 160ms ease, background 160ms ease;
+}
+button.btn.btn-outline-dark.w-50:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* Google logo */
+#login-Google-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* small screens: shrink card padding & font size */
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+    border-radius: 14px;
+    max-width: 420px;
+  }
+  .logo { font-size: 1.75rem; }
+  input.form-control { padding: 10px 12px; font-size: 0.92rem; }
+  .sign-in-btn { padding: 9px 12px; }
+  button.btn.btn-outline-dark.w-50 { width: 100%; }
+}
+
+/* medium screens: slightly larger */
+@media (min-width: 481px) and (max-width: 900px) {
+  .container { max-width: 480px; padding: 22px; }
+}
+
+/* Accessibility: focus outlines for keyboard users */
+button:focus, input:focus {
+  outline: 3px solid rgba(93, 156, 236, 0.18);
+  outline-offset: 2px;
+}
+
+/* Optional: reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .container, .sign-in-btn, #toggleLoginPassword, button.btn {
+    transition: none;
+  }
+  .container:hover, .sign-in-btn:hover, button.btn:hover { transform: none; }
+}
+

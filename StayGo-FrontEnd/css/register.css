@@ -1,56 +1,212 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+html, body {
+  height: 80%;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background Overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(180deg, rgba(10, 10, 20, 0.35), rgba(20, 18, 40, 0.6));
+  z-index: -1;
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Glass Card */
 .container {
-    max-width: 700px;
-    padding: 20px;
-    background: linear-gradient(135deg, #d2d7e9, #fefeff);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  padding: 26px;
+  border-radius: 18px;
+  z-index: 10;
+
+  background: linear-gradient(135deg, rgba(94, 170, 184, 0.85), rgba(47, 72, 126, 0.85));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(110%);
+  -webkit-backdrop-filter: blur(12px) saturate(110%);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.45);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.container:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s ease;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+/* Heading */
+h2.text-center {
+  color: #eaf2ff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 6px 20px rgba(10, 20, 40, 0.5);
 }
 
-.logo {
-            color: #1e40af;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-
+/* Labels */
+label {
+  color: rgba(0, 0, 0, 0.92);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
 }
 
-.logo:hover {
-            color: #523692;
+/* Inputs */
+input.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 180ms ease;
 }
 
-#register-Google-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
+input.form-control:focus {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 6px 18px rgba(30, 50, 120, 0.25);
+  color: #fff;
 }
 
+input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Input Group (password toggle) */
+.input-group .form-control {
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.toggle-password {
+  border-radius: 0 10px 10px 0;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+.toggle-password:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-1px);
+}
+.toggle-password i {
+  font-size: 1rem;
+}
+
+/* Message under inputs */
+#message {
+  min-height: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffd3d3; /* default error color */
+}
+
+/* Sign Up Button */
 .sign-up-btn {
-            background-color: #1e40af;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+ background: linear-gradient(180deg, #1e40af 0%, #2536b3 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 8px 20px rgba(30, 50, 120, 0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+.sign-up-btn:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(16, 120, 60, 0.35);
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  margin: 10px 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.18));
+}
+
+p.text-center {
+  color: rgba(255,255,255,0.92);
+}
+p.text-center a {
+  color: #d1fae5;
+  font-weight: 700;
+  text-decoration: none;
+}
+p.text-center a:hover { text-decoration: underline; }
+
+/* Google Button */
+button.btn.btn-outline-dark.w-50 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: transform 160ms ease, background 160ms ease;
+}
+button.btn.btn-outline-dark.w-50:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.12);
+}
+
+/* Google Logo */
+#register-Google-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    border-radius: 14px;
+    max-width: 420px;
+  }
+  h2.text-center { font-size: 1.6rem; }
+  input.form-control { padding: 10px 12px; font-size: 0.92rem; }
+  .sign-up-btn { padding: 10px 12px; }
+  button.btn.btn-outline-dark.w-50 { width: 100%; }
+}
+
+/* Accessibility */
+button:focus, input:focus {
+  outline: 3px solid rgba(93, 156, 236, 0.25);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
 }

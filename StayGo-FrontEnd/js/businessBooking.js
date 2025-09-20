@@ -2,9 +2,9 @@ $(document).ready(function () {
     console.log("Business Booking Page Ready ✅");
 
     const backendUrl = "http://localhost:8080";
-    let roomDetails = null; // store room info
-    let lastBooking = null; // store last booking
-    let availableRooms = 0; // ✅ new state for availability
+    let roomDetails = null;
+    let lastBooking = null;
+    let availableRooms = 0;
 
     // Get query params
     function getParams() {
@@ -37,25 +37,17 @@ $(document).ready(function () {
                 const d = res.data;
                 roomDetails = d;
 
-                // Show room info
                 $("#roomInfo").html(`
-                    <div class="card mb-4">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="${d.roomImage ? backendUrl + '/' + d.roomImage : '/images/default-room.png'}"
-                                     class="img-fluid rounded" style="height:220px; width:100%; object-fit:cover;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="fw-bold">${d.luxuryLevel}</h5>
-                                    <p>Rooms count: ${d.roomsCount}</p>
-                                    <p>Beds per room: ${d.bedsCount}</p>
-                                    <p>Guests allowed: ${d.guestCount}</p>   <!-- ✅ Add this -->
-                                    <p>Price Per Day: LKR ${d.pricePerDay}</p>
-                                    <p>Price Per Night: LKR ${d.pricePerNight}</p>
-                                    <p>${d.facilities || ""}</p>
-                                </div>
-                            </div>
+                    <div class="room-card">
+                        <img src="${d.roomImage ? backendUrl + '/' + d.roomImage : '/images/default-room.png'}" alt="Room Image" class="room-img">
+                        <div class="room-details">
+                            <h5 class="room-title">${d.luxuryLevel}</h5>
+                            <p><strong>Rooms count:</strong> ${d.roomsCount}</p>
+                            <p><strong>Beds per room:</strong> ${d.bedsCount}</p>
+                            <p><strong>Guests allowed:</strong> ${d.guestCount}</p>
+                            <p><strong>Price Per Day:</strong> LKR ${d.pricePerDay}</p>
+                            <p><strong>Price Per Night:</strong> LKR ${d.pricePerNight}</p>
+                            ${d.facilities ? `<div class="facilities">${d.facilities.split(',').map(f => `<span>${f.trim()}</span>`).join('')}</div>` : ''}
                         </div>
                     </div>
                 `);
@@ -67,7 +59,7 @@ $(document).ready(function () {
         });
     }
 
-    // ✅ Fetch available rooms
+    // Fetch available rooms
     async function fetchAvailableRooms(detailId, checkIn, checkOut) {
         const headers = await getAuthHeaders();
         return new Promise((resolve, reject) => {
@@ -80,7 +72,6 @@ $(document).ready(function () {
                     availableRooms = res.data || 0;
                     $("#availableRooms").text(availableRooms);
 
-                    // Adjust room count if needed
                     const currentCount = parseInt($("#roomCount").val(), 10);
                     if (currentCount > availableRooms) {
                         $("#roomCount").val(availableRooms);
@@ -97,7 +88,7 @@ $(document).ready(function () {
         });
     }
 
-    // ✅ Trigger availability check when dates change
+    // Trigger availability check when dates change
     $(document).on("change", "#checkInDate, #checkOutDate", async function () {
         const { detailId } = getParams();
         const checkIn = $("#checkInDate").val();
@@ -107,6 +98,11 @@ $(document).ready(function () {
         }
     });
 
+    // Handle booking time radio -> hidden input
+    $(document).on("change", ".booking-time-radio", function () {
+        const value = $(this).val();
+        $("#bookingTime").val(value).trigger("change");
+    });
 
     // Payment selection
     $(document).on("click", ".payment-btn", function () {
@@ -128,7 +124,7 @@ $(document).ready(function () {
 
         const inDate = new Date(checkIn);
         const outDate = new Date(checkOut);
-        const days = Math.ceil((outDate - inDate) / (1000*60*60*24));
+        const days = Math.ceil((outDate - inDate) / (1000 * 60 * 60 * 24));
 
         let pricePerRoom = 0;
         if (bookingTime === "DAY") pricePerRoom = roomDetails.pricePerDay;
@@ -140,36 +136,37 @@ $(document).ready(function () {
 
     // Update booking summary
     function updateBookingSummary() {
-        const checkIn = $("#checkInDate").val();
-        const checkOut = $("#checkOutDate").val();
-        const bookingTime = $("#bookingTime").val();
-        const roomCount = $("#roomCount").val();
-        const guestCount = $("#guestCount").val();
-        const paymentMethod = $("#paymentMethod").val();
-        const totalPrice = calculateTotalPrice();
+    const checkIn = $("#checkInDate").val();
+    const checkOut = $("#checkOutDate").val();
+    const bookingTime = $("#bookingTime").val();
+    const roomCount = $("#roomCount").val();
+    const guestCount = $("#guestCount").val();
+    const paymentMethod = $("#paymentMethod").val();
+    const totalPrice = calculateTotalPrice();
 
-        let summaryHtml = "";
-        if (checkIn || checkOut || bookingTime || roomCount || paymentMethod || lastBooking) {
-            const booking = lastBooking || {};
-            summaryHtml = `
-                <div class="card p-2 border">
-                    <strong>Booking Details:</strong>
-                    <p>Name: ${$("#firstName").val() || booking.firstName || "-"} ${$("#lastName").val() || booking.lastName || "-"}</p>
-                    <p>Email: ${$("#email").val() || booking.email || "-"}</p>
-                    <p>Phone: ${$("#phoneNumber").val() || booking.phoneNumber || "-"}</p>
-                    <p>Address: ${$("#address").val() || booking.address || "-"}</p>
-                    <p>Check-In Date: ${checkIn || booking.checkInDate || "-"}</p>
-                    <p>Check-Out Date: ${checkOut || booking.checkOutDate || "-"}</p>
-                    <p>Booking Time: ${bookingTime || booking.bookingTime || "-"}</p>
-                    <p>Room Count: ${roomCount || booking.roomCount || "-"}</p>
-                    <p>Guest Count: ${guestCount || booking.guestCount || "-"}</p>                    
-                    <p>Payment Method: ${paymentMethod || booking.paymentMethod || "-"}</p>
-                    <p><strong>Total Price: LKR ${totalPrice || booking.totalPrice || 0}</strong></p>
-                </div>
-            `;
-        }
-        $("#bookingSummary").html(summaryHtml);
+    let summaryHtml = "";
+    if (checkIn || checkOut || bookingTime || roomCount || paymentMethod || lastBooking) {
+        const booking = lastBooking || {};
+        summaryHtml = `
+            <div class="booking-card">
+                <strong>Booking Details:</strong>
+                <p>Name: ${$("#firstName").val() || booking.firstName || "-"} ${$("#lastName").val() || booking.lastName || "-"}</p>
+                <p>Email: ${$("#email").val() || booking.email || "-"}</p>
+                <p>Phone: ${$("#phoneNumber").val() || booking.phoneNumber || "-"}</p>
+                <p>Address: ${$("#address").val() || booking.address || "-"}</p>
+                <p>Check-In Date: ${checkIn || booking.checkInDate || "-"}</p>
+                <p>Check-Out Date: ${checkOut || booking.checkOutDate || "-"}</p>
+                <p>Booking Time: ${bookingTime || booking.bookingTime || "-"}</p>
+                <p>Room Count: ${roomCount || booking.roomCount || "-"}</p>
+                <p>Guest Count: ${guestCount || booking.guestCount || "-"}</p>
+                <p><strong>Total Price: LKR ${totalPrice || booking.totalPrice || 0}</strong></p>
+            </div>
+        `;
     }
+
+    $("#bookingSummary").html(summaryHtml);
+}
+
 
     // Update summary on form input/change
     $(document).on("input change", "#bookingForm input, #bookingForm select", function () {
@@ -179,7 +176,7 @@ $(document).ready(function () {
     // Room count controls
     $("#increaseRoom").on("click", function () {
         let val = parseInt($("#roomCount").val(), 10);
-        if (val < availableRooms) {   // ✅ prevent exceeding availability
+        if (val < availableRooms) {
             $("#roomCount").val(val + 1).trigger("change");
         } else {
             Swal.fire("Limit Reached", "No more available rooms!", "warning");
@@ -190,20 +187,19 @@ $(document).ready(function () {
         if (val > 1) $("#roomCount").val(val - 1).trigger("change");
     });
 
-// Guest count controls
-$("#increaseGuest").on("click", function () {
-    let val = parseInt($("#guestCount").val(), 10);
-    if (roomDetails && val < roomDetails.guestCount) {   // ✅ limit to allowed max
-        $("#guestCount").val(val + 1).trigger("change");
-    } else {
-        Swal.fire("Limit Reached", "Guest count cannot exceed allowed limit!", "warning");
-    }
-});
-$("#decreaseGuest").on("click", function () {
-    let val = parseInt($("#guestCount").val(), 10);
-    if (val > 1) $("#guestCount").val(val - 1).trigger("change");
-});
-
+    // Guest count controls
+    $("#increaseGuest").on("click", function () {
+        let val = parseInt($("#guestCount").val(), 10);
+        if (roomDetails && val < roomDetails.guestCount) {
+            $("#guestCount").val(val + 1).trigger("change");
+        } else {
+            Swal.fire("Limit Reached", "Guest count cannot exceed allowed limit!", "warning");
+        }
+    });
+    $("#decreaseGuest").on("click", function () {
+        let val = parseInt($("#guestCount").val(), 10);
+        if (val > 1) $("#guestCount").val(val - 1).trigger("change");
+    });
 
     // Submit booking
     $("#bookingForm").on("submit", async function (e) {
@@ -224,25 +220,19 @@ $("#decreaseGuest").on("click", function () {
             return;
         }
 
-        // ✅ validate availability before submit
         const requestedRooms = parseInt($("#roomCount").val(), 10);
         if (requestedRooms > availableRooms) {
             Swal.fire("Error", "Selected rooms exceed available rooms!", "error");
             return;
         }
 
-        // ✅ validate guest count before submit
         const requestedGuests = parseInt($("#guestCount").val(), 10);
         if (roomDetails && requestedGuests > roomDetails.guestCount) {
             Swal.fire("Error", `Guest count exceeds allowed limit! Max allowed: ${roomDetails.guestCount}`, "error");
             return;
-    }
-        const totalPrice = calculateTotalPrice();
-        const paymentMethod = $("#paymentMethod").val();
-        if (!paymentMethod) {
-            Swal.fire("Error", "Please select a payment method", "error");
-            return;
         }
+
+        const totalPrice = calculateTotalPrice();
 
         const payload = {
             userId: parseInt(userId, 10),
@@ -257,8 +247,7 @@ $("#decreaseGuest").on("click", function () {
             checkOutTime: checkOutDate + "T12:00:00",
             roomCount: parseInt($("#roomCount").val(), 10),
             guestCount: parseInt($("#guestCount").val(), 10),
-            totalPrice: totalPrice,
-            paymentMethod: paymentMethod
+            totalPrice: totalPrice
         };
 
         $.ajax({
@@ -268,7 +257,6 @@ $("#decreaseGuest").on("click", function () {
             data: JSON.stringify(payload),
             success: function (res) {
                 Swal.fire("Success", "Your booking has been placed!", "success").then(() => {
-                    // Store last booking to keep summary visible
                     lastBooking = {
                         firstName: $("#firstName").val(),
                         lastName: $("#lastName").val(),
@@ -280,16 +268,15 @@ $("#decreaseGuest").on("click", function () {
                         bookingTime: $("#bookingTime").val(),
                         roomCount: $("#roomCount").val(),
                         guestCount: $("#guestCount").val(),
-                        totalPrice: totalPrice,
-                        paymentMethod: paymentMethod
+                        totalPrice: totalPrice
                     };
 
                     updateBookingSummary();
 
-                    // Clear form and selections
                     $("#bookingForm")[0].reset();
                     $("#paymentMethod").val("");
                     $(".payment-btn").removeClass("active");
+                    $("#bookingTime").val(""); // clear hidden booking time
                 });
             },
             error: function (xhr) {
@@ -302,7 +289,4 @@ $("#decreaseGuest").on("click", function () {
 
     // Initial load
     loadRoomInfo();
-
-
-
 });

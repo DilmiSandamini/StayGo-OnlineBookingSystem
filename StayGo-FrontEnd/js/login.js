@@ -32,7 +32,7 @@ $(document).ready(function () {
             sessionStorage.setItem("userId", userId); // <-- save for business creation
 
             if (userRole === "ADMIN") {
-              $("#message").html('<div class="alert alert-success">Admin Login successful! Redirecting...</div>');
+              $("#message").html('<div class="alert alert-success">ADMIN Login successful! Redirecting...</div>');
             } else if (userRole === "CLIENT") {
               $("#message").html('<div class="alert alert-success">CLIENT Login successful! Redirecting...</div>');
             } else if (userRole === "BUSINESS") {

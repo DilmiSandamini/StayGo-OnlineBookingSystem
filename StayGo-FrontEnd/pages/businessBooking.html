@@ -59,8 +59,8 @@
                     <input type="text" class="form-control" id="address" required>
                   </div>
                   <div class="mt-3">
-                  <label class="form-label">Available Rooms:</label>
-                  <span id="availableRooms" class="fw-bold text-success">0</span>
+                  <label class="form-label fs-4">Available Rooms:</label>
+                  <span id="availableRooms" class="fw-bold text-success fs-4">0</span>
                 </div>
                   <div class="d-flex gap-3 mt-3">
                     <div class="col-md-6">
@@ -74,19 +74,31 @@
                   </div>
               </div>
 
-              <div class="mt-3">
-                <label for="bookingTime" class="form-label">Booking Time</label>
-                <select class="form-select" id="bookingTime" required>
-                  <option value="" disabled selected>-- Select --</option>
-                  <option value="DAY">Day</option>
-                  <option value="NIGHT">Night</option>
-                  <option value="BOTH">Full Day</option>
-                </select>
+              <div class="mt-3 ms-4 me-4">
+                <label class="form-label d-block fw-semibold">Booking Time</label>
+                <div class="d-flex justify-content-between gap-3" id="bookingTimeOptions">
+                  <div class="form-check">
+                    <input class="form-check-input booking-time-radio" type="radio" name="bookingTime" id="dayOption" value="DAY">
+                    <label class="form-check-label" for="dayOption">Day</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input booking-time-radio" type="radio" name="bookingTime" id="nightOption" value="NIGHT">
+                    <label class="form-check-label" for="nightOption">Night</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input booking-time-radio" type="radio" name="bookingTime" id="bothOption" value="BOTH">
+                    <label class="form-check-label" for="bothOption">Full Day</label>
+                  </div>
+                </div>
               </div>
 
-              <div class="mt-3 g-5 d-flex justify-content-start  align-items-center">
+              <!-- hidden input to keep value for booking -->
+              <input type="hidden" id="bookingTime" required>
+
+
+              <div class="mt-3 ms-4 me-4 g-5 d-flex justify-content-between  align-items-center">
                 <div class="mt-3">
-                <label for="roomCount" class="form-label">Room Count</label>
+                <label for="roomCount" class="form-label fw-semibold">Room Count</label>
                 <div class="input-group input-group-sm" style="max-width:170px;">
                   <button class="btn btn-outline-secondary" type="button" id="decreaseRoom">-</button>
                   <input type="text" class="form-control text-center" id="roomCount" value="1" readonly>
@@ -95,38 +107,25 @@
               </div>
 
               <div class="mt-3 ms-5">
-              <label for="guestCount" class="form-label">Guest Count</label>
-              <div class="input-group input-group-sm" style="max-width:170px;">
-                <button class="btn btn-outline-secondary" type="button" id="decreaseGuest">-</button>
-                <input type="text" class="form-control text-center" id="guestCount" value="1" readonly>
-                <button class="btn btn-outline-secondary" type="button" id="increaseGuest">+</button>
-              </div>
-            </div>
-
-              </div>
-
-
-              <div class="mt-3">
-                <label class="form-label">Payment Method</label>
-                <div class="d-flex gap-2">
-                  <button type="button" class="btn btn-outline-primary payment-btn" data-value="CARD">Card</button>
-                  <button type="button" class="btn btn-outline-success payment-btn" data-value="CASH">Cash</button>
-                  <button type="button" class="btn btn-outline-warning payment-btn" data-value="ONLINE">Online</button>
+                <label for="guestCount" class="form-label fw-semibold">Guest Count</label>
+                <div class="input-group input-group-sm" style="max-width:170px;">
+                  <button class="btn btn-outline-secondary" type="button" id="decreaseGuest">-</button>
+                  <input type="text" class="form-control text-center" id="guestCount" value="1" readonly>
+                  <button class="btn btn-outline-secondary" type="button" id="increaseGuest">+</button>
                 </div>
-                <input type="hidden" id="paymentMethod" required>
-              </div>
+            </div>
+          </div>
 
-              <button type="submit" class="btn btn-success w-100 mt-4">Confirm Booking</button>
+              <button type="submit" class="btn btn-success w-100 mt-4 ms-4 me-4">Confirm Booking</button>
             </form>
           </div>
         </div>
-
-        <!-- Booking Summary -->
-        <div id="bookingSummary" class="card shadow-sm p-3">
+      </div>
+      <!-- Booking Summary -->
+        <div id="bookingSummary" class="card mt-4 shadow-sm p-3">
           <h6 class="fw-bold">Your Booking Details</h6>
           <p>Fill in the form to see summary here.</p>
         </div>
-      </div>
     </div>
   </div>
 
