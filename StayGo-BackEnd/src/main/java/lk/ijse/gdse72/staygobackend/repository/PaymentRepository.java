@@ -1,4 +1,10 @@
 package lk.ijse.gdse72.staygobackend.repository;
 
-public interface PaymentRepository {
+import lk.ijse.gdse72.staygobackend.entity.Payment;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PaymentRepository extends JpaRepository<Payment,Long> {
+
 }

@@ -256,29 +256,47 @@ $(document).ready(function () {
             headers: { ...headers, "Content-Type": "application/json" },
             data: JSON.stringify(payload),
             success: function (res) {
-                Swal.fire("Success", "Your booking has been placed!", "success").then(() => {
-                    lastBooking = {
-                        firstName: $("#firstName").val(),
-                        lastName: $("#lastName").val(),
-                        email: $("#email").val(),
-                        phoneNumber: $("#phoneNumber").val(),
-                        address: $("#address").val(),
-                        checkInDate: checkInDate,
-                        checkOutDate: checkOutDate,
-                        bookingTime: $("#bookingTime").val(),
-                        roomCount: $("#roomCount").val(),
-                        guestCount: $("#guestCount").val(),
-                        totalPrice: totalPrice
-                    };
+    Swal.fire("Success", "Your booking has been placed!", "success").then(() => {
+        lastBooking = {
+            firstName: $("#firstName").val(),
+            lastName: $("#lastName").val(),
+            email: $("#email").val(),
+            phoneNumber: $("#phoneNumber").val(),
+            address: $("#address").val(),
+            checkInDate: checkInDate,
+            checkOutDate: checkOutDate,
+            bookingTime: $("#bookingTime").val(),
+            roomCount: $("#roomCount").val(),
+            guestCount: $("#guestCount").val(),
+            totalPrice: totalPrice
+        };
 
-                    updateBookingSummary();
+        updateBookingSummary();
 
-                    $("#bookingForm")[0].reset();
-                    $("#paymentMethod").val("");
-                    $(".payment-btn").removeClass("active");
-                    $("#bookingTime").val(""); // clear hidden booking time
-                });
-            },
+        // ✅ Append payment section to booking summary
+        $("#bookingSummary").append(`
+            <div id="paymentSection" class="mt-4">
+                <h5>Select Payment Method</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment-method" id="payment-card" value="card">
+                    <label class="form-check-label" for="payment-card">Credit/Debit Card</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment-method" id="payment-cod" value="cod">
+                    <label class="form-check-label" for="payment-cod">Cash</label>
+                </div>
+                <button id="payNowBtn" class="btn btn-primary w-100 mt-3">Pay Now</button>
+            </div>
+        `);
+
+        // ✅ Reset form
+        $("#bookingForm")[0].reset();
+        $("#paymentMethod").val("");
+        $(".payment-btn").removeClass("active");
+        $("#bookingTime").val(""); // clear hidden booking time
+    });
+    },
+
             error: function (xhr) {
                 console.error(xhr.responseText);
                 const msg = xhr.responseJSON?.message || "Failed to create booking";
@@ -286,6 +304,19 @@ $(document).ready(function () {
             }
         });
     });
+
+    $(document).on("click", "#payNowBtn", function () {
+    const method = $("input[name='payment-method']:checked").val();
+    if (!method) {
+        Swal.fire("Error", "Please select a payment method", "error");
+        return;
+    }
+
+    Swal.fire("Success", `Payment method selected: ${method.toUpperCase()}`, "success");
+    
+    // 🔹 You can now call your /api/v1/payments endpoint here
+    });
+
 
     // Initial load
     loadRoomInfo();

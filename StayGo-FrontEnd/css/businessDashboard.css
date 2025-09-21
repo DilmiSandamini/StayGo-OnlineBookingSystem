@@ -12,20 +12,6 @@ body {
   color: #2c3e50;
 }
 
-/* Header */
-.header {
-  background-color: #003580; /* Booking.com dark blue */
-  color: #fff;
-  padding: 15px 30px;
-  border-bottom: 3px solid #febb02; /* Booking.com yellow */
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
 /* Add Button */
 #Business-add-button {
   font-size: 2rem;
