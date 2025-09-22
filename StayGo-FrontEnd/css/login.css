@@ -265,18 +265,18 @@ button:focus, input:focus {
 }
 
 #sendResetLinkBtn:hover {
-    background-color: #27ae60;
+    background-color: #11502b;
 }
 
 /* Success/Update button */
 #resetPasswordBtn {
-    background-color: #f39c12; /* vibrant Uber Eats orange */
+    background-color: #124ef3; /* vibrant Uber Eats orange */
     border: none;
     color: #fff;
 }
 
 #resetPasswordBtn:hover {
-    background-color: #d87c0c;
+    background-color: #0c2bd8;
 }
 
 /* Input group for password toggle */
