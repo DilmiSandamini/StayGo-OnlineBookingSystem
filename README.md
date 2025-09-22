@@ -50,5 +50,5 @@ Business owners can manage their properties and booking requests, while admins o
   ### 1. Clone the Repository
   git clone https://github.com/your-username/staygo.git
 
-
+---
 
