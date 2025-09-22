@@ -52,7 +52,9 @@ git clone https://github.com/your-username/staygo.git
 
 ---
 
-https://github.com/DilmiSandamini/StayGo-OnlineBookingSystem/blob/a04ffd665e8bb71f8fb61155e4912d123606cf94/Screenshot%202025-09-22%20191124.png
+👨‍💻 Author
 
+Dilmi Sandamini
+2nd Semester Final Project – IJSE GDSE72 (Galle)
 
 
