@@ -47,14 +47,15 @@ Business owners can manage their properties and booking requests, while admins o
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the Repository
-git clone https://github.com/your-username/staygo.git
+  ### 1. Clone the Repository
+  git clone https://github.com/your-username/staygo.git
 
 ---
 
 👨‍💻 Author
 
 Dilmi Sandamini
+
 2nd Semester Final Project – IJSE GDSE72 (Galle)
 
 
