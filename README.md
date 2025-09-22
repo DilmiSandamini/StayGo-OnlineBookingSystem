@@ -55,7 +55,6 @@ Business owners can manage their properties and booking requests, while admins o
 👨‍💻 Author
 
 Dilmi Sandamini
-
 2nd Semester Final Project – IJSE GDSE72 (Galle)
 
 
