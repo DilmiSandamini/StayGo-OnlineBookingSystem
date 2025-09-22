@@ -47,8 +47,8 @@ Business owners can manage their properties and booking requests, while admins o
 
 ## ⚙️ Setup Instructions
 
-  ### Clone the Repository
-  git clone https://github.com/DilmiSandamini/StayGo-OnlineBookingSystem.git
+   ### Clone the Repository
+   git clone https://github.com/DilmiSandamini/StayGo-OnlineBookingSystem.git
 
 ---
 
