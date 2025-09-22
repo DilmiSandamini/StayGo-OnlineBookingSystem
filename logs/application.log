@@ -10622,3 +10622,424 @@ Action:
 
 Consider defining a bean of type 'lk.ijse.gdse72.staygobackend.service.OtpService' in your configuration.
 
+2025-09-21T09:18:45.617+05:30  INFO 5736 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 5736 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-21T09:18:45.619+05:30  INFO 5736 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-21T09:18:46.335+05:30  INFO 5736 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-21T09:18:46.407+05:30  INFO 5736 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2025-09-21T09:18:46.898+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-21T09:18:46.911+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-21T09:18:46.912+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-21T09:18:46.956+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-21T09:18:46.956+05:30  INFO 5736 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1289 ms
+2025-09-21T09:18:47.089+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-21T09:18:47.151+05:30  INFO 5736 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-21T09:18:47.198+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-21T09:18:47.439+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-21T09:18:47.467+05:30  INFO 5736 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-21T09:18:47.807+05:30  INFO 5736 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ec7eb5
+2025-09-21T09:18:47.809+05:30  INFO 5736 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-21T09:18:47.854+05:30  WARN 5736 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-21T09:18:47.868+05:30  INFO 5736 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-21T09:18:48.832+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-21T09:18:48.926+05:30  INFO 5736 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T09:18:49.304+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-21T09:18:50.234+05:30  WARN 5736 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-21T09:18:50.261+05:30  INFO 5736 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-21T09:18:50.262+05:30  WARN 5736 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-21T09:18:50.406+05:30 DEBUG 5736 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 42 mappings in 'requestMappingHandlerMapping'
+2025-09-21T09:18:50.492+05:30 DEBUG 5736 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-21T09:18:50.573+05:30 DEBUG 5736 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-21T09:18:50.620+05:30 DEBUG 5736 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-21T09:18:50.776+05:30  INFO 5736 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-21T09:18:50.782+05:30  INFO 5736 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 5.646 seconds (process running for 6.304)
+2025-09-21T09:19:15.400+05:30  INFO 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-21T09:19:15.400+05:30  INFO 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-21T09:19:15.400+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-21T09:19:15.400+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-21T09:19:15.401+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-21T09:19:15.402+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4140f94c
+2025-09-21T09:19:15.403+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@73cf33bd
+2025-09-21T09:19:15.403+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-21T09:19:15.403+05:30  INFO 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-09-21T09:19:15.457+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T09:19:15.458+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T09:19:15.532+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=admin, password=admin123)]
+2025-09-21T09:19:20.711+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T09:19:20.716+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ (truncated)...]
+2025-09-21T09:19:20.727+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T09:19:21.080+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T09:19:21.081+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T09:19:21.081+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=admin, password=admin123)]
+2025-09-21T09:19:26.644+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T09:19:26.645+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(code=200, status=OK, data=AuthResponseDTO(accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZ (truncated)...]
+2025-09-21T09:19:26.646+05:30 DEBUG 5736 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T10:05:56.489+05:30  WARN 5736 --- [StayGo-BackEnd] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m7s808ms682µs600ns).
+2025-09-21T10:28:37.625+05:30  INFO 5736 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-21T10:28:37.699+05:30  INFO 5736 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-21T10:28:37.764+05:30  INFO 5736 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T10:28:37.822+05:30  INFO 5736 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-21T10:28:37.855+05:30  INFO 5736 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-21T10:28:51.423+05:30  INFO 13416 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 13416 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-21T10:28:51.425+05:30  INFO 13416 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-21T10:28:52.772+05:30  INFO 13416 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-21T10:28:52.832+05:30  INFO 13416 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+2025-09-21T10:28:53.316+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-21T10:28:53.326+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-21T10:28:53.326+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-21T10:28:53.381+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-21T10:28:53.382+05:30  INFO 13416 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1904 ms
+2025-09-21T10:28:53.505+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-21T10:28:53.598+05:30  INFO 13416 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-21T10:28:53.642+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-21T10:28:53.895+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-21T10:28:53.916+05:30  INFO 13416 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-21T10:28:54.406+05:30  INFO 13416 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5534e6f1
+2025-09-21T10:28:54.409+05:30  INFO 13416 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-21T10:28:54.495+05:30  WARN 13416 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-21T10:28:54.508+05:30  INFO 13416 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-21T10:28:55.454+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-21T10:28:55.818+05:30  INFO 13416 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T10:28:56.208+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-21T10:28:56.988+05:30  WARN 13416 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-21T10:28:57.017+05:30  INFO 13416 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-21T10:28:57.017+05:30  WARN 13416 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-21T10:28:57.166+05:30 DEBUG 13416 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 42 mappings in 'requestMappingHandlerMapping'
+2025-09-21T10:28:57.263+05:30 DEBUG 13416 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-21T10:28:57.344+05:30 DEBUG 13416 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-21T10:28:57.389+05:30 DEBUG 13416 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-21T10:28:57.539+05:30  INFO 13416 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-21T10:28:57.549+05:30  INFO 13416 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 6.52 seconds (process running for 8.068)
+2025-09-21T10:29:40.111+05:30  INFO 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-21T10:29:40.112+05:30  INFO 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-21T10:29:40.113+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-21T10:29:40.113+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-21T10:29:40.114+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-21T10:29:40.115+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@88b9cf
+2025-09-21T10:29:40.116+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6887e1d1
+2025-09-21T10:29:40.117+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-21T10:29:40.117+05:30  INFO 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-09-21T10:29:40.200+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/send?email=jjkdilmisandamini@gmail.com", parameters={masked}
+2025-09-21T10:29:40.207+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-09-21T10:29:40.227+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-09-21T10:29:40.236+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#HandleException(Exception)
+2025-09-21T10:29:40.319+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:29:40.322+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@7697efce]
+2025-09-21T10:29:40.354+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/auth/otp/send.]
+2025-09-21T10:29:40.356+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-09-21T10:29:42.016+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/send?email=jjkdilmisandamini@gmail.com", parameters={masked}
+2025-09-21T10:29:42.018+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-09-21T10:29:42.020+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-09-21T10:29:42.022+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#HandleException(Exception)
+2025-09-21T10:29:42.023+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:29:42.024+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [lk.ijse.gdse72.staygobackend.util.APIResponse@49813793]
+2025-09-21T10:29:42.026+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/auth/otp/send.]
+2025-09-21T10:29:42.027+05:30 DEBUG 13416 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-09-21T10:38:18.206+05:30  INFO 13416 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-21T10:38:18.283+05:30  INFO 13416 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-21T10:38:18.348+05:30  INFO 13416 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T10:38:18.406+05:30  INFO 13416 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-21T10:38:18.532+05:30  INFO 13416 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-21T10:38:23.938+05:30  INFO 2568 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 2568 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-21T10:38:23.940+05:30  INFO 2568 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-21T10:38:24.676+05:30  INFO 2568 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-21T10:38:24.765+05:30  INFO 2568 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+2025-09-21T10:38:25.359+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-21T10:38:25.374+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-21T10:38:25.375+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-21T10:38:25.424+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-21T10:38:25.424+05:30  INFO 2568 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1443 ms
+2025-09-21T10:38:25.546+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-21T10:38:25.609+05:30  INFO 2568 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-21T10:38:25.670+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-21T10:38:25.893+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-21T10:38:25.914+05:30  INFO 2568 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-21T10:38:26.349+05:30  INFO 2568 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1450ffa3
+2025-09-21T10:38:26.350+05:30  INFO 2568 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-21T10:38:26.420+05:30  WARN 2568 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-21T10:38:26.435+05:30  INFO 2568 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-21T10:38:27.406+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-21T10:38:27.578+05:30  INFO 2568 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T10:38:27.925+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-21T10:38:28.751+05:30  WARN 2568 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-21T10:38:28.786+05:30  INFO 2568 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-21T10:38:28.787+05:30  WARN 2568 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-21T10:38:28.939+05:30 DEBUG 2568 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 43 mappings in 'requestMappingHandlerMapping'
+2025-09-21T10:38:29.021+05:30 DEBUG 2568 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-21T10:38:29.104+05:30 DEBUG 2568 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-21T10:38:29.155+05:30 DEBUG 2568 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-21T10:38:29.311+05:30  INFO 2568 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-21T10:38:29.316+05:30  INFO 2568 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 5.846 seconds (process running for 6.493)
+2025-09-21T10:53:38.716+05:30  INFO 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-21T10:53:38.727+05:30  INFO 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-21T10:53:38.731+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-21T10:53:38.732+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-21T10:53:38.732+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-21T10:53:38.778+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7720e110
+2025-09-21T10:53:38.779+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5ae3f8e4
+2025-09-21T10:53:38.781+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-21T10:53:38.782+05:30  INFO 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 53 ms
+2025-09-21T10:53:38.922+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/send?email=fvdcdvfbb", parameters={masked}
+2025-09-21T10:53:38.927+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#sendOtp(String)
+2025-09-21T10:53:47.387+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2025-09-21T10:53:47.455+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:53:47.461+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=500, status=Internal Server Error, data=Failed messages: jakarta.mail.SendFailedExc (truncated)...]
+2025-09-21T10:53:47.483+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.mail.MailSendException: Failed messages: jakarta.mail.SendFailedException: Invalid Addresses;<EOL>  nested exception is:<EOL>?org.eclipse.angus.mail.smtp.SMTPAddressFailedException: 553-5.1.3 The recipient address <fvdcdvfbb> is not a valid RFC 5321 address. For<EOL>553-5.1.3 more information, go to<EOL>553-5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321<EOL>553 5.1.3 specifications. d9443c01a7336-26980053194sm97742925ad.8 - gsmtp<EOL>; message exceptions (1) are:<EOL>Failed message 1: jakarta.mail.SendFailedException: Invalid Addresses;<EOL>  nested exception is:<EOL>?org.eclipse.angus.mail.smtp.SMTPAddressFailedException: 553-5.1.3 The recipient address <fvdcdvfbb> is not a valid RFC 5321 address. For<EOL>553-5.1.3 more information, go to<EOL>553-5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321<EOL>553 5.1.3 specifications. d9443c01a7336-26980053194sm97742925ad.8 - gsmtp<EOL>]
+2025-09-21T10:53:47.488+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-09-21T10:55:53.876+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/send?email=jkdilmisandamini@gmail.com", parameters={masked}
+2025-09-21T10:55:53.877+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#sendOtp(String)
+2025-09-21T10:55:58.301+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-09-21T10:55:58.302+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing ["OTP sent to jkdilmisandamini@gmail.com"]
+2025-09-21T10:55:58.306+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T10:57:15.305+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/reset", parameters={}
+2025-09-21T10:57:15.308+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#resetPassword(ResetPasswordRequest)
+2025-09-21T10:57:15.535+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.controller.OtpController$ResetPasswordRequest@5c92d76d]
+2025-09-21T10:57:15.552+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-09-21T10:57:15.553+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Password reset success"]
+2025-09-21T10:57:15.567+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T10:57:39.471+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/reset", parameters={}
+2025-09-21T10:57:39.472+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#resetPassword(ResetPasswordRequest)
+2025-09-21T10:57:39.473+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.controller.OtpController$ResetPasswordRequest@36900729]
+2025-09-21T10:57:39.474+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-09-21T10:57:39.475+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Password reset success"]
+2025-09-21T10:57:39.476+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T10:58:10.499+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:58:10.500+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:58:10.507+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=12345)]
+2025-09-21T10:58:10.678+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:58:10.680+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:58:10.680+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:58:10.682+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:58:10.683+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T10:58:31.145+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:58:31.145+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:58:31.147+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=12345)]
+2025-09-21T10:58:31.161+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:58:31.162+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:58:31.162+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:58:31.163+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:58:31.163+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T10:58:36.936+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:58:36.937+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:58:36.940+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=1234)]
+2025-09-21T10:58:36.948+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:58:36.948+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:58:36.949+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:58:36.950+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:58:36.951+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T10:59:38.584+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:59:38.609+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:59:38.610+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=Dilmik, password=12345)]
+2025-09-21T10:59:38.615+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:59:38.616+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:59:38.616+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:59:38.617+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:59:38.617+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T10:59:48.959+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:59:48.960+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:59:48.963+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=12345)]
+2025-09-21T10:59:48.974+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:59:48.977+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:59:48.978+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:59:48.981+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:59:48.982+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T10:59:50.373+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:59:50.375+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:59:50.377+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=12345)]
+2025-09-21T10:59:50.386+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:59:50.386+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:59:50.387+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:59:50.388+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:59:50.388+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T10:59:51.550+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T10:59:51.551+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T10:59:51.551+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=12345)]
+2025-09-21T10:59:51.555+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T10:59:51.556+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T10:59:51.556+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T10:59:51.556+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T10:59:51.557+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T11:00:06.958+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T11:00:06.959+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T11:00:06.961+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=1234)]
+2025-09-21T11:00:06.968+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T11:00:06.968+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T11:00:06.968+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T11:00:06.969+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T11:00:06.969+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T11:00:08.281+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T11:00:08.282+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T11:00:08.283+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=1234)]
+2025-09-21T11:00:08.289+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T11:00:08.289+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T11:00:08.290+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T11:00:08.290+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T11:00:08.291+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T11:00:38.289+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T11:00:38.290+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T11:00:38.292+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DilmiK, password=1234)]
+2025-09-21T11:00:38.299+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T11:00:38.300+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T11:00:38.300+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T11:00:38.301+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T11:00:38.302+05:30 DEBUG 2568 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T11:05:14.935+05:30  INFO 2568 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-21T11:05:14.961+05:30  INFO 2568 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-21T11:05:15.005+05:30  INFO 2568 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T11:05:15.042+05:30  INFO 2568 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-21T11:05:15.063+05:30  INFO 2568 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-21T11:05:20.932+05:30  INFO 11460 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 11460 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-21T11:05:20.933+05:30  INFO 11460 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-21T11:05:21.636+05:30  INFO 11460 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-21T11:05:21.709+05:30  INFO 11460 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2025-09-21T11:05:22.223+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-21T11:05:22.236+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-21T11:05:22.236+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-21T11:05:22.305+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-21T11:05:22.307+05:30  INFO 11460 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1339 ms
+2025-09-21T11:05:22.471+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-21T11:05:22.549+05:30  INFO 11460 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-21T11:05:22.617+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-21T11:05:22.896+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-21T11:05:22.927+05:30  INFO 11460 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-21T11:05:23.283+05:30  INFO 11460 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53e4a19e
+2025-09-21T11:05:23.285+05:30  INFO 11460 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-21T11:05:23.370+05:30  WARN 11460 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-21T11:05:23.392+05:30  INFO 11460 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-21T11:05:24.363+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-21T11:05:24.495+05:30  INFO 11460 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T11:05:24.901+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-21T11:05:25.687+05:30  WARN 11460 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-21T11:05:25.720+05:30  INFO 11460 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-21T11:05:25.721+05:30  WARN 11460 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-21T11:05:25.889+05:30 DEBUG 11460 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 43 mappings in 'requestMappingHandlerMapping'
+2025-09-21T11:05:25.966+05:30 DEBUG 11460 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-21T11:05:26.050+05:30 DEBUG 11460 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-21T11:05:26.097+05:30 DEBUG 11460 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-21T11:05:26.241+05:30  INFO 11460 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-21T11:05:26.247+05:30  INFO 11460 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 5.785 seconds (process running for 6.385)
+2025-09-21T11:05:56.035+05:30  INFO 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-21T11:05:56.036+05:30  INFO 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-21T11:05:56.036+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-21T11:05:56.036+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-21T11:05:56.036+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-21T11:05:56.037+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2d36a825
+2025-09-21T11:05:56.037+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6236d83a
+2025-09-21T11:05:56.037+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-21T11:05:56.037+05:30  INFO 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-21T11:05:56.080+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/send?email=jkdilmisandamini@gmail.com", parameters={masked}
+2025-09-21T11:05:56.081+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#sendOtp(String)
+2025-09-21T11:06:01.056+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-09-21T11:06:01.057+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["OTP sent to jkdilmisandamini@gmail.com"]
+2025-09-21T11:06:01.070+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T11:07:53.067+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/reset", parameters={}
+2025-09-21T11:07:53.068+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#resetPassword(ResetPasswordRequest)
+2025-09-21T11:07:53.147+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.controller.OtpController$ResetPasswordRequest@ba0327f]
+2025-09-21T11:07:53.149+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-09-21T11:07:53.149+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Password reset success"]
+2025-09-21T11:07:53.150+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T11:08:16.696+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/otp/reset", parameters={}
+2025-09-21T11:08:16.697+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.OtpController#resetPassword(ResetPasswordRequest)
+2025-09-21T11:08:16.698+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [lk.ijse.gdse72.staygobackend.controller.OtpController$ResetPasswordRequest@3e46771f]
+2025-09-21T11:08:16.698+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-09-21T11:08:16.698+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Password reset success"]
+2025-09-21T11:08:16.699+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-21T11:09:43.868+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T11:09:43.869+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T11:09:43.881+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DSDilmi, password=12345)]
+2025-09-21T11:09:43.989+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T11:09:44.014+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T11:09:44.018+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T11:09:44.037+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T11:09:44.038+05:30 DEBUG 11460 --- [StayGo-BackEnd] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T11:10:44.234+05:30  INFO 11460 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-21T11:10:44.274+05:30  INFO 11460 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-21T11:10:44.301+05:30  INFO 11460 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T11:10:44.315+05:30  INFO 11460 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-21T11:10:44.327+05:30  INFO 11460 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-21T11:10:51.680+05:30  INFO 12452 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Starting StayGoBackEndApplication using Java 21.0.8 with PID 12452 (D:\Campus IJSE\StayGo-OnlineBookingSystem\StayGo-BackEnd\target\classes started by chathuranga in D:\Campus IJSE\StayGo-OnlineBookingSystem)
+2025-09-21T11:10:51.684+05:30  INFO 12452 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-09-21T11:10:53.039+05:30  INFO 12452 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-21T11:10:53.147+05:30  INFO 12452 --- [StayGo-BackEnd] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2025-09-21T11:10:53.960+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-21T11:10:53.971+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-21T11:10:53.971+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-21T11:10:54.017+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-21T11:10:54.017+05:30  INFO 12452 --- [StayGo-BackEnd] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2277 ms
+2025-09-21T11:10:54.143+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-21T11:10:54.229+05:30  INFO 12452 --- [StayGo-BackEnd] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-21T11:10:54.276+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-21T11:10:54.508+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-21T11:10:54.537+05:30  INFO 12452 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-21T11:10:55.013+05:30  INFO 12452 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cc90398
+2025-09-21T11:10:55.015+05:30  INFO 12452 --- [StayGo-BackEnd] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-21T11:10:55.106+05:30  WARN 12452 --- [StayGo-BackEnd] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-21T11:10:55.123+05:30  INFO 12452 --- [StayGo-BackEnd] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-21T11:10:56.125+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-21T11:10:56.255+05:30  INFO 12452 --- [StayGo-BackEnd] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T11:10:56.681+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-21T11:10:57.527+05:30  WARN 12452 --- [StayGo-BackEnd] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-21T11:10:57.569+05:30  INFO 12452 --- [StayGo-BackEnd] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-21T11:10:57.570+05:30  WARN 12452 --- [StayGo-BackEnd] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-21T11:10:57.728+05:30 DEBUG 12452 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 43 mappings in 'requestMappingHandlerMapping'
+2025-09-21T11:10:57.853+05:30 DEBUG 12452 --- [StayGo-BackEnd] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /uploads/**] in 'resourceHandlerMapping'
+2025-09-21T11:10:57.968+05:30 DEBUG 12452 --- [StayGo-BackEnd] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-21T11:10:58.026+05:30 DEBUG 12452 --- [StayGo-BackEnd] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-21T11:10:58.220+05:30  INFO 12452 --- [StayGo-BackEnd] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-21T11:10:58.226+05:30  INFO 12452 --- [StayGo-BackEnd] [main] l.i.g.s.StayGoBackEndApplication         : Started StayGoBackEndApplication in 7.16 seconds (process running for 8.354)
+2025-09-21T11:11:15.948+05:30  INFO 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-21T11:11:15.949+05:30  INFO 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-21T11:11:15.949+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-21T11:11:15.949+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-21T11:11:15.949+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-21T11:11:15.951+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5ae3f8e4
+2025-09-21T11:11:15.951+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6626137e
+2025-09-21T11:11:15.952+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-21T11:11:15.952+05:30  INFO 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-09-21T11:11:16.007+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2025-09-21T11:11:16.009+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.gdse72.staygobackend.controller.AuthController#login(AuthDTO)
+2025-09-21T11:11:16.084+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AuthDTO(username=DSDilmi, password=12345)]
+2025-09-21T11:11:16.100+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.gdse72.staygobackend.exception.GlobalExceptionHandler#handleUsernameNotFoundException(UsernameNotFoundException)
+2025-09-21T11:11:16.122+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-21T11:11:16.129+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResponse(code=404, status=User Not Fount, data=Username not found)]
+2025-09-21T11:11:16.140+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.core.userdetails.UsernameNotFoundException: Username not found]
+2025-09-21T11:11:16.141+05:30 DEBUG 12452 --- [StayGo-BackEnd] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-21T11:12:13.609+05:30  INFO 12452 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-21T11:12:13.614+05:30  INFO 12452 --- [StayGo-BackEnd] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-21T11:12:13.621+05:30  INFO 12452 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-21T11:12:13.624+05:30  INFO 12452 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-21T11:12:13.632+05:30  INFO 12452 --- [StayGo-BackEnd] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

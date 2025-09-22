@@ -49,7 +49,43 @@
         Continue with Google
       </button>
     </div>
+    <div class="d-flex justify-content-center fs-5 ">
+          <small>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot password?</a>
+          </small>
+    </div>
   </div>
+
+  <!-- Forgot Password Modal -->
+<div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Reset Password</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Step 1: Email -->
+        <div id="forgotStep1">
+          <input type="email" id="resetEmail" class="form-control mb-3" placeholder="Enter your registered email">
+          <button class="btn btn-primary w-100" id="sendResetLinkBtn">Send OTP</button>
+        </div>
+
+        <!-- Step 2: OTP & new password -->
+        <div id="forgotStep2" class="d-none">
+          <input type="text" id="resetToken" class="form-control mb-2" placeholder="Enter OTP">
+          <input type="text" id="newUsername" class="form-control mb-2" placeholder="New Username">
+          <div class="input-group mb-3">
+            <input type="password" id="newPassword" class="form-control" placeholder="New Password">
+            <button type="button" class="btn btn-outline-secondary" id="toggleResetPassword"><i class="bi bi-eye"></i></button>
+          </div>
+          <button class="btn btn-success w-100" id="resetPasswordBtn">Update Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     
   <script>
     document.getElementById("toggleLoginPassword").addEventListener("click", function () {

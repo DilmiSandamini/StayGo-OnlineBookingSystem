@@ -39,4 +39,7 @@ public class User {
     private Timestamp updatedAt;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Business> businesses;
+
+    private String resetOtp;
+    private Timestamp otpExpiration;
 }

@@ -58,4 +58,73 @@ $(document).ready(function () {
         }
       });
     });
+
+    // Forgot password step 1: send OTP
+  $("#sendResetLinkBtn").click(function () {
+    const email = $("#resetEmail").val();
+    if (!email) { 
+      Swal.fire({
+        icon: 'warning',
+        title: 'Missing Email',
+        text: 'Enter your email',
+        confirmButtonColor: '#f8bb86'
+      });
+      return; 
+    }
+
+    $.post("http://localhost:8080/api/v1/auth/otp/send?email=" + email)
+      .done(() => { 
+        $("#forgotStep1").hide(); 
+        $("#forgotStep2").removeClass("d-none"); 
+        Swal.fire({
+          icon: 'success',
+          title: 'OTP Sent',
+          text: 'Check your email for the OTP',
+          confirmButtonColor: '#3085d6'
+        });
+      })
+      .fail(() => { 
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed',
+          text: 'Failed to send OTP',
+          confirmButtonColor: '#d33'
+        });
+      });
+  });
+
+  // Forgot password step 2: reset
+  $("#resetPasswordBtn").click(function () {
+    const dto = {
+      email: $("#resetEmail").val(),
+      otp: $("#resetToken").val(),
+      newUsername: $("#newUsername").val(),
+      newPassword: $("#newPassword").val()
+    };
+
+    $.ajax({
+      url: "http://localhost:8080/api/v1/auth/otp/reset",
+      type: "POST",
+      contentType: "application/json",
+      data: JSON.stringify(dto),
+      success: function () {
+        Swal.fire({
+          icon: 'success',
+          title: 'Password Updated',
+          text: 'Your password has been reset successfully!',
+          confirmButtonColor: '#3085d6'
+        }).then(() => {
+          $("#forgotPasswordModal").modal("hide");
+        });
+      },
+      error: function () {
+        Swal.fire({
+          icon: 'error',
+          title: 'Reset Failed',
+          text: 'Failed to reset password. Try again.',
+          confirmButtonColor: '#d33'
+        });
+      }
+    });
+  });
   });

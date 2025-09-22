@@ -25,6 +25,7 @@ public class AuthService {
     private final JwtUtil jwtUtil;
     private final ModelMapper modelMapper;
     private final EmailUtil emailUtil;
+    private final OtpService otpService;
 
     public String register(RegisterDTO registerDTO) {
         if (userRepository.findByUsername(registerDTO.getUsername()).isPresent()) {
@@ -51,8 +52,9 @@ public class AuthService {
         System.out.println("Authenticating user...");
         System.out.println("authDTO = " + authDTO);
 
-        User user = userRepository.findByUsername(authDTO.getUsername())
+        User user = userRepository.findByUsernameIgnoreCase(authDTO.getUsername())
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found"));
+
 
         System.out.println("User found: " + user.getUsername());
 
@@ -118,5 +120,48 @@ public class AuthService {
         user = userRepository.save(user);
 
         return modelMapper.map(user, UserDTO.class);
+    }
+
+    // Send OTP
+    public void sendOtpToEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Email not found"));
+
+        String otp = otpService.generateOtp();
+        user.setResetOtp(otp);
+        user.setOtpExpiration(new java.sql.Timestamp(System.currentTimeMillis() + 5 * 60 * 1000)); // 5 mins
+        userRepository.save(user);
+
+        String subject = "YummyGo Password Reset OTP";
+        String body = "Hello " + user.getFullName() + ",\n\nYour OTP: " + otp +
+                "\nIt expires in 5 minutes.\n\nYummyGo Team";
+
+        emailUtil.sendEmail(user.getEmail(), subject, body);
+    }
+
+    // Reset password using OTP
+    public void resetPasswordWithOtp(String email, String otp, String newUsername, String newPassword) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Email not found"));
+
+        if (user.getResetOtp() == null || !user.getResetOtp().equals(otp)) {
+            throw new RuntimeException("Invalid OTP");
+        }
+
+        if (user.getOtpExpiration().before(new java.util.Date())) {
+            throw new RuntimeException("OTP expired");
+        }
+
+        if (newUsername != null && !newUsername.isBlank()) {
+            user.setUsername(newUsername);
+        }
+
+        if (newPassword != null && !newPassword.isBlank()) {
+            user.setPassword(passwordEncoder.encode(newPassword));
+        }
+
+        user.setResetOtp(null);
+        user.setOtpExpiration(null);
+        userRepository.save(user);
     }
 }
