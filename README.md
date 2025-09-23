@@ -78,14 +78,6 @@ Business owners can manage their properties and booking requests, while admins o
       mvn spring-boot:run
 ---
 
-🔹 Frontend
-1.Navigate to frontend folder:
-      cd ../frontend
-
-2.Open index.html in a browser or serve using a local server (e.g., VSCode Live Server).
-
----
-
 ## 🖼️ Screenshots  
 
 ---
